@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController _characterController;
 
     public float Speed = 12f;
-    public float Gravity = -9.81f * 2;
+    public float Gravity = -9.81f * 2; // This is weird.
     public float JumpHeight = 3f;
 
     public Transform GroundCheck;
