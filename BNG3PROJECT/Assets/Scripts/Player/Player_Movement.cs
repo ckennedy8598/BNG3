@@ -5,6 +5,9 @@ using TMPro; // Using TMPro for testing purposes only. Remove before release.
 
 public class Player_Movement : MonoBehaviour
 {
+    [Header("Audio")]
+    public AudioSource JumpSource;
+
     [Header("Movement")]
     public float MoveSpeed;
     public float GroundDrag;
@@ -97,6 +100,7 @@ public class Player_Movement : MonoBehaviour
         {
             _readyToJump = false;
             _jump();
+            JumpSource.Play();
             JumpBufferCounter = 0f;
 
             Invoke(nameof(_resetJump), JumpCooldown);
