@@ -5,6 +5,9 @@ using TMPro; // Using TMPro for testing purposes only. Remove before release.
 
 public class Player_Movement : MonoBehaviour
 {
+    [Header("Lol doesn't matter")]
+    public int PlayerScore;
+
     [Header("Audio")]
     public AudioSource JumpSource;
 
@@ -44,8 +47,10 @@ public class Player_Movement : MonoBehaviour
     Rigidbody _rb;
 
     public TMP_Text GroundCheck; // Remove before release
+    public TMP_Text ScoreUpdate; // Score Counter
     void Start()
     {
+        PlayerScore = 0;
         _rb = GetComponent<Rigidbody>();
         _rb.freezeRotation = true; // Otherwise player falls over
         _readyToJump = true;
@@ -54,6 +59,8 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Score Update
+        ScoreUpdate.text = "Score: " + PlayerScore.ToString();
         // Ground Check
         _grounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.2f, IsGround);
 
