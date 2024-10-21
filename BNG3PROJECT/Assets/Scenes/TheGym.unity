@@ -7301,6 +7301,7 @@ MonoBehaviour:
   SensY: 20
   SensX: 20
   Orientation: {fileID: 1553005394}
+  CanMoveCamera: 1
   PauseScript: 0
 --- !u!43 &215447484
 Mesh:

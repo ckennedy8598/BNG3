@@ -12,7 +12,7 @@ public class Player_Cam : MonoBehaviour
     float xRot;
     float yRot;
 
-    private bool _canMoveCamera = true;
+    public bool CanMoveCamera = true;
     public bool PauseScript;
     // Start is called before the first frame update
     void Start()
@@ -25,26 +25,25 @@ public class Player_Cam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().GetIsPaused();
+
+        if (PauseScript)
         {
-            PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().GetIsPaused();
-            if (PauseScript)
-            {
-                _canMoveCamera = true;
-                Cursor.lockState = CursorLockMode.Locked;
-                Debug.Log("Cursor Lock State: " + Cursor.lockState);
-                Cursor.visible = true;
-                return;
-            }
-            else if (!PauseScript)
-            {
-                _canMoveCamera = false;
-                Cursor.lockState = CursorLockMode.None;
-                Debug.Log("Cursor Lock State: " + Cursor.lockState);
-                Cursor.visible = false;
-            }
+            CanMoveCamera = false;
+            Cursor.lockState = CursorLockMode.None;
+            Debug.Log("Cursor Lock State: " + Cursor.lockState);
+            Cursor.visible = true;
+            return;
         }
-        if (_canMoveCamera)
+        else
+        {
+            CanMoveCamera = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Debug.Log("Cursor Lock State: " + Cursor.lockState);
+            Cursor.visible = false;
+        }
+
+        if (CanMoveCamera)
         {
             CameraMovement();
         }
@@ -63,5 +62,11 @@ public class Player_Cam : MonoBehaviour
         // rotate cam and orientation
         transform.rotation = Quaternion.Euler(xRot, yRot, 0);
         Orientation.rotation = Quaternion.Euler(0, yRot, 0);
+    }
+
+    public bool SetCameraMovement()
+    {
+        CanMoveCamera = !CanMoveCamera;
+        return CanMoveCamera;
     }
 }
