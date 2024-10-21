@@ -48,17 +48,29 @@ public class Player_Movement : MonoBehaviour
 
     public TMP_Text GroundCheck; // Remove before release
     public TMP_Text ScoreUpdate; // Score Counter
+
+    public bool PauseScript;
     void Start()
     {
+        //PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().Paused;
         PlayerScore = 0;
         _rb = GetComponent<Rigidbody>();
         _rb.freezeRotation = true; // Otherwise player falls over
         _readyToJump = true;
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().GetIsPaused();
+            if(PauseScript)
+            {
+                return;
+            }
+        }
         // Score Update
         ScoreUpdate.text = "Score: " + PlayerScore.ToString();
         // Ground Check

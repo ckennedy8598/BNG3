@@ -12,15 +12,45 @@ public class Player_Cam : MonoBehaviour
     float xRot;
     float yRot;
 
+    private bool _canMoveCamera = true;
+    public bool PauseScript;
     // Start is called before the first frame update
     void Start()
     {
+        //PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().GetIsPaused();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().GetIsPaused();
+            if (PauseScript)
+            {
+                _canMoveCamera = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Debug.Log("Cursor Lock State: " + Cursor.lockState);
+                Cursor.visible = true;
+                return;
+            }
+            else if (!PauseScript)
+            {
+                _canMoveCamera = false;
+                Cursor.lockState = CursorLockMode.None;
+                Debug.Log("Cursor Lock State: " + Cursor.lockState);
+                Cursor.visible = false;
+            }
+        }
+        if (_canMoveCamera)
+        {
+            CameraMovement();
+        }
+        //CameraMovement();
+    }
+    public void CameraMovement()
     {
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.fixedDeltaTime * SensX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.fixedDeltaTime * SensY;
