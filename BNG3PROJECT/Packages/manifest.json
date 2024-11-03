@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.eflatun.scenereference": "file:C:/Users/chris/OneDrive/Desktop/Eflatun.SceneReference-main/Eflatun.SceneReference-main/Eflatun.SceneReference/Packages/com.eflatun.scenereference",
-    "com.kylewbanks.scenerefattribute": "file:C:/Users/chris/OneDrive/Desktop/scene-ref-attribute-main/scene-ref-attribute-main",
+    "com.eflatun.scenereference": "file:C:/Users/ckenn/Downloads/Eflatun.SceneReference-main/Eflatun.SceneReference-main/Eflatun.SceneReference/Packages/com.eflatun.scenereference",
+    "com.kylewbanks.scenerefattribute": "file:C:/Users/ckenn/Downloads/scene-ref-attribute-main/scene-ref-attribute-main",
     "com.unity.ai.navigation": "1.1.5",
     "com.unity.collab-proxy": "2.5.1",
     "com.unity.feature.development": "1.0.1",
