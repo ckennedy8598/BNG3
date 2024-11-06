@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -57,9 +58,10 @@ namespace Platformer
                 _dashCDTimer = DashCD;
             }
             _pm.Dashing = true;
-            Debug.Log("_pm.Dashing = " + _pm.Dashing);
+            //Debug.Log("_pm.Dashing = " + _pm.Dashing);
             Vector3 appliedForce = OrientObject.forward * DashForce + OrientObject.up * DashUpwardForce;
             delayedForceToApply = appliedForce;
+            
             Invoke(nameof(_delayedDashForce), 0.025f);
 
             Invoke(nameof(_resetDash), DashDuration);
@@ -75,7 +77,7 @@ namespace Platformer
         private void _resetDash()
         {
             _pm.Dashing = false;
-            Debug.Log("_pm.Dashing = " + _pm.Dashing);
+            //Debug.Log("_pm.Dashing = " + _pm.Dashing);
         }
     }
 }

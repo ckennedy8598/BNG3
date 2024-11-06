@@ -245,8 +245,11 @@ public class Player_Movement : MonoBehaviour
         if (_grounded)
         {
             state = MovementState.walking;
-            _desiredMS = MoveSpeed;
-            _rb.drag = GroundDrag;
+            if(_grounded && !Dashing)
+            {
+                _desiredMS = MoveSpeed;
+                _rb.drag = GroundDrag;
+            }
             CoyoteTimeCounter = CoyoteTime;
             GroundCheckText.text = "On Ground"; // Remove before release
             //Debug.Log("STATE MACHINE WORKING: GROUNDED");
