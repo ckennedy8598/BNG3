@@ -90,7 +90,6 @@ public class Player_Movement : MonoBehaviour
         // Ground Check
         _grounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.2f, IsGround);
 
-        _myInput();
         _speedControl();
         StateHandler();
 
@@ -170,8 +169,8 @@ public class Player_Movement : MonoBehaviour
             _rb.AddForce(_moveDirection.normalized * _desiredMS * 10f * AirMultiplier, ForceMode.Force);
         }
 
-        // turn off gravity on slope (so we don't slide)
-        _rb.useGravity = !_onSlope();
+        
+        //_rb.useGravity = !_onSlope();
     }
 
     private void _speedControl()
@@ -235,6 +234,8 @@ public class Player_Movement : MonoBehaviour
         if (Dashing)
         {
             state = MovementState.dashing;
+            _rb.useGravity = false;
+            _rb.velocity = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
             _desiredMS = DashSpeed;
             _rb.drag = 0f;
             GroundCheckText.text = "Dashing"; // Remove before release
@@ -245,10 +246,21 @@ public class Player_Movement : MonoBehaviour
         if (_grounded)
         {
             state = MovementState.walking;
-            if(_grounded && !Dashing)
+            if(!Dashing)
             {
+                _myInput();
                 _desiredMS = MoveSpeed;
                 _rb.drag = GroundDrag;
+            }
+
+            // turn off gravity on slope (so we don't slide)
+            if (_onSlope())
+            {
+                _rb.useGravity = false;
+            }
+            else
+            {
+                _rb.useGravity = true;
             }
             CoyoteTimeCounter = CoyoteTime;
             GroundCheckText.text = "On Ground"; // Remove before release
@@ -257,6 +269,8 @@ public class Player_Movement : MonoBehaviour
         else if (!_grounded && !Dashing)
         {
             state = MovementState.air;
+            _rb.useGravity = true;
+            _myInput();
             _desiredMS = MoveSpeed;
             _rb.drag = 0f;
             CoyoteTimeCounter -= Time.deltaTime;
