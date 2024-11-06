@@ -236,6 +236,7 @@ public class Player_Movement : MonoBehaviour
         {
             state = MovementState.dashing;
             _desiredMS = DashSpeed;
+            _rb.drag = 0f;
             GroundCheckText.text = "Dashing"; // Remove before release
             //Debug.Log("STATE MACHINE WORKING: DASHING");
         }
@@ -253,7 +254,8 @@ public class Player_Movement : MonoBehaviour
         else if (!_grounded && !Dashing)
         {
             state = MovementState.air;
-            _rb.drag = 0;
+            _desiredMS = MoveSpeed;
+            _rb.drag = 0f;
             CoyoteTimeCounter -= Time.deltaTime;
             GroundCheckText.text = "In Air"; // Remove before release
             //Debug.Log("STATE MACHINE WORKING: IN AIR");
