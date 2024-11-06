@@ -12,9 +12,14 @@ public class Player_Movement : MonoBehaviour
     public AudioSource JumpSource;
 
     [Header("Movement")]
+    private float _lastDesiredMS;
+    private float _desiredMS;
     public float MoveSpeed;
+    public float DashSpeed;
     public float GroundDrag;
+    public bool Dashing;
 
+    [Header("Jumping")]
     public float CoyoteTime;
     public float CoyoteTimeCounter;
     public float JumpForce;
@@ -46,12 +51,21 @@ public class Player_Movement : MonoBehaviour
     Vector3 _moveDirection;
     Rigidbody _rb;
 
-    public TMP_Text GroundCheck; // Remove before release
+    public TMP_Text GroundCheckText; // Remove before release
     public TMP_Text ScoreUpdate; // Score Counter
 
     public bool PauseScript;
+
+    public MovementState state;
+    public enum MovementState
+    {
+        walking,
+        air,
+        dashing
+    }
     void Start()
     {
+        GroundCheckText.text = "Start! <3";
         //PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().Paused;
         PlayerScore = 0;
         _rb = GetComponent<Rigidbody>();
@@ -78,20 +92,19 @@ public class Player_Movement : MonoBehaviour
 
         _myInput();
         _speedControl();
+        StateHandler();
 
         // Handle drag
-        if (_grounded)
-        {
-            GroundCheck.text = "On Ground"; // Remove before release
-            _rb.drag = GroundDrag;
-            CoyoteTimeCounter = CoyoteTime;
-        }
-        else
-        {
-            GroundCheck.text = "In the Air"; // Remove before release
-            _rb.drag = 0;
-             CoyoteTimeCounter -= Time.deltaTime;
-        }
+        //if (state == MovementState.walking)
+        //{
+        //    _rb.drag = GroundDrag;
+        //    CoyoteTimeCounter = CoyoteTime;
+        //}
+        //else
+        //{
+        //    _rb.drag = 0;
+        //     CoyoteTimeCounter -= Time.deltaTime;
+        //}
 
         // Jump Buffer
         if (Input.GetKeyDown(JumpKey))
@@ -139,7 +152,7 @@ public class Player_Movement : MonoBehaviour
         // on slope
         if (_onSlope() && !_exitSlope)
         {
-            _rb.AddForce(_getSlopeMoveDirection() * MoveSpeed * 20f, ForceMode.Force);
+            _rb.AddForce(_getSlopeMoveDirection() * _desiredMS * 20f, ForceMode.Force);
 
             if (_rb.velocity.y > 0)
             {
@@ -149,12 +162,12 @@ public class Player_Movement : MonoBehaviour
 
         if (_grounded)
         {
-            _rb.AddForce(_moveDirection.normalized * MoveSpeed * 10f, ForceMode.Force);
+            _rb.AddForce(_moveDirection.normalized * _desiredMS * 10f, ForceMode.Force);
         }
         // in air
         else if (!_grounded)
         {
-            _rb.AddForce(_moveDirection.normalized * MoveSpeed * 10f * AirMultiplier, ForceMode.Force);
+            _rb.AddForce(_moveDirection.normalized * _desiredMS * 10f * AirMultiplier, ForceMode.Force);
         }
 
         // turn off gravity on slope (so we don't slide)
@@ -166,9 +179,9 @@ public class Player_Movement : MonoBehaviour
         // limit speed on slope
         if (_onSlope() && !_exitSlope)
         {
-            if (_rb.velocity.magnitude > MoveSpeed)
+            if (_rb.velocity.magnitude > _desiredMS)
             {
-                _rb.velocity = _rb.velocity.normalized * MoveSpeed;
+                _rb.velocity = _rb.velocity.normalized * _desiredMS;
             }
         }
         else
@@ -176,9 +189,9 @@ public class Player_Movement : MonoBehaviour
             Vector3 _flatVel = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
 
             // limit velocity if needed
-            if (_flatVel.magnitude > MoveSpeed)
+            if (_flatVel.magnitude > _desiredMS)
             {
-                Vector3 _limitedVel = _flatVel.normalized * MoveSpeed;
+                Vector3 _limitedVel = _flatVel.normalized * _desiredMS;
                 _rb.velocity = new Vector3(_limitedVel.x, _rb.velocity.y, _limitedVel.z);
             }
         }
@@ -214,5 +227,36 @@ public class Player_Movement : MonoBehaviour
     private Vector3 _getSlopeMoveDirection()
     {
         return Vector3.ProjectOnPlane(_moveDirection, _slopeHit.normal).normalized;
+    }
+
+    private void StateHandler()
+    {
+        // Dashing
+        if (Dashing)
+        {
+            state = MovementState.dashing;
+            _desiredMS = DashSpeed;
+            GroundCheckText.text = "Dashing"; // Remove before release
+            //Debug.Log("STATE MACHINE WORKING: DASHING");
+        }
+
+        // Ground or Air State
+        if (_grounded)
+        {
+            state = MovementState.walking;
+            _desiredMS = MoveSpeed;
+            _rb.drag = GroundDrag;
+            CoyoteTimeCounter = CoyoteTime;
+            GroundCheckText.text = "On Ground"; // Remove before release
+            //Debug.Log("STATE MACHINE WORKING: GROUNDED");
+        }
+        else if (!_grounded && !Dashing)
+        {
+            state = MovementState.air;
+            _rb.drag = 0;
+            CoyoteTimeCounter -= Time.deltaTime;
+            GroundCheckText.text = "In Air"; // Remove before release
+            //Debug.Log("STATE MACHINE WORKING: IN AIR");
+        }
     }
 }

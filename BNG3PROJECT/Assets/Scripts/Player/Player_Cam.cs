@@ -31,7 +31,7 @@ public class Player_Cam : MonoBehaviour
         {
             CanMoveCamera = false;
             Cursor.lockState = CursorLockMode.None;
-            Debug.Log("Cursor Lock State: " + Cursor.lockState);
+            //Debug.Log("Cursor Lock State: " + Cursor.lockState);
             Cursor.visible = true;
             return;
         }
@@ -39,7 +39,7 @@ public class Player_Cam : MonoBehaviour
         {
             CanMoveCamera = true;
             Cursor.lockState = CursorLockMode.Locked;
-            Debug.Log("Cursor Lock State: " + Cursor.lockState);
+            //Debug.Log("Cursor Lock State: " + Cursor.lockState);
             Cursor.visible = false;
         }
 

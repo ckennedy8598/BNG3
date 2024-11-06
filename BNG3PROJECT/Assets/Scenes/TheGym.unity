@@ -68589,6 +68589,7 @@ GameObject:
   - component: {fileID: 1842809126}
   - component: {fileID: 1842809125}
   - component: {fileID: 1842809127}
+  - component: {fileID: 1842809129}
   - component: {fileID: 1842809128}
   m_Layer: 3
   m_Name: Player
@@ -68657,7 +68658,9 @@ MonoBehaviour:
   PlayerScore: 0
   JumpSource: {fileID: 1842809128}
   MoveSpeed: 10
+  DashSpeed: 20
   GroundDrag: 6
+  Dashing: 0
   CoyoteTime: 0.15
   CoyoteTimeCounter: 0
   JumpForce: 12
@@ -68672,9 +68675,10 @@ MonoBehaviour:
     m_Bits: 64
   PlayerHeight: 1.85
   Orientation: {fileID: 1553005394}
-  GroundCheck: {fileID: 1736959584}
+  GroundCheckText: {fileID: 1736959584}
   ScoreUpdate: {fileID: 717590478}
   PauseScript: 0
+  state: 0
 --- !u!82 &1842809128
 AudioSource:
   m_ObjectHideFlags: 0
@@ -68685,7 +68689,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 10c459926aa666d4aa33251167ee5f49, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a041c12cc825711448145c08fba12ca2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.224
   m_Pitch: 1
@@ -68771,6 +68775,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1842809129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842809124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2624339f5d5bcee418c16081235bfada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OrientObject: {fileID: 1553005394}
+  PlayerCam: {fileID: 761715883}
+  DashForce: 20
+  DashUpwardForce: 0
+  DashDuration: 0.25
+  _dashCDTimer: 0
+  DashCD: 1.5
+  DashKey: 304
 --- !u!43 &1847842108
 Mesh:
   m_ObjectHideFlags: 0

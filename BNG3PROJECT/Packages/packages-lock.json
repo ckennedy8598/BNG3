@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.eflatun.scenereference": {
-      "version": "file:C:/Users/ckenn/Downloads/Eflatun.SceneReference-main/Eflatun.SceneReference-main/Eflatun.SceneReference/Packages/com.eflatun.scenereference",
+      "version": "file:C:/Users/Bob/Desktop/BGN3/Packages/Eflatun/Eflatun.SceneReference-4.1.1",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -10,7 +10,7 @@
       }
     },
     "com.kylewbanks.scenerefattribute": {
-      "version": "file:C:/Users/ckenn/Downloads/scene-ref-attribute-main/scene-ref-attribute-main",
+      "version": "file:C:/Users/Bob/Desktop/BGN3/Packages/scene-ref-attribute/scene-ref-attribute-0.13.0",
       "depth": 0,
       "source": "local",
       "dependencies": {}
