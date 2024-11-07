@@ -29,6 +29,5 @@ public class Test_Pickup : MonoBehaviour
     {
         PickupMesh.enabled = false;
         SphereCollider.enabled = false;
-
     }
 }

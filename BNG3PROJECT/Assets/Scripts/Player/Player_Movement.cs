@@ -61,7 +61,7 @@ public class Player_Movement : MonoBehaviour
     {
         walking,
         air,
-        dashing
+        dashing,
     }
     void Start()
     {
@@ -170,7 +170,7 @@ public class Player_Movement : MonoBehaviour
         }
 
         
-        //_rb.useGravity = !_onSlope();
+        //_rb.useGravity = !_onSlope(); Old, keeping for better recognition
     }
 
     private void _speedControl()

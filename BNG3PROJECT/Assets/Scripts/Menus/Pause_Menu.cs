@@ -21,14 +21,14 @@ public class Pause_Menu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && (GetIsPaused() == false))
         {
             Paused = true;
-            Debug.Log("Sate of IsPaused: " + GetIsPaused());
+            //Debug.Log("Sate of IsPaused: " + GetIsPaused());
             Time.timeScale = 0f;
             P_MM.SetActive(true); P_Quit.SetActive(true); Crosshair.SetActive(false);
         }
         else if(Input.GetKeyDown(KeyCode.Escape) && (GetIsPaused() == true))
         {
             Paused = false;
-            Debug.Log("Sate of IsPaused: " + GetIsPaused());
+            //Debug.Log("Sate of IsPaused: " + GetIsPaused());
             Time.timeScale = 1.0f;
             P_MM.SetActive(false); P_Quit.SetActive(false); Crosshair.SetActive(true);
         }
