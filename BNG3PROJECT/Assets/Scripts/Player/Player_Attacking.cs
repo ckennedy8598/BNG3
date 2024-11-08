@@ -40,8 +40,6 @@ namespace Platformer
             _pm = GetComponent<Player_Movement>();
             AllowedToShoot = true;
             _allowInvoke = true;
-
-            
         }
 
         // Update is called once per frame
@@ -87,19 +85,17 @@ namespace Platformer
             GameObject currentFireball = Instantiate(Fireball, createPoint.position, Quaternion.identity);
 
             // Rotate to shoot direction (I don't think we need?)
-            currentFireball.transform.forward = directionWithSpread;
+            currentFireball.transform.forward = directionWithoutSpread;
 
             // Add force to bullet
-            currentFireball.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * ShootForce, ForceMode.Impulse);
+            currentFireball.GetComponent<Rigidbody>().AddForce(directionWithoutSpread.normalized * ShootForce, ForceMode.Impulse);
 
             // Invoke resetShot function for delay between each shot
-            Debug.Log("Player.Attack.cs _allowInvoke status 1: " + _allowInvoke);
             if (_allowInvoke)
             {
                 Invoke("_resetShot", TimeBetweenShots);
                 _allowInvoke = false;
             }
-            Debug.Log("Player_Attack.cs _allowInvoke status: " + _allowInvoke);
         }
         private void _resetShot()
         {
@@ -107,18 +103,18 @@ namespace Platformer
             _allowInvoke = true;
         }
 
-        private void _fireballDestroy()
-        {
-
-        }
         private void _stateHandler()
         {
+            if (_pm.state == Player_Movement.MovementState.paused)
+            {
+                return;
+            }
+
             if (AllowedToShoot && Input.GetMouseButton(1))
             {
                 //do stuff
                 State = AttackState.Ranged;
                 _shoot();
-                Debug.Log("PLAYER FIRED A FIREBALL... FIRE!");
             }
         }
     }

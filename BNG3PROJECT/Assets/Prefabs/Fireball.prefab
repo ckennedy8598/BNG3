@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5cff0e0e2edb5488442f1f12924b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireballType: 0
+  fireballType: 1
   _spriteMesh: {fileID: 7197828999439900783}
   _sphereCollider: {fileID: 3517604719450188102}
   _audioClip: {fileID: 8300000, guid: 373403fa66da7314fb4344b98a21e92f, type: 3}
@@ -151,7 +151,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.15676564
-  m_Center: {x: 0.0020885468, y: -0.0129392, z: -0.021211445}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &6374752425479592788
 AudioSource:
   m_ObjectHideFlags: 0

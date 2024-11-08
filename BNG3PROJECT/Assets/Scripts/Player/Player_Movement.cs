@@ -59,14 +59,14 @@ public class Player_Movement : MonoBehaviour
     public MovementState state;
     public enum MovementState
     {
+        paused,
         walking,
         air,
         dashing,
     }
     void Start()
     {
-        GroundCheckText.text = "Start! <3";
-        //PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().Paused;
+        //GroundCheckText.text = "Start! <3";
         PlayerScore = 0;
         _rb = GetComponent<Rigidbody>();
         _rb.freezeRotation = true; // Otherwise player falls over
@@ -77,14 +77,6 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().GetIsPaused();
-            if(PauseScript)
-            {
-                return;
-            }
-        }
         // Score Update
         ScoreUpdate.text = "Score: " + PlayerScore.ToString();
         // Ground Check
@@ -92,18 +84,6 @@ public class Player_Movement : MonoBehaviour
 
         _speedControl();
         StateHandler();
-
-        // Handle drag
-        //if (state == MovementState.walking)
-        //{
-        //    _rb.drag = GroundDrag;
-        //    CoyoteTimeCounter = CoyoteTime;
-        //}
-        //else
-        //{
-        //    _rb.drag = 0;
-        //     CoyoteTimeCounter -= Time.deltaTime;
-        //}
 
         // Jump Buffer
         if (Input.GetKeyDown(JumpKey))
@@ -119,6 +99,11 @@ public class Player_Movement : MonoBehaviour
     private void FixedUpdate()
     {
         _movePlayer();
+    }
+
+    private void LateUpdate()
+    {
+        _checkPaused();
     }
 
     private void _myInput()
@@ -228,8 +213,28 @@ public class Player_Movement : MonoBehaviour
         return Vector3.ProjectOnPlane(_moveDirection, _slopeHit.normal).normalized;
     }
 
+    private void _checkPaused()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().GetIsPaused();
+            if (PauseScript)
+            {
+                state = MovementState.paused;
+                return;
+            }
+        }
+    }
+
     private void StateHandler()
     {
+        if (PauseScript)
+        {
+            state = MovementState.paused;
+            GroundCheckText.text = "Paused!";
+            return;
+        }
+
         // Dashing
         if (Dashing)
         {

@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace Platformer
 {
     public class Target_Script : MonoBehaviour
     {
+        //private int test_hits;
+        //public TMP_Text text;
+
         private MeshRenderer _targetMesh;
         private BoxCollider _collider;
         public AudioClip TargetHit;
@@ -20,6 +24,7 @@ namespace Platformer
         {
             if (other.gameObject.name == "Fireball(Clone)")
             {
+                //text.text = "Number of Hits: " + test_hits++.ToString();
                 _setDead();
                 AudioSource.PlayClipAtPoint(TargetHit, gameObject.transform.position);
                 Destroy(gameObject, 3);

@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.eflatun.scenereference": {
-      "version": "file:Eflatun.SceneReference-main/Eflatun.SceneReference-main/Eflatun.SceneReference/Packages/com.eflatun.scenereference",
+      "version": "file:C:/Users/Bob/Desktop/BGN3/Packages/Eflatun/Eflatun.SceneReference-4.1.1",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -98,6 +98,13 @@
       "dependencies": {
         "com.unity.modules.uielements": "1.0.0"
       },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.performance.profile-analyzer": {
