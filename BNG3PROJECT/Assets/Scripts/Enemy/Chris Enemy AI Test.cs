@@ -86,7 +86,7 @@ public class ChrisEnemyAITest : MonoBehaviour
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
         {
             walkPointSet = true;
-            Debug.Log("Walkpoint Found");
+            //Debug.Log("Walkpoint Found");
         }
     }
 
@@ -106,7 +106,7 @@ public class ChrisEnemyAITest : MonoBehaviour
         if (distancetowalkpoint.magnitude < 1f)
         {
             walkPointSet = false;
-            Debug.Log("Walkpont reached successfully");
+            //Debug.Log("Walkpont reached successfully");
         }
     }
 

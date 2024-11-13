@@ -11,6 +11,6 @@ public class Velocity_Counter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _velocityText.text = (Mathf.Floor(_rb.velocity.x + _rb.velocity.z)).ToString();
+        _velocityText.text = Mathf.Floor(Mathf.Abs(_rb.velocity.x) + Mathf.Abs(_rb.velocity.z)).ToString();
     }
 }

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TheGym.unity
     guid: 7e80d22c0c9a20a40927e7b109b87e39
+  - enabled: 1
+    path: Assets/Scenes/Infernus.unity
+    guid: b7a6e27ec1c8d604daa8142fb27d919d
   m_configObjects: {}

@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.eflatun.scenereference": {
-      "version": "file:C:/Users/chris/OneDrive/Desktop/Eflatun.SceneReference-main/Eflatun.SceneReference-main/Eflatun.SceneReference/Packages/com.eflatun.scenereference",
+      "version": "file:C:/Users/Bob/Desktop/BGN3/Packages/Eflatun/Eflatun.SceneReference-4.1.1",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -10,9 +10,16 @@
       }
     },
     "com.kylewbanks.scenerefattribute": {
-      "version": "file:C:/Users/chris/OneDrive/Desktop/scene-ref-attribute-main/scene-ref-attribute-main",
+      "version": "https://github.com/KyleBanks/scene-ref-attribute.git",
       "depth": 0,
-      "source": "local",
+      "source": "git",
+      "dependencies": {},
+      "hash": "8d3a0ee421588faaf373e0fe4b8f4577a522f029"
+    },
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
       "dependencies": {}
     },
     "com.unity.ai.navigation": {

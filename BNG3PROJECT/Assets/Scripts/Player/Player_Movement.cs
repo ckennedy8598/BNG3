@@ -12,9 +12,14 @@ public class Player_Movement : MonoBehaviour
     public AudioSource JumpSource;
 
     [Header("Movement")]
+    private float _lastDesiredMS;
+    private float _desiredMS;
     public float MoveSpeed;
+    public float DashSpeed;
     public float GroundDrag;
+    public bool Dashing;
 
+    [Header("Jumping")]
     public float CoyoteTime;
     public float CoyoteTimeCounter;
     public float JumpForce;
@@ -46,13 +51,22 @@ public class Player_Movement : MonoBehaviour
     Vector3 _moveDirection;
     Rigidbody _rb;
 
-    public TMP_Text GroundCheck; // Remove before release
+    public TMP_Text GroundCheckText; // Remove before release
     public TMP_Text ScoreUpdate; // Score Counter
 
     public bool PauseScript;
+
+    public MovementState state;
+    public enum MovementState
+    {
+        paused,
+        walking,
+        air,
+        dashing,
+    }
     void Start()
     {
-        //PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().Paused;
+        //GroundCheckText.text = "Start! <3";
         PlayerScore = 0;
         _rb = GetComponent<Rigidbody>();
         _rb.freezeRotation = true; // Otherwise player falls over
@@ -63,35 +77,13 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().GetIsPaused();
-            if(PauseScript)
-            {
-                return;
-            }
-        }
         // Score Update
         ScoreUpdate.text = "Score: " + PlayerScore.ToString();
         // Ground Check
         _grounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.2f, IsGround);
 
-        _myInput();
         _speedControl();
-
-        // Handle drag
-        if (_grounded)
-        {
-            GroundCheck.text = "On Ground"; // Remove before release
-            _rb.drag = GroundDrag;
-            CoyoteTimeCounter = CoyoteTime;
-        }
-        else
-        {
-            GroundCheck.text = "In the Air"; // Remove before release
-            _rb.drag = 0;
-             CoyoteTimeCounter -= Time.deltaTime;
-        }
+        StateHandler();
 
         // Jump Buffer
         if (Input.GetKeyDown(JumpKey))
@@ -107,6 +99,11 @@ public class Player_Movement : MonoBehaviour
     private void FixedUpdate()
     {
         _movePlayer();
+    }
+
+    private void LateUpdate()
+    {
+        _checkPaused();
     }
 
     private void _myInput()
@@ -139,7 +136,7 @@ public class Player_Movement : MonoBehaviour
         // on slope
         if (_onSlope() && !_exitSlope)
         {
-            _rb.AddForce(_getSlopeMoveDirection() * MoveSpeed * 20f, ForceMode.Force);
+            _rb.AddForce(_getSlopeMoveDirection() * _desiredMS * 20f, ForceMode.Force);
 
             if (_rb.velocity.y > 0)
             {
@@ -149,16 +146,16 @@ public class Player_Movement : MonoBehaviour
 
         if (_grounded)
         {
-            _rb.AddForce(_moveDirection.normalized * MoveSpeed * 10f, ForceMode.Force);
+            _rb.AddForce(_moveDirection.normalized * _desiredMS * 10f, ForceMode.Force);
         }
         // in air
         else if (!_grounded)
         {
-            _rb.AddForce(_moveDirection.normalized * MoveSpeed * 10f * AirMultiplier, ForceMode.Force);
+            _rb.AddForce(_moveDirection.normalized * _desiredMS * 10f * AirMultiplier, ForceMode.Force);
         }
 
-        // turn off gravity on slope (so we don't slide)
-        _rb.useGravity = !_onSlope();
+        
+        //_rb.useGravity = !_onSlope(); Old, keeping for better recognition
     }
 
     private void _speedControl()
@@ -166,9 +163,9 @@ public class Player_Movement : MonoBehaviour
         // limit speed on slope
         if (_onSlope() && !_exitSlope)
         {
-            if (_rb.velocity.magnitude > MoveSpeed)
+            if (_rb.velocity.magnitude > _desiredMS)
             {
-                _rb.velocity = _rb.velocity.normalized * MoveSpeed;
+                _rb.velocity = _rb.velocity.normalized * _desiredMS;
             }
         }
         else
@@ -176,9 +173,9 @@ public class Player_Movement : MonoBehaviour
             Vector3 _flatVel = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
 
             // limit velocity if needed
-            if (_flatVel.magnitude > MoveSpeed)
+            if (_flatVel.magnitude > _desiredMS)
             {
-                Vector3 _limitedVel = _flatVel.normalized * MoveSpeed;
+                Vector3 _limitedVel = _flatVel.normalized * _desiredMS;
                 _rb.velocity = new Vector3(_limitedVel.x, _rb.velocity.y, _limitedVel.z);
             }
         }
@@ -214,5 +211,76 @@ public class Player_Movement : MonoBehaviour
     private Vector3 _getSlopeMoveDirection()
     {
         return Vector3.ProjectOnPlane(_moveDirection, _slopeHit.normal).normalized;
+    }
+
+    private void _checkPaused()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().GetIsPaused();
+            if (PauseScript)
+            {
+                state = MovementState.paused;
+                return;
+            }
+        }
+    }
+
+    private void StateHandler()
+    {
+        if (PauseScript)
+        {
+            state = MovementState.paused;
+            GroundCheckText.text = "Paused!";
+            return;
+        }
+
+        // Dashing
+        if (Dashing)
+        {
+            state = MovementState.dashing;
+            _rb.useGravity = false;
+            _rb.velocity = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
+            _desiredMS = DashSpeed;
+            _rb.drag = 0f;
+            GroundCheckText.text = "Dashing"; // Remove before release
+            //Debug.Log("STATE MACHINE WORKING: DASHING");
+        }
+
+        // Ground or Air State
+        if (_grounded)
+        {
+            state = MovementState.walking;
+            if(!Dashing)
+            {
+                _myInput();
+                _desiredMS = MoveSpeed;
+                _rb.drag = GroundDrag;
+            }
+
+            // turn off gravity on slope (so we don't slide)
+            if (_onSlope())
+            {
+                _rb.useGravity = false;
+            }
+            else
+            {
+                _rb.useGravity = true;
+            }
+            CoyoteTimeCounter = CoyoteTime;
+            GroundCheckText.text = "On Ground"; // Remove before release
+            //Debug.Log("STATE MACHINE WORKING: GROUNDED");
+        }
+        else if (!_grounded && !Dashing)
+        {
+            state = MovementState.air;
+            _rb.useGravity = true;
+            _myInput();
+            _desiredMS = MoveSpeed;
+            _rb.drag = 0f;
+            CoyoteTimeCounter -= Time.deltaTime;
+            GroundCheckText.text = "In Air"; // Remove before release
+            //Debug.Log("STATE MACHINE WORKING: IN AIR");
+        }
     }
 }
