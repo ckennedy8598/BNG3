@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489824620890003797}
   - component: {fileID: 559049896898554643}
+  - component: {fileID: 3149785287267166910}
   - component: {fileID: 4240777985963439651}
   - component: {fileID: 492631374618611098}
   - component: {fileID: 8444426671324920955}
@@ -128,6 +129,21 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &3149785287267166910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4995208622559640853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e1756070c78c942ae37d8c69bb93b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PM_Script: {fileID: 0}
+  PlayerHealth: 0
+  HealthReadout: {fileID: 0}
 --- !u!114 &4240777985963439651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +215,7 @@ MonoBehaviour:
   OrientObj: {fileID: 388427661608022794}
   Fireball: {fileID: 7915509550358804350, guid: c1154976630438f499991041be5e9222, type: 3}
   AllowedToShoot: 0
-  ShootForce: 25
+  ShootForce: 35
   TimeBetweenShots: 0.2
   Spread: 0
   Camera: {fileID: 0}
@@ -315,7 +331,7 @@ GameObject:
   - component: {fileID: 9100756408868237022}
   m_Layer: 3
   m_Name: PlayerBody
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

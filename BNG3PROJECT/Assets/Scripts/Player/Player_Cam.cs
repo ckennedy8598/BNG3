@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Cam : MonoBehaviour
 {
@@ -12,12 +13,15 @@ public class Player_Cam : MonoBehaviour
     float xRot;
     float yRot;
 
-    public bool CanMoveCamera = true;
+    private bool setRot;
+    public bool DeathCamera;
+    public bool CanMoveCamera;
     public bool PauseScript;
     // Start is called before the first frame update
     void Start()
     {
-        //PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().GetIsPaused();
+        setRot = true;
+        CanMoveCamera = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -25,29 +29,16 @@ public class Player_Cam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PauseScript = GameObject.Find("User_Interface").GetComponent<Pause_Menu>().GetIsPaused();
-
-        if (PauseScript)
-        {
-            CanMoveCamera = false;
-            Cursor.lockState = CursorLockMode.None;
-            //Debug.Log("Cursor Lock State: " + Cursor.lockState);
-            Cursor.visible = true;
-            return;
-        }
-        else
-        {
-            CanMoveCamera = true;
-            Cursor.lockState = CursorLockMode.Locked;
-            //Debug.Log("Cursor Lock State: " + Cursor.lockState);
-            Cursor.visible = false;
-        }
-
         if (CanMoveCamera)
         {
             CameraMovement();
         }
-        //CameraMovement();
+
+        if (DeathCamera)
+        {
+            Debug.Log("STATE OF DEATHCAMERA: " + DeathCamera);
+            DeathCameraStart();
+        }
     }
     public void CameraMovement()
     {
@@ -62,6 +53,21 @@ public class Player_Cam : MonoBehaviour
         // rotate cam and orientation
         transform.rotation = Quaternion.Euler(xRot, yRot, 0);
         Orientation.rotation = Quaternion.Euler(0, yRot, 0);
+    }
+
+    private void DeathCameraStart()
+    {
+        _setRotationDeathOnce();
+        transform.Rotate(0f, 20 * Time.deltaTime, 0f, Space.Self);
+    }
+
+    private void _setRotationDeathOnce()
+    {
+        if (setRot)
+        {
+            transform.eulerAngles = new Vector3 (0, transform.eulerAngles.y, 0);
+            setRot = false;
+        }
     }
 
     public bool SetCameraMovement()
