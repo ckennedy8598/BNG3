@@ -10,7 +10,7 @@ public class ChrisEnemyAITest : MonoBehaviour
     // writing an AI script before I dissect other ones
     // - Chris
 
-
+    // I am revising this for the Tech POK.
 
     public NavMeshAgent agent;
 
@@ -28,14 +28,14 @@ public class ChrisEnemyAITest : MonoBehaviour
     public float walkSpeed;
 
     // Attack Timers
-    public float timeBetweenAttacks;
+    public float timeBetweenAttacks = 5f;
     bool alreadyAttacked;
 
     // Enemy States
     public float sightRange, attackingRange;
     public bool playerInSightRange, playerInAttackRange;
 
-    public int health = 1;
+    
 
     public GameObject enemyBullet;
     public Transform spawnPoint;
@@ -45,7 +45,7 @@ public class ChrisEnemyAITest : MonoBehaviour
 
     private float bulletTime;
 
-    public float bulletVelocity;
+    
 
     private void Awake()
     {
@@ -62,7 +62,7 @@ public class ChrisEnemyAITest : MonoBehaviour
 
         if (!playerInSightRange && !playerInAttackRange)
         {
-            Patroling();
+            //Patroling();
         }
 
         if (playerInSightRange && !playerInAttackRange)
@@ -118,7 +118,7 @@ public class ChrisEnemyAITest : MonoBehaviour
     private void AttackPlayer()
     {
         //Stopping enemy movement during attacking
-        agent.SetDestination(transform.position);
+        gameObject.GetComponent<NavMeshAgent>().isStopped = true;
 
         transform.LookAt(player);
 
@@ -137,17 +137,18 @@ public class ChrisEnemyAITest : MonoBehaviour
    
     private void ResetAttack()
     {
+        Debug.Log("Resetting Attack");
         alreadyAttacked = false;
     }
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        //health -= damage;
 
-        if (health <= 0)
-        {
-            Invoke(nameof(DestroyEnemy), 0.5f);
-        }
+        //if (health <= 0)
+        //{
+        //    Invoke(nameof(DestroyEnemy), 0.5f);
+        //}
     }
 
     private void DestroyEnemy()
@@ -155,6 +156,7 @@ public class ChrisEnemyAITest : MonoBehaviour
         Destroy(gameObject);
     }
 
+    //public float bulletVelocity = 10f;
     void ShootAtPlayer()
     {
         bulletTime -= Time.deltaTime;
@@ -164,12 +166,15 @@ public class ChrisEnemyAITest : MonoBehaviour
             return;
         }
 
-        bulletTime = timer;
+        Instantiate(enemyBullet, transform.position, Quaternion.identity);
+        //bulletRig.AddForce(transform.forward * bulletVelocity, ForceMode.Impulse);
 
-        GameObject bulletObj = Instantiate(enemyBullet, spawnPoint.transform.position, spawnPoint.transform.rotation) as GameObject;
+        //bulletTime = timer;
 
-        Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
-        bulletRig.AddForce(bulletRig.transform.forward * bulletVelocity);
+        //GameObject bulletObj = Instantiate(enemyBullet, spawnPoint.transform.position, spawnPoint.transform.rotation) as GameObject;
+
+        //Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
+        //bulletRig.AddForce(bulletRig.transform.forward * bulletVelocity);
         
     }
 
