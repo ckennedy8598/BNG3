@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Player_Cam : MonoBehaviour
 {
+    [Header("Sliders")]
+    public Slider SensSliderX;
+    public Slider SensSliderY;
+    public TMP_Text SensTextX;
+    public TMP_Text SensTextY;
+
     public float SensY;
     public float SensX;
 
@@ -20,15 +27,29 @@ public class Player_Cam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Set and store sensitivity values
+        if (!PlayerPrefs.HasKey("sensitivityX") && !PlayerPrefs.HasKey("sensitivityY"))
+        {
+            PlayerPrefs.SetFloat("sensitivityX", 21); PlayerPrefs.SetFloat("sensitivityY", 21);
+            _loadSensitivity();
+        }
+        else
+        {
+            _loadSensitivity();
+        }
+
         setRot = true;
         CanMoveCamera = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        SensSliderX.value = 20; SensSliderY.value = 20;
     }
 
     // Update is called once per frame
     void Update()
     {
+        _updateSliders();
+
         if (CanMoveCamera)
         {
             CameraMovement();
@@ -69,9 +90,49 @@ public class Player_Cam : MonoBehaviour
         }
     }
 
+    private void _updateSliders()
+    {
+        // Set sensitivity equal to slider value
+        SensX = SensSliderX.value;
+        SensY = SensSliderY.value;
+
+        if (SensSliderX != null && SensSliderY != null)
+        {
+            if (SensSliderX.value > 0)
+            {
+                SensTextX.text = SensSliderX.value.ToString("#");
+            }
+            else
+            {
+                SensTextX.text = "0";
+            }
+
+            if (SensSliderY.value > 0)
+            {
+                SensTextY.text = SensSliderY.value.ToString("#");
+            }
+            else
+            {
+                SensTextY.text = "0";
+            }
+        }
+    }
+
     public bool SetCameraMovement()
     {
         CanMoveCamera = !CanMoveCamera;
         return CanMoveCamera;
+    }
+
+    private void _saveSensitivity()
+    {
+        PlayerPrefs.SetFloat("sensitivityX", SensSliderX.value);
+        PlayerPrefs.SetFloat("sensitivityY", SensSliderY.value);
+    }
+
+    private void _loadSensitivity()
+    {
+        SensSliderX.value = PlayerPrefs.GetFloat("sensitivityX");
+        SensSliderY.value = PlayerPrefs.GetFloat("sensitivityY");
     }
 }
