@@ -42,7 +42,7 @@ public class Player_Cam : MonoBehaviour
         CanMoveCamera = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        SensSliderX.value = 20; SensSliderY.value = 20;
+        //SensSliderX.value = 20; SensSliderY.value = 20;
     }
 
     // Update is called once per frame
@@ -93,6 +93,7 @@ public class Player_Cam : MonoBehaviour
     private void _updateSliders()
     {
         // Set sensitivity equal to slider value
+        _saveSensitivity();
         SensX = SensSliderX.value;
         SensY = SensSliderY.value;
 
