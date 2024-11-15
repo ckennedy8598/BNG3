@@ -36,7 +36,6 @@ public class Player_Cam : MonoBehaviour
 
         if (DeathCamera)
         {
-            Debug.Log("STATE OF DEATHCAMERA: " + DeathCamera);
             DeathCameraStart();
         }
     }

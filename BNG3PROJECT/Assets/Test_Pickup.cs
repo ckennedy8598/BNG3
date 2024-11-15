@@ -10,7 +10,7 @@ public class Test_Pickup : MonoBehaviour
     [Header("Player Script Reference")]
     public Player_Health PHScript;
 
-    private MeshRenderer PickupMesh;
+    private SpriteRenderer SpriteRender;
     private SphereCollider SphereCollider;
     public TMP_Text Counter_Text;
     public AudioSource SCREAM;
@@ -18,8 +18,13 @@ public class Test_Pickup : MonoBehaviour
     {
         PHScript = FindAnyObjectByType<Player_Health>();
         SCREAM = GetComponent<AudioSource>();
-        PickupMesh = GetComponent<MeshRenderer>();
+        SpriteRender = GetComponent<SpriteRenderer>();
         SphereCollider = GetComponent<SphereCollider>();
+    }
+
+    private void LateUpdate()
+    {
+        transform.forward = Camera.main.transform.forward;
     }
 
     void OnTriggerEnter(Collider other)
@@ -32,13 +37,13 @@ public class Test_Pickup : MonoBehaviour
             Destroy(gameObject, 5);
 
             // TESTING DAMAGE ONLY
-            PHScript.TakeDamage(5);
+            //PHScript.TakeDamage(5);
         }
     }
 
     public void SetDead()
     {
-        PickupMesh.enabled = false;
+        SpriteRender.enabled = false;
         SphereCollider.enabled = false;
     }
 }

@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PM_Script: {fileID: 0}
-  PlayerHealth: 0
+  PlayerHealth: 20
   HealthReadout: {fileID: 0}
 --- !u!114 &4240777985963439651
 MonoBehaviour:
@@ -212,11 +212,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5a4773134c3dd49a07f48fb2894786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Anim: {fileID: 0}
   OrientObj: {fileID: 388427661608022794}
+  MeleeHitbox: {fileID: 0}
+  ManaCounter: {fileID: 0}
   Fireball: {fileID: 7915509550358804350, guid: c1154976630438f499991041be5e9222, type: 3}
   AllowedToShoot: 0
+  FireballCost: 2
   ShootForce: 35
-  TimeBetweenShots: 0.2
+  TimeBetweenShots: 0.4
   Spread: 0
   Camera: {fileID: 0}
   createPoint: {fileID: 0}

@@ -1,25 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
+using UnityEngine.InputSystem;
 
 namespace Platformer
 {
     public class Player_Attacking : MonoBehaviour
     {
+        [Header("Animation Variables")]
+        public Animator Anim;
+
         [Header("Player Variables")]
         private Rigidbody _rb;
         private Player_Movement _pm;
         public Transform OrientObj;
 
+        [Header("Melee Variables")]
+        private bool _meleeAllowed;
+        public BoxCollider MeleeHitbox;
+
         [Header("Ranged Variables")]
+        private string _mana;
         private bool _shooting;
         private bool _allowInvoke;
+        private float PlayerMana;
+        public TMP_Text ManaCounter;
         public GameObject Fireball;
         public bool AllowedToShoot;
+        public float FireballCost;
         public float ShootForce;
         public float TimeBetweenShots;
         public float Spread;
+
+        [Header("Mana Bar")]
+        public Slider ManaBar;
 
         [Header("Camera Variables")]
         public Camera Camera;
@@ -28,6 +45,7 @@ namespace Platformer
         public AttackState State;
         public enum AttackState
         {
+            Neutral,
             Light_Attack,
             Light_Attack2,
             Heavy_Attack,
@@ -38,8 +56,9 @@ namespace Platformer
         {
             _rb = GetComponent<Rigidbody>();
             _pm = GetComponent<Player_Movement>();
-            AllowedToShoot = true;
+            AllowedToShoot = true; _meleeAllowed = true;
             _allowInvoke = true;
+            PlayerMana = 20;
         }
 
         // Update is called once per frame
@@ -48,12 +67,20 @@ namespace Platformer
             _stateHandler();
             Ray debugRay = Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             Debug.DrawRay(debugRay.origin, debugRay.direction * 80, Color.green);
+
+            _manaRegen();
+
+            // Display Mana Count in whole numbers (#)
+            _mana = PlayerMana.ToString("#");
+            ManaCounter.text = "Mana: " + _mana;
         }
 
 
         private void _shoot()
         {
             AllowedToShoot = false;
+            State = AttackState.Ranged;
+            PlayerMana -= FireballCost;
 
             // Find point from raycast
             Ray ray = Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
@@ -97,10 +124,50 @@ namespace Platformer
                 _allowInvoke = false;
             }
         }
+
+        private void _lightAttack()
+        {
+            State = AttackState.Light_Attack;
+            _meleeAllowed = false;
+            Anim.SetTrigger("Light_Attack_Trigger");
+
+            if (_allowInvoke)
+            {
+                Invoke("_resetMelee", 1);
+                _allowInvoke = false;
+            }
+        }
+
+        // Cooldown between shots
         private void _resetShot()
         {
+            State = AttackState.Neutral;
+            AllowedToShoot = true;
+            _meleeAllowed = true;
+            _allowInvoke = true;
+        }
+
+        // Time Between Melee Attacks
+        private void _resetMelee()
+        {
+            State = AttackState.Neutral;
+            _meleeAllowed = true;
             AllowedToShoot = true;
             _allowInvoke = true;
+        }
+
+        private void _manaRegen()
+        {
+            ManaBar.value = PlayerMana;
+
+            if (PlayerMana < 20)
+            {
+                PlayerMana += Time.deltaTime;
+            }
+            else if (PlayerMana > 20)
+            {
+                PlayerMana = 20;
+            }
         }
 
         private void _stateHandler()
@@ -110,11 +177,33 @@ namespace Platformer
                 return;
             }
 
+            if (State  == AttackState.Neutral)
+            {
+
+            }
+
+            if (State == AttackState.Ranged && State != AttackState.Light_Attack)
+            {
+                Anim.SetBool("Firing_State", true);
+            }
+            else
+            {
+                Anim.SetBool("Firing_State", false);
+            }
+
+            if (_meleeAllowed && Input.GetMouseButtonDown(0))
+            {
+                AllowedToShoot = false;
+                _lightAttack();
+            }
+
             if (AllowedToShoot && Input.GetMouseButton(1))
             {
-                //do stuff
-                State = AttackState.Ranged;
-                _shoot();
+                if (PlayerMana > FireballCost)
+                {
+                    _meleeAllowed = false;
+                    _shoot();
+                }
             }
         }
     }
