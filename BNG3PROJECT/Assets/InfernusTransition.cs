@@ -11,7 +11,7 @@ namespace Platformer
         {
             if (other.gameObject.name == "PlayerBody")
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(1);
             }
         }
 
