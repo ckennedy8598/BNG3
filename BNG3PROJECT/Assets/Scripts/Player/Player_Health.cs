@@ -16,6 +16,7 @@ namespace Platformer
         public Slider HealthSlider;
 
         private bool _canBeDamaged;
+        private float _maxHealth = 20f;
         public float PlayerHealth = 20f;
         public TMP_Text HealthReadout;
         // Start is called before the first frame update
@@ -39,6 +40,17 @@ namespace Platformer
             _setDead();
         }
 
+        public void IncreaseHealth(float amount)
+        {
+            if (PlayerHealth > 0)
+            {
+                PlayerHealth += amount;
+                if (PlayerHealth >= _maxHealth)
+                {
+                    PlayerHealth = _maxHealth;
+                }
+            }
+        }
 
         public void TakeDamage(float damage)
         {

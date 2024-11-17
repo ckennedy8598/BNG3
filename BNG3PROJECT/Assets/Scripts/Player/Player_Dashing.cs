@@ -20,6 +20,7 @@ namespace Platformer
         public float DashDuration;
 
         [Header("Cooldown")]
+        public Animator anim;
         public float _dashCDTimer;
         public float DashCD;
 
@@ -58,7 +59,7 @@ namespace Platformer
                 _dashCDTimer = DashCD;
             }
             _pm.Dashing = true;
-            //Debug.Log("_pm.Dashing = " + _pm.Dashing);
+            anim.SetTrigger("Dashed");
             Vector3 appliedForce = OrientObject.forward * DashForce + OrientObject.up * DashUpwardForce;
             delayedForceToApply = appliedForce;
             

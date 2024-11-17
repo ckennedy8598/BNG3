@@ -21143,6 +21143,11 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!95 &537250327 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4755843690344039342, guid: ad4dbe6f1e1c4a444be4b1ad71d79f0f, type: 3}
+  m_PrefabInstance: {fileID: 4596077549718150699}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &540458845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84109,6 +84114,10 @@ PrefabInstance:
       propertyPath: createPoint
       value: 
       objectReference: {fileID: 8834045490978037503}
+    - target: {fileID: 6147061432627669349, guid: 2622608942a383b4b8f84e27c902954a, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 537250327}
     - target: {fileID: 7185679126083412256, guid: 2622608942a383b4b8f84e27c902954a, type: 3}
       propertyPath: HealthSlider
       value: 

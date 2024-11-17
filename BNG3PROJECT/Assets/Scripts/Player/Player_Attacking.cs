@@ -35,6 +35,15 @@ namespace Platformer
         public float TimeBetweenShots;
         public float Spread;
 
+        [Header("Soul Overflow Elements")]
+        [SerializeField]
+        private float _soulOverflowDuration;
+        [SerializeField]
+        private float _soulOverflowCooldown;
+        [SerializeField]
+        private bool _inOverflow;
+        public Animator Soul_Overflow_Animator;
+
         [Header("Mana Bar")]
         public Slider ManaBar;
 
@@ -49,7 +58,7 @@ namespace Platformer
             Light_Attack,
             Light_Attack2,
             Heavy_Attack,
-            Ranged
+            Ranged,
         }
         // Start is called before the first frame update
         void Start()
@@ -67,6 +76,8 @@ namespace Platformer
             _stateHandler();
             Ray debugRay = Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             Debug.DrawRay(debugRay.origin, debugRay.direction * 80, Color.green);
+
+            _soulOverflow();
 
             _manaRegen();
 
@@ -122,6 +133,44 @@ namespace Platformer
             {
                 Invoke("_resetShot", TimeBetweenShots);
                 _allowInvoke = false;
+            }
+        }
+
+        private void _soulOverflow()
+        {
+            if (!_inOverflow)
+            {
+                FireballCost = 2f;
+                TimeBetweenShots = .4f;
+            }
+
+            if (_soulOverflowDuration > 0)
+            {
+                _soulOverflowDuration -= Time.deltaTime;
+            }
+            else
+            {
+                _inOverflow = false;
+            }
+
+            if (_soulOverflowCooldown > 0)
+            {
+                _soulOverflowCooldown -= Time.deltaTime;
+                
+                return;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q) && _soulOverflowCooldown <= 0)
+            {
+                Soul_Overflow_Animator.SetTrigger("Soul_Overflow");
+                _soulOverflowCooldown = 10f; _soulOverflowDuration = 2f;
+                if (_soulOverflowDuration > 0)
+                {
+                    _inOverflow = true;
+                    FireballCost = 0f;
+                    PlayerMana = 20;
+                    TimeBetweenShots = .2f;
+                }
             }
         }
 
