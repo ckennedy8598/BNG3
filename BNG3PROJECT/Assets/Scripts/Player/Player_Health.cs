@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using System;
 
 namespace Platformer
 {
@@ -10,13 +12,17 @@ namespace Platformer
         [Header("Pause_Menu.cs Reference")]
         public Pause_Menu PM_Script;
 
+        [Header("Health Bar")]
+        public Slider HealthSlider;
+
+        private bool _canBeDamaged;
         public float PlayerHealth = 20f;
         public TMP_Text HealthReadout;
         // Start is called before the first frame update
         void Start()
         {
             PM_Script = FindAnyObjectByType<Pause_Menu>();
-            PlayerHealth = 20f;
+            _canBeDamaged = true;
         }
 
         // Update is called once per frame
@@ -24,18 +30,38 @@ namespace Platformer
         {
             // Update UI Element
             HealthReadout.text = "Health: " +  PlayerHealth.ToString();
+            HealthSlider.value = PlayerHealth;
             _checkDead();
         }
 
+        private void LateUpdate()
+        {
+            _setDead();
+        }
+
+
         public void TakeDamage(float damage)
         {
-            if(PlayerHealth <= 0)
+            if (_canBeDamaged)
             {
-                return;
+                if (PlayerHealth <= 0)
+                {
+                    _canBeDamaged = false;
+                    return;
+                }
+                else
+                {
+                    PlayerHealth -= damage;
+                }
             }
-            else
+            
+        }
+
+        private void _setDead()
+        {
+            if (PM_Script.PlayerDead)
             {
-                PlayerHealth -= damage;
+                gameObject.SetActive(false);
             }
         }
 
@@ -43,9 +69,9 @@ namespace Platformer
         {
             if (PlayerHealth <= 0)
             {
+                HealthSlider.enabled = false;
                 PM_Script.PlayerDead = true;
-                Debug.Log("This is PM_Script.PlayeDead Status: " + PM_Script.PlayerDead);
-                gameObject.SetActive(false);
+                PlayerHealth = 0;
             }
         }
     }

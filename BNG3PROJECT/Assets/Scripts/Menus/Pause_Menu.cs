@@ -9,10 +9,16 @@ public class Pause_Menu : MonoBehaviour
     [Header("Player_Cam.cs Reference")]
     public Player_Cam PCam_Script;
 
+    [Header("Player Weapon")]
+    public GameObject PWeapon;
+
     [Header("Pause Menu Items")]
     public GameObject P_MM;
+    public GameObject P_Options;
+    public GameObject P_Back;
     public GameObject P_Quit;
     public GameObject Crosshair;
+    public GameObject SliderHolder;
 
     [Header("Death Menu Items")]
     private bool _keyPressed;
@@ -60,6 +66,7 @@ public class Pause_Menu : MonoBehaviour
     {
         if (PlayerDead)
         {
+            PWeapon.SetActive(false); Crosshair.SetActive(false);
             Death_Text.SetActive(true);
             if (Input.anyKey && !_keyPressed)
             {
@@ -94,21 +101,28 @@ public class Pause_Menu : MonoBehaviour
 
     private void _deathUI_Active()
     {
+        Crosshair.SetActive(false);
         P_MM.SetActive(true); P_Quit.SetActive(true);
     }
     
     private void _pauseUI_Active()
     {
         Crosshair.SetActive(false);
-        P_MM.SetActive(true); P_Quit.SetActive(true);
+        P_MM.SetActive(true); P_Quit.SetActive(true); P_Options.SetActive(true);
     }
 
     private void _pauseUI_Deactive()
     {
-        P_MM.SetActive(false); P_Quit.SetActive(false);
+        P_MM.SetActive(false); P_Quit.SetActive(false); P_Options.SetActive(false);
+        P_Back.SetActive(false); SliderHolder.SetActive(false);
         Crosshair.SetActive(true);
     }
 
+
+    public void OnOptionsButton()
+    {
+
+    }
     public void OnMainMenuButton()
     {
         SceneManager.LoadScene(0);
