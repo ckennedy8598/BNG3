@@ -56,6 +56,7 @@ public class ChrisEnemyAITest : MonoBehaviour
     private void Update()
     {
         // Checking attack and sight range
+        transform.LookAt(player);
 
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackingRange, whatIsPlayer);

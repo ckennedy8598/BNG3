@@ -28,6 +28,7 @@ public class EnemyBulletTest : MonoBehaviour
     }
     void Update()
     {
+        
         timer += Time.deltaTime;
         if(timer > despawnTimer)
         {
