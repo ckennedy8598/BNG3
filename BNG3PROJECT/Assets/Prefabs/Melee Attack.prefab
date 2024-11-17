@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   despawnTimer: 0.5
-  force: 2
+  force: 3
   meleeDamage: 10
   playerHealth: {fileID: 0}
   enemyMelee: {fileID: 0}
