@@ -7,20 +7,23 @@ namespace Platformer
 {
     public class ParentPlatform : MonoBehaviour
     {
+        public bool onPlatform;
         private void OnCollisionEnter(Collision collision)
         {
-            collision.transform.SetParent(transform);
+            if (collision.gameObject.name == "Player")
+            {
+                onPlatform = true;
+                collision.transform.SetParent(transform);
+            }
+            
         }
         private void OnCollisionExit(Collision collision)
         {
-            collision.transform.SetParent(null);
+            if (collision.gameObject.name == "Player")
+            {
+                onPlatform = false;
+                collision.transform.SetParent(null);
+            }
         }
-        // for above, if the object had a parent before, it could be problematic supposedly
-        // is that why it won't go back down maybe
-
-
-
-
-       
     }
 }

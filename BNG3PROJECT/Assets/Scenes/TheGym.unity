@@ -2215,6 +2215,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!95 &39136512 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7603642494911013754, guid: ad4dbe6f1e1c4a444be4b1ad71d79f0f, type: 3}
+  m_PrefabInstance: {fileID: 4596077549718150699}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &41021655
 Mesh:
   m_ObjectHideFlags: 0
@@ -11930,7 +11935,7 @@ Transform:
   m_GameObject: {fileID: 325067937}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9, y: 13.736, z: 10.066}
+  m_LocalPosition: {x: 11.03, y: 10.33, z: 10.066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34232,6 +34237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8dd1bc90efa8cd42b66b7e8d5631541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPlatform: 0
 --- !u!65 &899504761
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -83464,6 +83470,10 @@ PrefabInstance:
       propertyPath: createPoint
       value: 
       objectReference: {fileID: 8834045490978037503}
+    - target: {fileID: 5693364405076419501, guid: 2622608942a383b4b8f84e27c902954a, type: 3}
+      propertyPath: Soul_Overflow_Animator
+      value: 
+      objectReference: {fileID: 39136512}
     - target: {fileID: 6147061432627669349, guid: 2622608942a383b4b8f84e27c902954a, type: 3}
       propertyPath: anim
       value: 

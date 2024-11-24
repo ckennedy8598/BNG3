@@ -19,7 +19,12 @@ namespace Platformer
         {
             platform.canMove = true;
         }
-        
+
+        private void OnTriggerExit(Collider other)
+        {
+            platform.canMove = true;
+        }
+
 
 
     }
