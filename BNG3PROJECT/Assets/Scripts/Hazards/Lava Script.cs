@@ -11,10 +11,13 @@ namespace Platformer
         public float lavaDamage = 20f;
         public Player_Health playerHealth;
 
+        public GameObject player;
 
         void Start()
         {
-        
+            player = GameObject.FindGameObjectWithTag("Player");
+
+            playerHealth = FindAnyObjectByType<Player_Health>();
         }
 
         // Update is called once per frame
