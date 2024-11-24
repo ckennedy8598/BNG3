@@ -142,4 +142,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PHScript: {fileID: 0}
-  HealingAmount: 5
+  HealingAmount: 10
