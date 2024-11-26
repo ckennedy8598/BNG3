@@ -18,6 +18,7 @@ namespace Platformer
         //public AudioSource SFX;
         void Start()
         {
+            //ManaAnimator = FindObject
             PAttack_Script = FindAnyObjectByType<Player_Attacking>();
             SpriteRender = GetComponent<SpriteRenderer>();
             SphereCollider = GetComponent<SphereCollider>();
