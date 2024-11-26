@@ -83515,6 +83515,10 @@ PrefabInstance:
       propertyPath: m_TargetGraphic
       value: 
       objectReference: {fileID: 1534212350}
+    - target: {fileID: 4537794158394547982, guid: ad4dbe6f1e1c4a444be4b1ad71d79f0f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4980945723522244662, guid: ad4dbe6f1e1c4a444be4b1ad71d79f0f, type: 3}
       propertyPath: m_TargetGraphic
       value: 
