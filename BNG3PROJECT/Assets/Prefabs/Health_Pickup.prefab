@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5993294157305072430}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.35, y: 1.606, z: -1.2186617}
+  m_LocalPosition: {x: -11.309973, y: 11.56, z: 1.8078706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,12 +97,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 58d024e84b0185443b22a8c7fd5b280a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1c763239fbf26d4f8b5ee56cacc83a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -142,4 +142,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PHScript: {fileID: 0}
+  HealthAnimator: {fileID: 0}
   HealingAmount: 10

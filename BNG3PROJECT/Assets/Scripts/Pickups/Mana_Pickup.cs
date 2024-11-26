@@ -9,6 +9,8 @@ namespace Platformer
         [Header("Player Script Reference")]
         public Player_Attacking PAttack_Script;
 
+        public Animator ManaAnimator;
+
         private SpriteRenderer SpriteRender;
         private SphereCollider SphereCollider;
         public float ManaAmount;
@@ -30,6 +32,7 @@ namespace Platformer
         {
             if (other.gameObject.tag == "Player")
             {
+                ManaAnimator.SetTrigger("PickedUp");
                 PAttack_Script.IncreaseMana(ManaAmount);
                 SetDead();
                 Destroy(gameObject, 5);
