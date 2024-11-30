@@ -50,6 +50,7 @@ public class ChrisEnemyAITest : MonoBehaviour
 
     private void Awake()
     {
+        spawnPoint = GetComponent<Transform>();
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
 
@@ -174,7 +175,7 @@ public class ChrisEnemyAITest : MonoBehaviour
             return;
         }
 
-        Instantiate(enemyBullet, transform.position, Quaternion.identity);
+        Instantiate(enemyBullet, transform.Find("SpawnPoint").position, Quaternion.identity);
         //bulletRig.AddForce(transform.forward * bulletVelocity, ForceMode.Impulse);
 
         //bulletTime = timer;

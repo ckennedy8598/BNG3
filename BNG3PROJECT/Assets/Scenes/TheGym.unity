@@ -34232,6 +34232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8dd1bc90efa8cd42b66b7e8d5631541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPlatform: 0
 --- !u!65 &899504761
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -83295,6 +83296,10 @@ PrefabInstance:
     - target: {fileID: 649043069165151860, guid: 455a5803313079a4d8f8eb0b95a10934, type: 3}
       propertyPath: m_Name
       value: Test Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783909673318847231, guid: 455a5803313079a4d8f8eb0b95a10934, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.945
       objectReference: {fileID: 0}
     - target: {fileID: 7562001946189556837, guid: 455a5803313079a4d8f8eb0b95a10934, type: 3}
       propertyPath: player

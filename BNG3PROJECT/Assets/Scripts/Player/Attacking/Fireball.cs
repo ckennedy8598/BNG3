@@ -73,15 +73,15 @@ namespace Platformer
             //This is an edit I made to the fireball to test collision boxes
             // Soon I will be updating this with actual damage values
             // - Chris
-            //else if (other.gameObject.tag == "Enemy")
-            //{
-                
-            //    AudioSource.PlayClipAtPoint(_audioClip, gameObject.transform.position);
-            //    _setDead();
-            //    Debug.Log("Collided with " + other.gameObject.name);
-            //    Destroy(other.gameObject);
+            else if (other.gameObject.tag == "Enemy")
+            {
 
-            //}
+                Debug.Log("Collided with " + other.gameObject.name);
+                Debug.Log("Collided with " + gameObject.name);
+                Destroy(other.gameObject);
+                _setDead();
+
+            }
         }
 
         public void _setDead()
