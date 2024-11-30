@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro; // Using TMPro for testing purposes only. Remove before release.
+using Platformer;
 
 public class Player_Movement : MonoBehaviour
 {
     [Header("Lol doesn't matter")]
     public int PlayerScore;
+    public ParentPlatform PP_Script;
 
     [Header("Audio")]
     public AudioSource JumpSource;
@@ -63,9 +65,13 @@ public class Player_Movement : MonoBehaviour
         walking,
         air,
         dashing,
+        onPlatform
     }
     void Start()
     {
+        // Get ParentPlatform script reference
+        PP_Script = FindAnyObjectByType<ParentPlatform>();
+
         //GroundCheckText.text = "Start! <3";
         PlayerScore = 0;
         _rb = GetComponent<Rigidbody>();
@@ -245,6 +251,16 @@ public class Player_Movement : MonoBehaviour
             _rb.drag = 0f;
             GroundCheckText.text = "Dashing"; // Remove before release
             //Debug.Log("STATE MACHINE WORKING: DASHING");
+        }
+
+        // On Moving Platform State
+        if (PP_Script.onPlatform)
+        {
+            state = MovementState.onPlatform;
+            _myInput();
+            _desiredMS = MoveSpeed;
+            _rb.drag = GroundDrag;
+            GroundCheckText.text = "On Platform"; // Remvove before release
         }
 
         // Ground or Air State

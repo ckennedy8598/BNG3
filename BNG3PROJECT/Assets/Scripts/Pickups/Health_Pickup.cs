@@ -10,6 +10,8 @@ namespace Platformer
         [Header("Player Script Reference")]
         public Player_Health PHScript;
 
+        public Animator HealthAnimator;
+
         private SpriteRenderer SpriteRender;
         private SphereCollider SphereCollider;
         public float HealingAmount;
@@ -33,6 +35,7 @@ namespace Platformer
             if (other.gameObject.tag == "Player")
             {
                 //SFX.Play();
+                HealthAnimator.SetTrigger("PickedUp");
                 PHScript.IncreaseHealth(HealingAmount);
                 SetDead();
                 Destroy(gameObject, 5);

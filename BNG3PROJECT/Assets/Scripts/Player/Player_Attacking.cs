@@ -219,6 +219,11 @@ namespace Platformer
             }
         }
 
+        public void IncreaseMana(float mana)
+        {
+            PlayerMana += mana;
+        }
+
         private void _stateHandler()
         {
             if (_pm.state == Player_Movement.MovementState.paused)
