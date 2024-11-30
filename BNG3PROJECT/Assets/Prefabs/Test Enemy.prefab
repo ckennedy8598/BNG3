@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5379241433133510484}
   - component: {fileID: 7562001946189556837}
   - component: {fileID: 907254949368070040}
+  - component: {fileID: 6257037332356821191}
   m_Layer: 0
   m_Name: Test Enemy
   m_TagString: Enemy
@@ -57,8 +58,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.3409576, y: 3.9067945, z: 1}
+  m_Center: {x: -0.020233154, y: 1.4533973, z: 0}
 --- !u!54 &5379241433133510484
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -67,7 +68,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649043069165151860}
   serializedVersion: 4
-  m_Mass: 30
+  m_Mass: 40
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -139,6 +140,20 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
+--- !u!114 &6257037332356821191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649043069165151860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b835036eb2a3349a7ccfc33e5f5201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 20
 --- !u!1 &3809360382464114735
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,10 +163,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8621803140974661013}
-  - component: {fileID: 8038646052248523379}
   - component: {fileID: 2849971565624339602}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,27 +186,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8913056581336362824}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8038646052248523379
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3809360382464114735}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &2849971565624339602
 SpriteRenderer:
   m_ObjectHideFlags: 0

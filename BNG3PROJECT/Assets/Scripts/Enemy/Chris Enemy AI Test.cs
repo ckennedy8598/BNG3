@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.GraphicsBuffer;
 
 public class ChrisEnemyAITest : MonoBehaviour
 {
@@ -55,8 +56,13 @@ public class ChrisEnemyAITest : MonoBehaviour
     }
     private void Update()
     {
+
+        // Hopefully a better "Look At Player" function
+
+        Vector3 targetPostition = new Vector3(player.position.x, this.transform.position.y, player.position.z);
+        this.transform.LookAt(targetPostition);
         // Checking attack and sight range
-        transform.LookAt(player);
+
 
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackingRange, whatIsPlayer);
@@ -66,12 +72,12 @@ public class ChrisEnemyAITest : MonoBehaviour
             //Patroling();
         }
 
-        if (playerInSightRange && !playerInAttackRange)
+        else if (playerInSightRange && !playerInAttackRange)
         {
             ChasePlayer();
         }
 
-        if (playerInSightRange && playerInAttackRange)
+        else if (playerInSightRange && playerInAttackRange)
         {
             AttackPlayer();
         }
@@ -113,6 +119,7 @@ public class ChrisEnemyAITest : MonoBehaviour
 
     private void ChasePlayer()
     {
+        gameObject.GetComponent<NavMeshAgent>().isStopped = false;
         agent.SetDestination(player.position);
     }
 
@@ -121,7 +128,7 @@ public class ChrisEnemyAITest : MonoBehaviour
         //Stopping enemy movement during attacking
         gameObject.GetComponent<NavMeshAgent>().isStopped = true;
 
-        transform.LookAt(player);
+        
 
         
 

@@ -54,8 +54,10 @@ namespace Platformer
         }
         private void Update()
         {
+            Vector3 targetPostition = new Vector3(player.position.x, this.transform.position.y, player.position.z);
+            this.transform.LookAt(targetPostition);
             // Checking attack and sight range
-            transform.LookAt(player);
+
             playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
             playerInAttackRange = Physics.CheckSphere(transform.position, attackingRange, whatIsPlayer);
 
@@ -109,6 +111,7 @@ namespace Platformer
             }
         }     private void ChasePlayer()
         {
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             agent.SetDestination(player.position);
         }
 
