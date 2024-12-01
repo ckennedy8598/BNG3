@@ -55,6 +55,7 @@ public class ChrisEnemyAITest : MonoBehaviour
         spawnPoint = GetComponent<Transform>();
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        //animator = this.GetComponent<Animator>();
 
     }
     private void Update()
@@ -122,8 +123,11 @@ public class ChrisEnemyAITest : MonoBehaviour
 
     private void ChasePlayer()
     {
+        //animator.ResetTrigger("isStaying");
+        animator.SetTrigger("isWalking");
         gameObject.GetComponent<NavMeshAgent>().isStopped = false;
         agent.SetDestination(player.position);
+        
     }
 
     private void AttackPlayer()

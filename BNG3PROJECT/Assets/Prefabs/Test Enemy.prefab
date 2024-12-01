@@ -115,7 +115,7 @@ MonoBehaviour:
   attackingRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
-  animator: {fileID: 0}
+  animator: {fileID: 8322640703122403252}
   enemyBullet: {fileID: 3177013235917468854, guid: a66e0e83580fa1a418957b7488be31db, type: 3}
   spawnPoint: {fileID: 6783909673318847231}
   timer: 10
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 2849971565624339602}
   - component: {fileID: 8322640703122403252}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: RangedSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
