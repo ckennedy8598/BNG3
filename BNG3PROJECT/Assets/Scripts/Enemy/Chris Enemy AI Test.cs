@@ -36,6 +36,8 @@ public class ChrisEnemyAITest : MonoBehaviour
     public float sightRange, attackingRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    public Animator animator;
+
     
 
     public GameObject enemyBullet;

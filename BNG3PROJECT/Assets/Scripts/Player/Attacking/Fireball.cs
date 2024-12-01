@@ -7,7 +7,7 @@ namespace Platformer
     public class Fireball : MonoBehaviour
     {
 
-        // Hi Bob. I'm updating this script for my enemy health script
+        // Hi Bob. I'm updating this script for my enemy health script(Haven't finished as of 12/01/2024
         // - Chris
         [SerializeField] private FireballType fireballType;
         public enum FireballType {LookatCamera, CameraForward};
