@@ -73,16 +73,19 @@ public class ChrisEnemyAITest : MonoBehaviour
 
         if (!playerInSightRange && !playerInAttackRange)
         {
-            //Patroling();
+            animator.SetBool("isIdle", true);
         }
 
         else if (playerInSightRange && !playerInAttackRange)
         {
+            
             ChasePlayer();
         }
 
         else if (playerInSightRange && playerInAttackRange)
         {
+            
+            
             AttackPlayer();
         }
     }
@@ -123,21 +126,26 @@ public class ChrisEnemyAITest : MonoBehaviour
 
     private void ChasePlayer()
     {
-        //animator.ResetTrigger("isStaying");
-        animator.SetTrigger("isWalking");
+        
+        
         gameObject.GetComponent<NavMeshAgent>().isStopped = false;
         agent.SetDestination(player.position);
-        
+        animator.SetBool("isIdle", false);
+        animator.SetBool("isWalking", true);
+        animator.SetBool("isShooting", false);
+
     }
 
     private void AttackPlayer()
     {
         //Stopping enemy movement during attacking
         gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+        animator.SetBool("isShooting", true);
+        animator.SetBool("isWalking", false);
+        animator.SetBool("isIdle", false);
 
-        
 
-        
+
 
         if (!alreadyAttacked)
         {

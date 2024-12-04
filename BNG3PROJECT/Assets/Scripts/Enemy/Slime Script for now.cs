@@ -32,7 +32,7 @@ namespace Platformer
         public bool playerInSightRange, playerInAttackRange;
 
 
-
+        public Animator animator;
         //public GameObject enemyBullet;
         //public Transform spawnPoint;
 
@@ -61,18 +61,18 @@ namespace Platformer
 
             if (!playerInSightRange && !playerInAttackRange)
             {
-                //Patroling();
+                animator.SetBool("isIdle", false);
             }
 
-            if (playerInSightRange)
+            else if (playerInSightRange)
             {
                 ChasePlayer();
             }
 
-            //if (playerInSightRange && playerInAttackRange)
-            //{
-            //    AttackPlayer();
-            //}
+            else if (playerInSightRange && playerInAttackRange)
+            {
+                AttackPlayer();
+            }
         }
 
         private void SearchWalkPoint()
@@ -89,50 +89,40 @@ namespace Platformer
             }
         }
 
-        private void Patroling()
-        {
-            if (!walkPointSet) SearchWalkPoint();
+        //private void Patroling()
+        //{
+        //    if (!walkPointSet) SearchWalkPoint();
 
-            if (walkPointSet)
-            {
-                agent.SetDestination(walkPoint);
-            }
+        //    if (walkPointSet)
+        //    {
+        //        agent.SetDestination(walkPoint);
+        //    }
 
-            Vector3 distancetowalkpoint = transform.position - walkPoint;
+        //    Vector3 distancetowalkpoint = transform.position - walkPoint;
 
-            //Walkpoint reached
+        //    //Walkpoint reached
 
-            if (distancetowalkpoint.magnitude < 1f)
-            {
-                walkPointSet = false;
-                //Debug.Log("Walkpont reached successfully");
-            }
-        }
+        //    if (distancetowalkpoint.magnitude < 1f)
+        //    {
+        //        walkPointSet = false;
+        //        //Debug.Log("Walkpont reached successfully");
+        //    }
+        //}
 
         private void ChasePlayer()
         {
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isCharging", true);
             agent.SetDestination(player.position);
         }
 
-        //private void AttackPlayer()
-        //{
-        //    //Stopping enemy movement during attacking
-        //    gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+        private void AttackPlayer()
+        {
+            
+            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
 
-        //    transform.LookAt(player);
-
-
-
-        //    if (!alreadyAttacked)
-        //    {
-
-        //        ShootAtPlayer();
-        //        Debug.Log("Attacking Player");
-
-        //        alreadyAttacked = true;
-        //        Invoke(nameof(ResetAttack), timeBetweenAttacks);
-        //    }
-        //}
+            
+        }
 
         private void ResetAttack()
         {
