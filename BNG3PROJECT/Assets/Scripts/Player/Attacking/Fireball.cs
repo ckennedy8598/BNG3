@@ -64,12 +64,6 @@ namespace Platformer
                 _setDead();
                 Destroy(gameObject, 2);
             }
-            else if(other.gameObject.name != "PlayerBody")
-            {
-                AudioSource.PlayClipAtPoint(_audioClip, gameObject.transform.position);
-                _setDead();
-                Destroy(gameObject, 2);
-            }
             //This is an edit I made to the fireball to test collision boxes
             // Soon I will be updating this with actual damage values
             // - Chris
@@ -81,6 +75,12 @@ namespace Platformer
                 Destroy(other.gameObject);
                 _setDead();
 
+            }
+            else if(other.gameObject.name != "PlayerBody")
+            {
+                AudioSource.PlayClipAtPoint(_audioClip, gameObject.transform.position);
+                _setDead();
+                Destroy(gameObject, 2);
             }
         }
 
