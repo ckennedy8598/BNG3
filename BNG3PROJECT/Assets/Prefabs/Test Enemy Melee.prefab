@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 4569139313708707571}
   - component: {fileID: 4936590913178209819}
   - component: {fileID: 4379309076040079803}
+  - component: {fileID: 3213906985444991792}
   m_Layer: 0
   m_Name: Test Enemy Melee
   m_TagString: Enemy
@@ -211,7 +212,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -254,6 +255,20 @@ MonoBehaviour:
   enemyMelee: {fileID: 1211534957273779233, guid: aef22bcb66a863a419b4eb11a4a42124, type: 3}
   spawnPoint: {fileID: 0}
   timer: 5
+--- !u!114 &3213906985444991792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8494002195757013940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b835036eb2a3349a7ccfc33e5f5201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 100
 --- !u!1001 &281244643397474457
 PrefabInstance:
   m_ObjectHideFlags: 0

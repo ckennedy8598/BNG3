@@ -84595,30 +84595,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 586255181597439594, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
-      propertyPath: m_Size.x
-      value: 2.1215172
-      objectReference: {fileID: 0}
-    - target: {fileID: 586255181597439594, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
-      propertyPath: m_Size.y
-      value: 3.498826
-      objectReference: {fileID: 0}
-    - target: {fileID: 586255181597439594, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
-      propertyPath: m_Size.z
-      value: 0.11118317
-      objectReference: {fileID: 0}
-    - target: {fileID: 586255181597439594, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
-      propertyPath: m_Center.x
-      value: -0.053567886
-      objectReference: {fileID: 0}
-    - target: {fileID: 586255181597439594, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
-      propertyPath: m_Center.y
-      value: 1.249413
-      objectReference: {fileID: 0}
-    - target: {fileID: 586255181597439594, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
-      propertyPath: m_Center.z
-      value: 0.44440842
-      objectReference: {fileID: 0}
     - target: {fileID: 4379309076040079803, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
       propertyPath: player
       value: 

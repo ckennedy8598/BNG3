@@ -7,7 +7,7 @@ namespace Platformer
     public class Fireball : MonoBehaviour
     {
 
-        // Hi Bob. I'm updating this script for my enemy health script(Haven't finished as of 12/01/2024
+        // Hi Bob. I'm updating this script for my enemy health script(Last updated 2/6/2025)
         // - Chris
         [SerializeField] private FireballType fireballType;
         public enum FireballType {LookatCamera, CameraForward};
@@ -72,7 +72,9 @@ namespace Platformer
 
                 Debug.Log("Collided with " + other.gameObject.name);
                 Debug.Log("Collided with " + gameObject.name);
-                Destroy(other.gameObject);
+
+                other.gameObject.GetComponent<EnemyHealth>().Hurt(25);
+                //Destroy(other.gameObject);
                 _setDead();
 
             }

@@ -8,7 +8,7 @@ namespace Platformer
     {
         // Start is called before the first frame update
         [SerializeField] float health;
-        [SerializeField] float maxHealth = 20f;
+        [SerializeField] float maxHealth = 100f;
 
         private void Die()
         {

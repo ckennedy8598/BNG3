@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5379241433133510484}
   - component: {fileID: 7562001946189556837}
   - component: {fileID: 907254949368070040}
-  - component: {fileID: 6257037332356821191}
+  - component: {fileID: 1195348299117043709}
   m_Layer: 0
   m_Name: Test Enemy
   m_TagString: Enemy
@@ -129,7 +129,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -141,7 +141,7 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
---- !u!114 &6257037332356821191
+--- !u!114 &1195348299117043709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 20
+  maxHealth: 150
 --- !u!1 &3809360382464114735
 GameObject:
   m_ObjectHideFlags: 0

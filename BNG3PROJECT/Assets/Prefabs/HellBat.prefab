@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 6867339624350397292}
   - component: {fileID: 3828387146221191104}
   - component: {fileID: 6618046611392371600}
+  - component: {fileID: 2584777632536841594}
   m_Layer: 0
   m_Name: HellBat
   m_TagString: Enemy
@@ -200,7 +201,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -241,3 +242,17 @@ MonoBehaviour:
   playerInSightRange: 0
   playerInAttackRange: 0
   timer: 5
+--- !u!114 &2584777632536841594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8199070898651077198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b835036eb2a3349a7ccfc33e5f5201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 50
