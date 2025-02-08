@@ -36,8 +36,8 @@ namespace Platformer
 
 
 
-        //public GameObject enemyBullet;
-        //public Transform spawnPoint;
+        public GameObject enemyMelee;
+        public Transform spawnPoint;
 
         [SerializeField]
         private float timer = 5;
@@ -71,10 +71,10 @@ namespace Platformer
                 ChasePlayer();
             }
 
-            //if (playerInSightRange && playerInAttackRange)
-            //{
-            //    AttackPlayer();
-            //}
+            if (playerInSightRange && playerInAttackRange)
+            {
+                AttackPlayer();
+            }
         }
 
         private void SearchWalkPoint()
@@ -115,25 +115,25 @@ namespace Platformer
             agent.SetDestination(player.position);
         }
 
-        //private void AttackPlayer()
-        //{
-        //    //Stopping enemy movement during attacking
-        //    gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+        private void AttackPlayer()
+        {
+           //Stopping enemy movement during attacking
+            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
 
-        //    transform.LookAt(player);
+            transform.LookAt(player);
 
 
 
-        //    if (!alreadyAttacked)
-        //    {
+            if (!alreadyAttacked)
+            {
 
-        //        ShootAtPlayer();
-        //        Debug.Log("Attacking Player");
+                ShootAtPlayer();
+                Debug.Log("Attacking Player");
 
-        //        alreadyAttacked = true;
-        //        Invoke(nameof(ResetAttack), timeBetweenAttacks);
-        //    }
-        //}
+                alreadyAttacked = true;
+                Invoke(nameof(ResetAttack), timeBetweenAttacks);
+           }
+        }
 
         private void ResetAttack()
         {
@@ -156,27 +156,28 @@ namespace Platformer
             Destroy(gameObject);
         }
 
-        //public float bulletVelocity = 10f;
-        //void ShootAtPlayer()
-        //{
-        //    bulletTime -= Time.deltaTime;
+        public float bulletVelocity = 10f;
+        void ShootAtPlayer()
+        {
+            bulletTime -= Time.deltaTime;
 
-        //    if (bulletTime > 0)
-        //    {
-        //        return;
-        //    }
+            if (bulletTime > 0)
+            {
+                return;
+            }
 
-        //    //Instantiate(enemyBullet, transform.position, Quaternion.identity);
-        //    //bulletRig.AddForce(transform.forward * bulletVelocity, ForceMode.Impulse);
+            Instantiate(enemyMelee, transform.position, Quaternion.identity);
 
-        //    //bulletTime = timer;
+            //bulletRig.AddForce(transform.forward * bulletVelocity, ForceMode.Impulse);
 
-        //    //GameObject bulletObj = Instantiate(enemyBullet, spawnPoint.transform.position, spawnPoint.transform.rotation) as GameObject;
+            //bulletTime = timer;
 
-        //    //Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
-        //    //bulletRig.AddForce(bulletRig.transform.forward * bulletVelocity);
+            //GameObject bulletObj = Instantiate(enemyBullet, spawnPoint.transform.position, spawnPoint.transform.rotation) as GameObject;
 
-        //}
+            //Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
+            //bulletRig.AddForce(bulletRig.transform.forward * bulletVelocity);
+
+        }
 
 
 
