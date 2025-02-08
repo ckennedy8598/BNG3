@@ -24,6 +24,11 @@ public class Player_Cam : MonoBehaviour
     public bool DeathCamera;
     public bool CanMoveCamera;
     public bool PauseScript;
+
+    [Header("Level Start Variable")]
+    public float _levelStartRotation = 0f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +48,9 @@ public class Player_Cam : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         //SensSliderX.value = 20; SensSliderY.value = 20;
+
+        // Rotate Camera + Player Orientation On Level Start
+        yRot = _levelStartRotation;
     }
 
     // Update is called once per frame
