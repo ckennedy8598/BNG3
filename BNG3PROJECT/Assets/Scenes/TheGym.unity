@@ -84288,6 +84288,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 537250327}
     - target: {fileID: 7185679126083412256, guid: 2622608942a383b4b8f84e27c902954a, type: 3}
+      propertyPath: isPoisoned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185679126083412256, guid: 2622608942a383b4b8f84e27c902954a, type: 3}
       propertyPath: HealthSlider
       value: 
       objectReference: {fileID: 3058192379421452379}

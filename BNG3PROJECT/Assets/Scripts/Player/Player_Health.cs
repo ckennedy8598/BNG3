@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 using System;
+using System.Runtime.CompilerServices;
 
 namespace Platformer
 {
@@ -19,6 +20,14 @@ namespace Platformer
         private float _maxHealth = 20f;
         public float PlayerHealth = 20f;
         public TMP_Text HealthReadout;
+
+
+        // These are variables for my poison damage method - Chris
+        private float poisonTimer = 4f;
+        public bool isPoisoned = false;
+        public bool poisonTick = true;
+        private float timeBetweenPoison = 4f;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -33,8 +42,39 @@ namespace Platformer
             HealthReadout.text = "Health: " +  PlayerHealth.ToString();
             HealthSlider.value = PlayerHealth;
             _checkDead();
+            if (isPoisoned == true)
+            {
+                PoisonDamage();
+                //ResetPoisonTick();
+            }
         }
 
+        //Poison damage. Gonna rework this in the future. I want this to do a certian amount of damage a second - Chris
+        private void ResetPoisonTick()
+        {
+            poisonTick = true;
+        }
+        private void PoisonDamage()
+        {
+            if (_canBeDamaged == true && poisonTick == true)
+            {
+
+                PlayerHealth -= 1f;
+
+                poisonTimer -= 1f;
+                Debug.Log("Poison Damage");
+                poisonTick = false;
+
+                Invoke(nameof(ResetPoisonTick), timeBetweenPoison);
+            }
+            
+
+            
+            if (poisonTimer <= 0 )
+            {
+                isPoisoned = false;
+            }
+        }
         private void LateUpdate()
         {
             _setDead();
