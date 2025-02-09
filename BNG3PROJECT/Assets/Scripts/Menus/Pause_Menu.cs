@@ -14,11 +14,15 @@ public class Pause_Menu : MonoBehaviour
 
     [Header("Pause Menu Items")]
     public GameObject P_MM;
+    public GameObject P_Retry;
     public GameObject P_Options;
     public GameObject P_Back;
     public GameObject P_Quit;
     public GameObject Crosshair;
     public GameObject SliderHolder;
+    public GameObject Options_Controls;
+    public GameObject Options_ControlsBack;
+    public GameObject Options_ControlsDisplay;
 
     [Header("Death Menu Items")]
     private bool _keyPressed;
@@ -108,20 +112,22 @@ public class Pause_Menu : MonoBehaviour
     private void _pauseUI_Active()
     {
         Crosshair.SetActive(false);
-        P_MM.SetActive(true); P_Quit.SetActive(true); P_Options.SetActive(true);
+        P_MM.SetActive(true); P_Quit.SetActive(true);
+        P_Options.SetActive(true); P_Retry.SetActive(true);
     }
 
     private void _pauseUI_Deactive()
     {
         P_MM.SetActive(false); P_Quit.SetActive(false); P_Options.SetActive(false);
-        P_Back.SetActive(false); SliderHolder.SetActive(false);
+        P_Back.SetActive(false); SliderHolder.SetActive(false); P_Retry.SetActive(false);
+        Options_ControlsBack.SetActive(false); Options_Controls.SetActive(false); Options_ControlsDisplay.SetActive(false);
         Crosshair.SetActive(true);
     }
 
-
-    public void OnOptionsButton()
+    // Reloads Active Scene
+    public void OnRetryPress()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void OnMainMenuButton()
     {
