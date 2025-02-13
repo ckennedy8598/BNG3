@@ -14,17 +14,17 @@ namespace Platformer
         public Animator Anim;
 
         [Header("Player Variables")]
-        private Rigidbody _rb;
         private Player_Movement _pm;
         public Transform OrientObj;
 
         [Header("Melee Variables")]
         private bool _meleeAllowed;
         public BoxCollider MeleeHitbox;
+        public TMP_Text BlockIndicator;
+        public bool _canBlock;
 
         [Header("Ranged Variables")]
         private string _mana;
-        private bool _shooting;
         private bool _allowInvoke;
         private float PlayerMana;
         public TMP_Text ManaCounter;
@@ -51,6 +51,10 @@ namespace Platformer
         public Camera Camera;
         public Transform createPoint;
 
+        //Player_Health Script Variable
+        public Player_Health Player_Health_Script;
+        public TMP_Text State_Shower;
+
         public AttackState State;
         public enum AttackState
         {
@@ -59,12 +63,13 @@ namespace Platformer
             Light_Attack2,
             Heavy_Attack,
             Ranged,
+            Blocking,
         }
         // Start is called before the first frame update
         void Start()
         {
-            _rb = GetComponent<Rigidbody>();
             _pm = GetComponent<Player_Movement>();
+            Player_Health_Script = GetComponent<Player_Health>();
             AllowedToShoot = true; _meleeAllowed = true;
             _allowInvoke = true;
             PlayerMana = 20;
@@ -77,8 +82,9 @@ namespace Platformer
             Ray debugRay = Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             Debug.DrawRay(debugRay.origin, debugRay.direction * 80, Color.green);
 
-            _soulOverflow();
+            _getInput();
 
+            _soulOverflow();
             _manaRegen();
 
             // Display Mana Count in whole numbers (#)
@@ -131,13 +137,14 @@ namespace Platformer
             // Invoke resetShot function for delay between each shot
             if (_allowInvoke)
             {
-                Invoke("_resetShot", TimeBetweenShots);
+                Invoke("_resetState", TimeBetweenShots);
                 _allowInvoke = false;
             }
         }
 
         private void _soulOverflow()
         {
+            // Neutral state reset
             if (!_inOverflow)
             {
                 FireballCost = 2f;
@@ -160,6 +167,7 @@ namespace Platformer
                 return;
             }
 
+            // Set power up use state
             if (Input.GetKeyDown(KeyCode.Q) && _soulOverflowCooldown <= 0)
             {
                 Soul_Overflow_Animator.SetTrigger("Soul_Overflow");
@@ -174,35 +182,34 @@ namespace Platformer
             }
         }
 
+        // Method for light attacking; does not include input
         private void _lightAttack()
         {
             State = AttackState.Light_Attack;
+            State_Shower.text = "Player State: Light Attack";
             _meleeAllowed = false;
+            _canBlock = false;
             Anim.SetTrigger("Light_Attack_Trigger");
 
             if (_allowInvoke)
             {
-                Invoke("_resetMelee", 1);
+                Invoke("_resetState", 1);
                 _allowInvoke = false;
             }
         }
 
-        // Cooldown between shots
-        private void _resetShot()
+        // Method for heavy attacking; does not include input
+        private void _heavyAttack()
         {
-            State = AttackState.Neutral;
-            AllowedToShoot = true;
-            _meleeAllowed = true;
-            _allowInvoke = true;
-        }
+            State = AttackState.Heavy_Attack;
+            _meleeAllowed = false;
+            Anim.SetTrigger("Heavy_Attack_Trigger");
 
-        // Time Between Melee Attacks
-        private void _resetMelee()
-        {
-            State = AttackState.Neutral;
-            _meleeAllowed = true;
-            AllowedToShoot = true;
-            _allowInvoke = true;
+            if (_allowInvoke)
+            {
+                Invoke("_resetState", 1);
+                _allowInvoke = false;
+            }
         }
 
         private void _manaRegen()
@@ -211,7 +218,8 @@ namespace Platformer
 
             if (PlayerMana < 20)
             {
-                PlayerMana += Time.deltaTime;
+                // Increase 
+                PlayerMana += (.5f * Time.deltaTime);
             }
             else if (PlayerMana > 20)
             {
@@ -224,20 +232,45 @@ namespace Platformer
             PlayerMana += mana;
         }
 
+
+        // Cooldown for attacks, shots, and state change
+        private void _resetState()
+        {
+            State = AttackState.Neutral;
+        }
+
+        // Controls what is possible in each state
         private void _stateHandler()
         {
+            
             if (_pm.state == Player_Movement.MovementState.paused)
             {
                 return;
             }
 
-            if (State  == AttackState.Neutral)
+            if (State == AttackState.Neutral)
             {
-
+                State_Shower.text = "Player State: Neutral";
+                Player_Health_Script.CanBeDamaged = true;
+                _canBlock = true;
+                _meleeAllowed = true;
+                AllowedToShoot = true;
+                _allowInvoke = true;
             }
 
-            if (State == AttackState.Ranged && State != AttackState.Light_Attack)
+            if (State == AttackState.Blocking)
             {
+                State_Shower.text = "Player State: Blocking";
+                Player_Health_Script.CanBeDamaged = false;
+                AllowedToShoot = false;
+                _meleeAllowed = false;
+            }
+
+            // If in proper state, range attack anim and setting
+            if (State == AttackState.Ranged)
+            {
+                State_Shower.text = "Player State: Ranged";
+                _meleeAllowed = false;
                 Anim.SetBool("Firing_State", true);
             }
             else
@@ -245,18 +278,50 @@ namespace Platformer
                 Anim.SetBool("Firing_State", false);
             }
 
-            if (_meleeAllowed && Input.GetMouseButtonDown(0))
+            // If in proper state, light attack
+            if (State == AttackState.Light_Attack)
             {
                 AllowedToShoot = false;
+                _canBlock = false;
+            }
+        }
+
+        private void _getInput()
+        {
+            // Light Attack Input
+            if (_meleeAllowed && Input.GetMouseButtonDown(0))
+            {
                 _lightAttack();
             }
 
-            if (AllowedToShoot && Input.GetMouseButton(1))
+            // Ranged Attack Input
+            if (State == AttackState.Neutral && Input.GetMouseButton(1))
             {
                 if (PlayerMana > FireballCost)
                 {
-                    _meleeAllowed = false;
                     _shoot();
+                }
+            }
+
+            // Blocking Input
+            if (Input.GetKeyDown(KeyCode.LeftControl) && _canBlock)
+            {
+                if (IsInvoking("_resetState"))
+                {
+                    CancelInvoke("_resetState");
+                    _allowInvoke = true;
+                }
+                State = AttackState.Blocking;
+                Debug.Log("Annoy Log For Blocking Lol");
+            }
+            else if (Input.GetKeyUp(KeyCode.LeftControl))
+            {
+                BlockIndicator.text = "Not Blocking";
+                if (_allowInvoke)
+                {
+                    _canBlock = false;
+                    Invoke("_resetState", 1);
+                    _allowInvoke = false;
                 }
             }
         }

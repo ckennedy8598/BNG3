@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PM_Script: {fileID: 0}
   HealthSlider: {fileID: 0}
+  CanBeDamaged: 0
   PlayerHealth: 20
   HealthReadout: {fileID: 0}
   isPoisoned: 0
@@ -189,6 +190,8 @@ MonoBehaviour:
   Anim: {fileID: 0}
   OrientObj: {fileID: 6467647252861771760}
   MeleeHitbox: {fileID: 0}
+  BlockIndicator: {fileID: 0}
+  _canBlock: 0
   ManaCounter: {fileID: 0}
   Fireball: {fileID: 7915509550358804350, guid: c1154976630438f499991041be5e9222, type: 3}
   AllowedToShoot: 0
@@ -203,6 +206,8 @@ MonoBehaviour:
   ManaBar: {fileID: 0}
   Camera: {fileID: 0}
   createPoint: {fileID: 0}
+  Player_Health_Script: {fileID: 0}
+  State_Shower: {fileID: 0}
   State: 0
 --- !u!82 &6736992631126367313
 AudioSource:
