@@ -113,7 +113,8 @@ public class Pause_Menu : MonoBehaviour
     private void _deathUI_Active()
     {
         Crosshair.SetActive(false);
-        P_MM.SetActive(true); P_Quit.SetActive(true); P_Retry.SetActive(true);
+        EscapeMenu_Top.SetActive(true);
+        P_Options.SetActive(false);
     }
     
     private void _pauseUI_Active()

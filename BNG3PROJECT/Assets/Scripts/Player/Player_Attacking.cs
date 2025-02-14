@@ -10,6 +10,10 @@ namespace Platformer
 {
     public class Player_Attacking : MonoBehaviour
     {
+        // Weapon_GetCollision Reference
+        [SerializeField]
+        public Weapon_GetCollision Weapon_Collision_Script;
+
         [Header("Animation Variables")]
         public Animator Anim;
 
@@ -187,8 +191,8 @@ namespace Platformer
         {
             State = AttackState.Light_Attack;
             State_Shower.text = "Player State: Light Attack";
-            _meleeAllowed = false;
-            _canBlock = false;
+            // Deal Light Attack Damage on Collision
+            Weapon_Collision_Script.DealDamage(50);
             Anim.SetTrigger("Light_Attack_Trigger");
 
             if (_allowInvoke)
@@ -202,12 +206,14 @@ namespace Platformer
         private void _heavyAttack()
         {
             State = AttackState.Heavy_Attack;
-            _meleeAllowed = false;
+            State_Shower.text = "Player State: Heavy Attack";
+            // Deal Heavy Attack Damage on Collision
+            Weapon_Collision_Script.DealDamage(200);
             Anim.SetTrigger("Heavy_Attack_Trigger");
 
             if (_allowInvoke)
             {
-                Invoke("_resetState", 1);
+                Invoke("_resetState", 2.2f);
                 _allowInvoke = false;
             }
         }
@@ -282,16 +288,30 @@ namespace Platformer
             if (State == AttackState.Light_Attack)
             {
                 AllowedToShoot = false;
+                _meleeAllowed = false;
                 _canBlock = false;
+            }
+
+            if (State == AttackState.Heavy_Attack)
+            {
+                AllowedToShoot= false;
+                _meleeAllowed = false;
+                _canBlock = false;
+                //Anim.SetTrigger("Heavy_Attack_Trigger");
             }
         }
 
         private void _getInput()
         {
             // Light Attack Input
-            if (_meleeAllowed && Input.GetMouseButtonDown(0))
+            if (State == AttackState.Neutral && Input.GetMouseButtonDown(0))
             {
                 _lightAttack();
+            }
+
+            if (State == AttackState.Neutral && Input.GetMouseButtonDown(2))
+            {
+                _heavyAttack();
             }
 
             // Ranged Attack Input
@@ -316,7 +336,6 @@ namespace Platformer
             }
             else if (Input.GetKeyUp(KeyCode.LeftControl))
             {
-                BlockIndicator.text = "Not Blocking";
                 if (_allowInvoke)
                 {
                     _canBlock = false;
