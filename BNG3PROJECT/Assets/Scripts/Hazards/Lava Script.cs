@@ -10,6 +10,7 @@ namespace Platformer
 
         public float lavaDamage = 20f;
         public Player_Health playerHealth;
+        public GameObject slime;
 
         public GameObject player;
 
@@ -18,6 +19,8 @@ namespace Platformer
             player = GameObject.FindGameObjectWithTag("Player");
 
             playerHealth = FindAnyObjectByType<Player_Health>();
+
+            slime = GameObject.Find("Slime");
         }
 
         // Update is called once per frame
@@ -33,6 +36,10 @@ namespace Platformer
             {
                 playerHealth.TakeDamage(lavaDamage);
                 Debug.Log("Player has been Killed by Lava");
+            }
+            if (other.gameObject == slime)
+            {
+                Destroy(other.gameObject);
             }
         }
     }

@@ -14,6 +14,11 @@ namespace Platformer
 
         public LayerMask whatIsGround, whatIsPlayer;
 
+        public Transform endZone;
+
+        public GameObject lineOfSight;
+
+        public bool playerSeen = false;
 
         // Patroling variables
         public Vector3 walkPoint;
@@ -47,32 +52,40 @@ namespace Platformer
         {
             player = GameObject.Find("Player").transform;
             agent = GetComponent<NavMeshAgent>();
+            endZone = GameObject.Find("EndZone").transform;
+            lineOfSight = GameObject.Find("LineOfSight");
+
 
         }
         private void Update()
         {
 
-            Vector3 targetPostition = new Vector3(player.position.x, this.transform.position.y, player.position.z);
-            this.transform.LookAt(targetPostition);
+            //Vector3 targetPostition = new Vector3(player.position.x, this.transform.position.y, player.position.z);
+            //this.transform.LookAt(targetPostition);
             // Checking attack and sight range
 
-            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-            playerInAttackRange = Physics.CheckSphere(transform.position, attackingRange, whatIsPlayer);
+            //playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+            //playerInAttackRange = Physics.CheckSphere(transform.position, attackingRange, whatIsPlayer);
 
-            if (!playerInSightRange && !playerInAttackRange)
+            //if (!playerInSightRange && !playerInAttackRange)
+            //{
+                //animator.SetBool("isIdle", false);
+           // }
+
+            //else if (playerInSightRange)
+            //{
+            //    ChasePlayer();
+           // }
+
+            //else if (playerInSightRange && playerInAttackRange)
+           // {
+            //    AttackPlayer();
+            //}
+            if (playerSeen == true)
             {
-                animator.SetBool("isIdle", false);
+                agent.SetDestination(endZone.position);
             }
 
-            else if (playerInSightRange)
-            {
-                ChasePlayer();
-            }
-
-            else if (playerInSightRange && playerInAttackRange)
-            {
-                AttackPlayer();
-            }
         }
 
         private void SearchWalkPoint()
@@ -111,9 +124,9 @@ namespace Platformer
 
         private void ChasePlayer()
         {
-            animator.SetBool("isIdle", false);
-            animator.SetBool("isCharging", true);
-            agent.SetDestination(player.position);
+            //animator.SetBool("isIdle", false);
+            //animator.SetBool("isCharging", true);
+            //agent.SetDestination(player.position);
         }
 
         private void AttackPlayer()
