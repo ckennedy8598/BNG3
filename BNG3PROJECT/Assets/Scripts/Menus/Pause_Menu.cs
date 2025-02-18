@@ -12,13 +12,24 @@ public class Pause_Menu : MonoBehaviour
     [Header("Player Weapon")]
     public GameObject PWeapon;
 
+    
     [Header("Pause Menu Items")]
     public GameObject P_MM;
+    public GameObject P_Retry;
     public GameObject P_Options;
     public GameObject P_Back;
     public GameObject P_Quit;
     public GameObject Crosshair;
     public GameObject SliderHolder;
+    public GameObject Options_Controls;
+    public GameObject Options_ControlsBack;
+    public GameObject Options_ControlsDisplay;
+    
+
+    [Header("New Pause Menu Items")]
+    public GameObject EscapeMenu_Top;
+    public GameObject EscapeMenu_Options;
+    public GameObject EscapeMenu_Controls;
 
     [Header("Death Menu Items")]
     private bool _keyPressed;
@@ -102,26 +113,33 @@ public class Pause_Menu : MonoBehaviour
     private void _deathUI_Active()
     {
         Crosshair.SetActive(false);
-        P_MM.SetActive(true); P_Quit.SetActive(true);
+        EscapeMenu_Top.SetActive(true);
+        P_Options.SetActive(false);
     }
     
     private void _pauseUI_Active()
     {
+        EscapeMenu_Top.SetActive(true);
         Crosshair.SetActive(false);
-        P_MM.SetActive(true); P_Quit.SetActive(true); P_Options.SetActive(true);
+        //Crosshair.SetActive(false);
+        //P_MM.SetActive(true); P_Quit.SetActive(true);
+        //P_Options.SetActive(true); P_Retry.SetActive(true);
     }
 
     private void _pauseUI_Deactive()
     {
-        P_MM.SetActive(false); P_Quit.SetActive(false); P_Options.SetActive(false);
-        P_Back.SetActive(false); SliderHolder.SetActive(false);
+        EscapeMenu_Top.SetActive(false); EscapeMenu_Options.SetActive(false); EscapeMenu_Controls.SetActive(false);
         Crosshair.SetActive(true);
+        //P_MM.SetActive(false); P_Quit.SetActive(false); P_Options.SetActive(false);
+        //P_Back.SetActive(false); SliderHolder.SetActive(false); P_Retry.SetActive(false);
+        //Options_ControlsBack.SetActive(false); Options_Controls.SetActive(false); Options_ControlsDisplay.SetActive(false);
+        //Crosshair.SetActive(true);
     }
 
-
-    public void OnOptionsButton()
+    // Reloads Active Scene
+    public void OnRetryPress()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void OnMainMenuButton()
     {

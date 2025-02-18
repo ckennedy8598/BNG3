@@ -16,8 +16,8 @@ namespace Platformer
         [Header("Health Bar")]
         public Slider HealthSlider;
 
-        private bool _canBeDamaged;
         private float _maxHealth = 20f;
+        public bool CanBeDamaged;
         public float PlayerHealth = 20f;
         public TMP_Text HealthReadout;
 
@@ -32,7 +32,7 @@ namespace Platformer
         void Start()
         {
             PM_Script = FindAnyObjectByType<Pause_Menu>();
-            _canBeDamaged = true;
+            CanBeDamaged = true;
         }
 
         // Update is called once per frame
@@ -56,7 +56,7 @@ namespace Platformer
         }
         private void PoisonDamage()
         {
-            if (_canBeDamaged == true && poisonTick == true)
+            if (CanBeDamaged == true && poisonTick == true)
             {
 
                 PlayerHealth -= 1f;
@@ -94,11 +94,11 @@ namespace Platformer
 
         public void TakeDamage(float damage)
         {
-            if (_canBeDamaged)
+            if (CanBeDamaged)
             {
                 if (PlayerHealth <= 0)
                 {
-                    _canBeDamaged = false;
+                    CanBeDamaged = false;
                     return;
                 }
                 else

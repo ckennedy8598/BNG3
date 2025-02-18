@@ -24,13 +24,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4338054157346445033}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3612288947939897248}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &4473704320128826865
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,8 +112,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PM_Script: {fileID: 0}
   HealthSlider: {fileID: 0}
+  CanBeDamaged: 0
   PlayerHealth: 20
   HealthReadout: {fileID: 0}
+  isPoisoned: 0
+  poisonTick: 1
 --- !u!114 &5187883471847569615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerScore: 0
+  PP_Script: {fileID: 0}
   JumpSource: {fileID: 6736992631126367313}
   MoveSpeed: 10
   DashSpeed: 20
@@ -167,6 +171,7 @@ MonoBehaviour:
   DashForce: 20
   DashUpwardForce: 0
   DashDuration: 0.25
+  anim: {fileID: 0}
   _dashCDTimer: 0
   DashCD: 1.5
   DashKey: 304
@@ -185,6 +190,8 @@ MonoBehaviour:
   Anim: {fileID: 0}
   OrientObj: {fileID: 6467647252861771760}
   MeleeHitbox: {fileID: 0}
+  BlockIndicator: {fileID: 0}
+  _canBlock: 0
   ManaCounter: {fileID: 0}
   Fireball: {fileID: 7915509550358804350, guid: c1154976630438f499991041be5e9222, type: 3}
   AllowedToShoot: 0
@@ -192,9 +199,15 @@ MonoBehaviour:
   ShootForce: 35
   TimeBetweenShots: 0.4
   Spread: 0
+  _soulOverflowDuration: 0
+  _soulOverflowCooldown: 0
+  _inOverflow: 0
+  Soul_Overflow_Animator: {fileID: 0}
   ManaBar: {fileID: 0}
   Camera: {fileID: 0}
   createPoint: {fileID: 0}
+  Player_Health_Script: {fileID: 0}
+  State_Shower: {fileID: 0}
   State: 0
 --- !u!82 &6736992631126367313
 AudioSource:
@@ -320,8 +333,8 @@ Transform:
   m_GameObject: {fileID: 4632760846529015646}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3612288947939897248}
@@ -423,8 +436,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7863402234483049528}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
