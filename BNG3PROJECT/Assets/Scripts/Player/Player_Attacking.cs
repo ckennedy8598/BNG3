@@ -27,6 +27,12 @@ namespace Platformer
         public TMP_Text BlockIndicator;
         public bool _canBlock;
 
+        // Combo Attack Variables
+        private float _comboTimePassed = 0.2f;
+        private float _comboTimer;
+        private bool _startTimer;
+        private int _numClicks;
+
         [Header("Ranged Variables")]
         private string _mana;
         private bool _allowInvoke;
@@ -57,6 +63,7 @@ namespace Platformer
 
         //Player_Health Script Variable
         public Player_Health Player_Health_Script;
+        public Pause_Menu PauseScript;
         public TMP_Text State_Shower;
 
         public AttackState State;
@@ -74,6 +81,7 @@ namespace Platformer
         {
             _pm = GetComponent<Player_Movement>();
             Player_Health_Script = GetComponent<Player_Health>();
+            PauseScript = GetComponent<Pause_Menu>();
             AllowedToShoot = true; _meleeAllowed = true;
             _allowInvoke = true;
             PlayerMana = 20;
@@ -82,12 +90,19 @@ namespace Platformer
         // Update is called once per frame
         void Update()
         {
+            if (_pm != null)
+            {
+                if (_pm.state == Player_Movement.MovementState.paused)
+                {
+                    return;
+                }
+            }
             _stateHandler();
             Ray debugRay = Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             Debug.DrawRay(debugRay.origin, debugRay.direction * 80, Color.green);
 
             _getInput();
-
+            _comboTimerMethod();
             _soulOverflow();
             _manaRegen();
 
@@ -186,18 +201,53 @@ namespace Platformer
             }
         }
 
+        // Method for checking time passed
+
         // Method for light attacking; does not include input
         private void _lightAttack()
         {
             State = AttackState.Light_Attack;
-            State_Shower.text = "Player State: Light Attack";
+            
             // Deal Light Attack Damage on Collision
             Weapon_Collision_Script.DealDamage(50);
             Anim.SetTrigger("Light_Attack_Trigger");
+            _comboTimerMethod();
 
             if (_allowInvoke)
             {
                 Invoke("_resetState", 1);
+                _allowInvoke = false;
+            }
+        }
+        private void _comboTimerMethod()
+        {
+            if (_comboTimer < _comboTimePassed && _startTimer)
+            {
+                _comboTimer += Time.deltaTime;
+            }
+            else if (_comboTimer > _comboTimePassed)
+            {
+                Debug.Log("Combo Timer Counter: " + _comboTimer);
+                _startTimer = false;
+                _meleeAllowed = true;
+            }
+        }
+
+        private void _lightAttack2()
+        {
+            State = AttackState.Light_Attack2;
+            if (IsInvoking("_resetState"))
+            {
+                CancelInvoke("_resetState");
+                _allowInvoke = true;
+            }
+
+            Weapon_Collision_Script.DealDamage(50);
+            Anim.SetTrigger("Light_Attack_Combo_Trigger");
+
+            if (_allowInvoke)
+            {
+                Invoke("_resetState", 1f);
                 _allowInvoke = false;
             }
         }
@@ -206,7 +256,7 @@ namespace Platformer
         private void _heavyAttack()
         {
             State = AttackState.Heavy_Attack;
-            State_Shower.text = "Player State: Heavy Attack";
+
             // Deal Heavy Attack Damage on Collision
             Weapon_Collision_Script.DealDamage(200);
             Anim.SetTrigger("Heavy_Attack_Trigger");
@@ -257,6 +307,13 @@ namespace Platformer
             if (State == AttackState.Neutral)
             {
                 State_Shower.text = "Player State: Neutral";
+
+                // All combo variables
+                Anim.SetBool("Light_Attack_Combo_Allowed", false);
+                Anim.ResetTrigger("Light_Attack_Combo_Trigger");
+                _comboTimer = 0;
+                _startTimer = false;
+
                 Player_Health_Script.CanBeDamaged = true;
                 _canBlock = true;
                 _meleeAllowed = true;
@@ -287,6 +344,25 @@ namespace Platformer
             // If in proper state, light attack
             if (State == AttackState.Light_Attack)
             {
+                State_Shower.text = "Player State: Light Attack";
+                // Combo Timer
+                Anim.ResetTrigger("Light_Attack_Combo_Trigger");
+                Anim.SetBool("Light_Attack_Combo_Allowed", true);
+                _startTimer = true;
+
+                AllowedToShoot = false;
+                _meleeAllowed = false;
+                _canBlock = false;
+            }
+
+            if (State == AttackState.Light_Attack2)
+            {
+                State_Shower.text = "Player State: Combo Light Attack";
+
+                // Combo Variables
+                _startTimer = false;
+                _comboTimer = 0;
+
                 AllowedToShoot = false;
                 _meleeAllowed = false;
                 _canBlock = false;
@@ -294,7 +370,8 @@ namespace Platformer
 
             if (State == AttackState.Heavy_Attack)
             {
-                AllowedToShoot= false;
+                State_Shower.text = "Player State: Heavy Attack";
+                AllowedToShoot = false;
                 _meleeAllowed = false;
                 _canBlock = false;
                 //Anim.SetTrigger("Heavy_Attack_Trigger");
@@ -309,6 +386,15 @@ namespace Platformer
                 _lightAttack();
             }
 
+            if (State == AttackState.Light_Attack)
+            {
+                if (_comboTimer > _comboTimePassed && Input.GetMouseButtonDown(0))
+                {
+                    _lightAttack2();
+                }
+            }
+
+            // Heavy Attack Input
             if (State == AttackState.Neutral && Input.GetMouseButtonDown(2))
             {
                 _heavyAttack();
