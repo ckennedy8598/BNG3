@@ -84309,11 +84309,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2036770567006396219, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.19
+      value: 12.057
       objectReference: {fileID: 0}
     - target: {fileID: 2036770567006396219, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.998325
+      value: 36.548
       objectReference: {fileID: 0}
     - target: {fileID: 2036770567006396219, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
       propertyPath: m_LocalRotation.w
@@ -84343,9 +84343,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3466828790697331774, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.423
+      objectReference: {fileID: 0}
     - target: {fileID: 6942719053752765719, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
       propertyPath: m_Name
       value: Checkpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471510242493098126, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
+      propertyPath: m_Radius
+      value: 0.8500218
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471510242493098126, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
+      propertyPath: m_Center.z
+      value: -0.35002187
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
