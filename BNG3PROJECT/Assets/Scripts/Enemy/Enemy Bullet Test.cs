@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class EnemyBulletTest : MonoBehaviour
 {
+    public Player_Attacking PA_Script;
+    public EnemyHealth EH_Script;
 
     public float despawnTimer = 5f;
     public float force = 10f;
@@ -15,12 +17,16 @@ public class EnemyBulletTest : MonoBehaviour
     public Player_Health playerHealth;
     Rigidbody rb;
 
+    public Camera MainCamera;
     public GameObject enemyBullet;
     public GameObject player;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
+        MainCamera = FindAnyObjectByType<Camera>();
+        PA_Script = FindAnyObjectByType<Player_Attacking>();
+        EH_Script = FindAnyObjectByType<EnemyHealth>();
 
         Vector3 direction = player.transform.position - transform.position;
         rb.velocity = new Vector3(direction.x, direction.y, direction.z).normalized * force;
@@ -41,8 +47,23 @@ public class EnemyBulletTest : MonoBehaviour
     
         if (other.gameObject.CompareTag("Player"))
         {
-            playerHealth.TakeDamage(bulletDamage);
-            Debug.Log("Player has been shot D:");
+            if (PA_Script.CanParry || PA_Script.IsBlocking) // - B
+            {
+                rb.position = new Vector3(MainCamera.transform.position.x, MainCamera.transform.position.y - .25f, MainCamera.transform.position.z);
+                rb.velocity = MainCamera.transform.forward * force;
+                gameObject.tag = "Reflected";
+            }
+            else
+            {
+                playerHealth.TakeDamage(bulletDamage);
+                Debug.Log("Player has been shot D:");
+                Destroy(gameObject);
+            }
+        }
+        else if (other.gameObject.CompareTag("Enemy") && gameObject.tag == "Reflected") // - B
+        {
+            other.gameObject.GetComponent<EnemyHealth>().Hurt(bulletDamage);
+            Debug.Log("Enemy got rekt by reflected projectile!");
             Destroy(gameObject);
         }
     }
