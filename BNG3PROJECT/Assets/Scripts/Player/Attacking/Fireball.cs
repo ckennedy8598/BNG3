@@ -73,7 +73,13 @@ namespace Platformer
                 Debug.Log("Collided with " + other.gameObject.name);
                 Debug.Log("Collided with " + gameObject.name);
 
-                other.gameObject.GetComponent<EnemyHealth>().Hurt(25);
+                if (other.gameObject.GetComponent<EnemyHealth>() != null)
+                {
+                    other.gameObject.GetComponent<EnemyHealth>().Hurt(25);
+                }
+                
+
+
                 //Destroy(other.gameObject);
                 _setDead();
 
