@@ -142,11 +142,12 @@ namespace Platformer
 
                 
                 // Take damage on getting parried - B
-                if (PA_Script._canParry)
+                if (PA_Script.CanParry)
                 {
+                    // Damage for testing
                     EH_Script.Hurt(50);
-                    // longer cooldown between attacks after getting parried?
-                    // Invoke(nameof(ResetAttack), 1 billion hours); the ultimate get rekt parry
+                    //Invoke(nameof(ResetAttack), timeBetweenAttacks * 2);
+                    //return;
                 }
                 
 

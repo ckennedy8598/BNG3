@@ -17,8 +17,8 @@ namespace Platformer
         {
             if (other.gameObject.tag == "Enemy")
             {
-                Debug.Log("Collided with " + other.gameObject.name);
-                Debug.Log("Collided with " + gameObject.name);
+                //Debug.Log("Collided with " + other.gameObject.name);
+                //Debug.Log("Collided with " + gameObject.name);
 
                 other.gameObject.GetComponent<EnemyHealth>().Hurt(Damage);
                 //Destroy(other.gameObject);

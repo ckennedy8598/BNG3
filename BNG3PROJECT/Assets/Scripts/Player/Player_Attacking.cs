@@ -29,8 +29,9 @@ namespace Platformer
         private float _blockTimer;
         public BoxCollider MeleeHitbox;
         public TMP_Text BlockIndicator;
-        public bool _canParry;
-        public bool _canBlock;
+        public bool CanParry;
+        public bool CanBlock;
+        public bool IsBlocking;
 
         // Combo Attack Variables
         private float _comboTimePassed = 0.2f;
@@ -134,12 +135,11 @@ namespace Platformer
                 // All combo variables
                 Anim.SetBool("Light_Attack_Combo_Allowed", false);
                 Anim.ResetTrigger("Light_Attack_Combo_Trigger");
-                _comboTimer = 0;
-                _blockTimer = 0;
-                _startTimer = false;
+                _comboTimer = 0; _blockTimer = 0;
+                _startTimer = false; IsBlocking = false;
 
                 Player_Health_Script.CanBeDamaged = true;
-                _canBlock = true;
+                CanBlock = true;
                 _meleeAllowed = true;
                 AllowedToShoot = true;
                 _allowInvoke = true;
@@ -148,19 +148,20 @@ namespace Platformer
             if (State == AttackState.Blocking)
             {
                 State_Shower.text = "Player State: Blocking";
+                IsBlocking = true;
                 Player_Health_Script.CanBeDamaged = false;
                 AllowedToShoot = false;
                 _meleeAllowed = false;
                 if (_blockTimer < _blockTimerMax)
                 {
                     _blockTimer += Time.deltaTime;
-                    _canParry = true;
+                    CanParry = true;
                     parryText.text = "Parry State: True";
                     //Debug.Log("This is _canParry: " + _canParry);
                 }
                 else
                 {
-                    _canParry = false;
+                    CanParry = false;
                     parryText.text = "Parry State: False";
                     //Debug.Log("This is _canParry: " + _canParry);
                 }
@@ -189,7 +190,7 @@ namespace Platformer
 
                 AllowedToShoot = false;
                 _meleeAllowed = false;
-                _canBlock = false;
+                CanBlock = false;
             }
 
             if (State == AttackState.Light_Attack2)
@@ -202,7 +203,7 @@ namespace Platformer
 
                 AllowedToShoot = false;
                 _meleeAllowed = false;
-                _canBlock = false;
+                CanBlock = false;
             }
 
             if (State == AttackState.Heavy_Attack)
@@ -210,7 +211,7 @@ namespace Platformer
                 State_Shower.text = "Player State: Heavy Attack";
                 AllowedToShoot = false;
                 _meleeAllowed = false;
-                _canBlock = false;
+                CanBlock = false;
                 //Anim.SetTrigger("Heavy_Attack_Trigger");
             }
         }
@@ -247,7 +248,7 @@ namespace Platformer
             }
 
             // Blocking Input
-            if (Input.GetKeyDown(KeyCode.LeftControl) && _canBlock)
+            if (Input.GetKeyDown(KeyCode.LeftControl) && CanBlock)
             {
                 if (IsInvoking("_resetState"))
                 {
@@ -261,7 +262,7 @@ namespace Platformer
             {
                 if (_allowInvoke)
                 {
-                    _canBlock = false;
+                    CanBlock = false;
                     Invoke("_resetState", 1);
                     _allowInvoke = false;
                 }
