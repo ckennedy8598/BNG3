@@ -75,6 +75,7 @@ namespace Platformer
                 isPoisoned = false;
             }
         }
+
         private void LateUpdate()
         {
             _setDead();
@@ -105,8 +106,7 @@ namespace Platformer
                 {
                     PlayerHealth -= damage;
                 }
-            }
-            
+            }          
         }
 
         private void _setDead()
