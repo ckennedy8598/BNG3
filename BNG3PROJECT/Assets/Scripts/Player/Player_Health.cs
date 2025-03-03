@@ -16,7 +16,7 @@ namespace Platformer
         [Header("Health Bar")]
         public Slider HealthSlider;
 
-        private float _maxHealth = 20f;
+        private float _maxHealth = 100f;
         public bool CanBeDamaged;
         public float PlayerHealth = 20f;
         public TMP_Text HealthReadout;
@@ -75,6 +75,7 @@ namespace Platformer
                 isPoisoned = false;
             }
         }
+
         private void LateUpdate()
         {
             _setDead();
@@ -105,8 +106,7 @@ namespace Platformer
                 {
                     PlayerHealth -= damage;
                 }
-            }
-            
+            }          
         }
 
         private void _setDead()

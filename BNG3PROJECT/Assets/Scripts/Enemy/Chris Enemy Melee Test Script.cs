@@ -14,6 +14,11 @@ namespace Platformer
         public LayerMask whatIsGround, whatIsPlayer;
 
 
+        // Player_Attacking.cs Reference
+        public Player_Attacking PA_Script;
+        // EnemyHealth.cs Reference
+        public EnemyHealth EH_Script;
+
         // Patroling variables
         public Vector3 walkPoint;
         bool walkPointSet;
@@ -44,6 +49,11 @@ namespace Platformer
 
         private void Awake()
         {
+            // Player Attacking Script Declaration - B
+            PA_Script = FindAnyObjectByType<Player_Attacking>();
+            // Enemy Health Script Declaration - B
+            EH_Script = GetComponent<EnemyHealth>();
+
             player = GameObject.Find("Player").transform;
             agent = GetComponent<NavMeshAgent>();
 
@@ -128,8 +138,19 @@ namespace Platformer
 
                 ShootAtPlayer();
                 Debug.Log("Attacking Player");
-
                 alreadyAttacked = true;
+
+                
+                // Take damage on getting parried - B
+                if (PA_Script.CanParry)
+                {
+                    // Damage for testing
+                    EH_Script.Hurt(50);
+                    //Invoke(nameof(ResetAttack), timeBetweenAttacks * 2);
+                    //return;
+                }
+                
+
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
             }
         }

@@ -23,7 +23,7 @@ namespace Platformer
 
         public void Hurt(float damage)
         {
-            Debug.Log("Enemy has been hurt");
+            //Debug.Log("Enemy has been hurt");
             health -= damage;
         }
         private void Update()

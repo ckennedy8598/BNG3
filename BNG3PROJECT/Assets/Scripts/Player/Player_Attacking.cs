@@ -10,6 +10,8 @@ namespace Platformer
 {
     public class Player_Attacking : MonoBehaviour
     {
+        public TMP_Text parryText;
+
         // Weapon_GetCollision Reference
         [SerializeField]
         public Weapon_GetCollision Weapon_Collision_Script;
@@ -23,9 +25,13 @@ namespace Platformer
 
         [Header("Melee Variables")]
         private bool _meleeAllowed;
+        private float _blockTimerMax = .25f;
+        private float _blockTimer;
         public BoxCollider MeleeHitbox;
         public TMP_Text BlockIndicator;
-        public bool _canBlock;
+        public bool CanParry;
+        public bool CanBlock;
+        public bool IsBlocking;
 
         // Combo Attack Variables
         private float _comboTimePassed = 0.2f;
@@ -112,6 +118,156 @@ namespace Platformer
         }
 
 
+
+        // Controls what is possible in each state
+        private void _stateHandler()
+        {
+            
+            if (_pm.state == Player_Movement.MovementState.paused)
+            {
+                return;
+            }
+
+            if (State == AttackState.Neutral)
+            {
+                State_Shower.text = "Player State: Neutral";
+
+                // All combo variables
+                Anim.SetBool("Light_Attack_Combo_Allowed", false);
+                Anim.ResetTrigger("Light_Attack_Combo_Trigger");
+                _comboTimer = 0; _blockTimer = 0;
+                _startTimer = false; IsBlocking = false;
+
+                Player_Health_Script.CanBeDamaged = true;
+                CanBlock = true;
+                _meleeAllowed = true;
+                AllowedToShoot = true;
+                _allowInvoke = true;
+            }
+
+            if (State == AttackState.Blocking)
+            {
+                State_Shower.text = "Player State: Blocking";
+                IsBlocking = true;
+                Player_Health_Script.CanBeDamaged = false;
+                AllowedToShoot = false;
+                _meleeAllowed = false;
+                if (_blockTimer < _blockTimerMax)
+                {
+                    _blockTimer += Time.deltaTime;
+                    CanParry = true;
+                    parryText.text = "Parry State: True";
+                    //Debug.Log("This is _canParry: " + _canParry);
+                }
+                else
+                {
+                    CanParry = false;
+                    parryText.text = "Parry State: False";
+                    //Debug.Log("This is _canParry: " + _canParry);
+                }
+            }
+
+            // If in proper state, range attack anim and setting
+            if (State == AttackState.Ranged)
+            {
+                State_Shower.text = "Player State: Ranged";
+                _meleeAllowed = false;
+                Anim.SetBool("Firing_State", true);
+            }
+            else
+            {
+                Anim.SetBool("Firing_State", false);
+            }
+
+            // If in proper state, light attack
+            if (State == AttackState.Light_Attack)
+            {
+                State_Shower.text = "Player State: Light Attack";
+                // Combo Timer
+                Anim.ResetTrigger("Light_Attack_Combo_Trigger");
+                Anim.SetBool("Light_Attack_Combo_Allowed", true);
+                _startTimer = true;
+
+                AllowedToShoot = false;
+                _meleeAllowed = false;
+                CanBlock = false;
+            }
+
+            if (State == AttackState.Light_Attack2)
+            {
+                State_Shower.text = "Player State: Combo Light Attack";
+
+                // Combo Variables
+                _startTimer = false;
+                _comboTimer = 0;
+
+                AllowedToShoot = false;
+                _meleeAllowed = false;
+                CanBlock = false;
+            }
+
+            if (State == AttackState.Heavy_Attack)
+            {
+                State_Shower.text = "Player State: Heavy Attack";
+                AllowedToShoot = false;
+                _meleeAllowed = false;
+                CanBlock = false;
+                //Anim.SetTrigger("Heavy_Attack_Trigger");
+            }
+        }
+
+        private void _getInput()
+        {
+            // Light Attack Input
+            if (State == AttackState.Neutral && Input.GetMouseButtonDown(0))
+            {
+                _lightAttack();
+            }
+
+            if (State == AttackState.Light_Attack)
+            {
+                if (_comboTimer > _comboTimePassed && Input.GetMouseButtonDown(0))
+                {
+                    _lightAttack2();
+                }
+            }
+
+            // Heavy Attack Input
+            if (State == AttackState.Neutral && Input.GetMouseButtonDown(2))
+            {
+                _heavyAttack();
+            }
+
+            // Ranged Attack Input
+            if (State == AttackState.Neutral && Input.GetMouseButton(1))
+            {
+                if (PlayerMana > FireballCost)
+                {
+                    _shoot();
+                }
+            }
+
+            // Blocking Input
+            if (Input.GetKeyDown(KeyCode.LeftControl) && CanBlock)
+            {
+                if (IsInvoking("_resetState"))
+                {
+                    CancelInvoke("_resetState");
+                    _allowInvoke = true;
+                }
+                State = AttackState.Blocking;
+                Debug.Log("Annoy Log For Blocking Lol");
+            }
+            else if (Input.GetKeyUp(KeyCode.LeftControl))
+            {
+                if (_allowInvoke)
+                {
+                    CanBlock = false;
+                    Invoke("_resetState", 1);
+                    _allowInvoke = false;
+                }
+            }
+        }
         private void _shoot()
         {
             AllowedToShoot = false;
@@ -227,7 +383,7 @@ namespace Platformer
             }
             else if (_comboTimer > _comboTimePassed)
             {
-                Debug.Log("Combo Timer Counter: " + _comboTimer);
+                //Debug.Log("Combo Timer Counter: " + _comboTimer);
                 _startTimer = false;
                 _meleeAllowed = true;
             }
@@ -293,142 +449,6 @@ namespace Platformer
         private void _resetState()
         {
             State = AttackState.Neutral;
-        }
-
-        // Controls what is possible in each state
-        private void _stateHandler()
-        {
-            
-            if (_pm.state == Player_Movement.MovementState.paused)
-            {
-                return;
-            }
-
-            if (State == AttackState.Neutral)
-            {
-                State_Shower.text = "Player State: Neutral";
-
-                // All combo variables
-                Anim.SetBool("Light_Attack_Combo_Allowed", false);
-                Anim.ResetTrigger("Light_Attack_Combo_Trigger");
-                _comboTimer = 0;
-                _startTimer = false;
-
-                Player_Health_Script.CanBeDamaged = true;
-                _canBlock = true;
-                _meleeAllowed = true;
-                AllowedToShoot = true;
-                _allowInvoke = true;
-            }
-
-            if (State == AttackState.Blocking)
-            {
-                State_Shower.text = "Player State: Blocking";
-                Player_Health_Script.CanBeDamaged = false;
-                AllowedToShoot = false;
-                _meleeAllowed = false;
-            }
-
-            // If in proper state, range attack anim and setting
-            if (State == AttackState.Ranged)
-            {
-                State_Shower.text = "Player State: Ranged";
-                _meleeAllowed = false;
-                Anim.SetBool("Firing_State", true);
-            }
-            else
-            {
-                Anim.SetBool("Firing_State", false);
-            }
-
-            // If in proper state, light attack
-            if (State == AttackState.Light_Attack)
-            {
-                State_Shower.text = "Player State: Light Attack";
-                // Combo Timer
-                Anim.ResetTrigger("Light_Attack_Combo_Trigger");
-                Anim.SetBool("Light_Attack_Combo_Allowed", true);
-                _startTimer = true;
-
-                AllowedToShoot = false;
-                _meleeAllowed = false;
-                _canBlock = false;
-            }
-
-            if (State == AttackState.Light_Attack2)
-            {
-                State_Shower.text = "Player State: Combo Light Attack";
-
-                // Combo Variables
-                _startTimer = false;
-                _comboTimer = 0;
-
-                AllowedToShoot = false;
-                _meleeAllowed = false;
-                _canBlock = false;
-            }
-
-            if (State == AttackState.Heavy_Attack)
-            {
-                State_Shower.text = "Player State: Heavy Attack";
-                AllowedToShoot = false;
-                _meleeAllowed = false;
-                _canBlock = false;
-                //Anim.SetTrigger("Heavy_Attack_Trigger");
-            }
-        }
-
-        private void _getInput()
-        {
-            // Light Attack Input
-            if (State == AttackState.Neutral && Input.GetMouseButtonDown(0))
-            {
-                _lightAttack();
-            }
-
-            if (State == AttackState.Light_Attack)
-            {
-                if (_comboTimer > _comboTimePassed && Input.GetMouseButtonDown(0))
-                {
-                    _lightAttack2();
-                }
-            }
-
-            // Heavy Attack Input
-            if (State == AttackState.Neutral && Input.GetMouseButtonDown(2))
-            {
-                _heavyAttack();
-            }
-
-            // Ranged Attack Input
-            if (State == AttackState.Neutral && Input.GetMouseButton(1))
-            {
-                if (PlayerMana > FireballCost)
-                {
-                    _shoot();
-                }
-            }
-
-            // Blocking Input
-            if (Input.GetKeyDown(KeyCode.LeftControl) && _canBlock)
-            {
-                if (IsInvoking("_resetState"))
-                {
-                    CancelInvoke("_resetState");
-                    _allowInvoke = true;
-                }
-                State = AttackState.Blocking;
-                Debug.Log("Annoy Log For Blocking Lol");
-            }
-            else if (Input.GetKeyUp(KeyCode.LeftControl))
-            {
-                if (_allowInvoke)
-                {
-                    _canBlock = false;
-                    Invoke("_resetState", 1);
-                    _allowInvoke = false;
-                }
-            }
         }
     }
 }
