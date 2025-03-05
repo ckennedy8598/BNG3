@@ -47,12 +47,18 @@ namespace Platformer
 
         bool CheckForPlayerUnderneath()
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, checkDistance, playerLayer))
+            Collider col = GetComponent<Collider>(); // Get the elevator's collider
+
+            if (col == null)
             {
-                return true; // Player detected under the elevator
+                Debug.LogWarning("No Collider found on the elevator. BoxCast cannot be sized properly.");
+                return false;
             }
-            return false;
+
+            Vector3 Extents = col.bounds.extents; // Get half the size of the collider
+            Extents.y = 0.1f; // Keep Y small
+
+            return Physics.BoxCast(transform.position, Extents, Vector3.down, out _, Quaternion.identity, checkDistance, playerLayer);
         }
     }
 }

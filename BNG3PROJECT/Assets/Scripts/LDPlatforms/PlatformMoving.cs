@@ -15,9 +15,8 @@ namespace Platformer
         [SerializeField] float speed;
         [SerializeField] int startPoint;
         [SerializeField] Transform[] points;
-        [SerializeField] float checkDistance = 2f; //distance to check for the player
-        [SerializeField] LayerMask playerLayer;   // Assign "Player" layer in the Inspector
-        [SerializeField] Transform resetPosition; // Assign a reset position for safety
+        
+     
 
         int i;
         bool reverse;
@@ -63,31 +62,12 @@ namespace Platformer
                 }
             }
 
-            // **Check if moving down AND if a player is detected**
-            if (canMove && reverse)
-            {
-                if (CheckForPlayerUnderneath())
-                {
-                    Debug.Log("Player detected under elevator! Stopping.");
-                    canMove = false;
-                    return;
-                }
-            }
-
             if (canMove)
             {
                 transform.position = Vector3.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
             }
 
-            bool CheckForPlayerUnderneath()
-            {
-                RaycastHit hit;
-                if (Physics.Raycast(transform.position, Vector3.down, out hit, checkDistance, playerLayer))
-                {
-                    return true; // Player detected under the elevator
-                }
-                return false;
-            }
+           
 
         }
     }
