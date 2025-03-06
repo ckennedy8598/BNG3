@@ -45,7 +45,7 @@ namespace Platformer
             if (isPoisoned == true)
             {
                 PoisonDamage();
-                //ResetPoisonTick();
+                
             }
         }
 
@@ -59,7 +59,7 @@ namespace Platformer
             if (CanBeDamaged == true && poisonTick == true)
             {
 
-                PlayerHealth -= 1f;
+                PlayerHealth -= 3f;
 
                 poisonTimer -= 1f;
                 Debug.Log("Poison Damage");

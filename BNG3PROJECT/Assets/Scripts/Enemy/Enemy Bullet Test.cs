@@ -12,7 +12,7 @@ public class EnemyBulletTest : MonoBehaviour
     public float despawnTimer = 5f;
     public float force = 10f;
     private float timer;
-    public float bulletDamage = 5f;
+    public float bulletDamage = 30f;
 
     public Player_Health playerHealth;
     Rigidbody rb;

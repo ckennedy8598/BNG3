@@ -10,7 +10,7 @@ namespace Platformer
         public float despawnTimer = 1f;
         public float force = 2f;
         private float timer;
-        public float meleeDamage = 10f;
+        public float meleeDamage = 25f;
 
         public Player_Health playerHealth;
         Rigidbody rb;
