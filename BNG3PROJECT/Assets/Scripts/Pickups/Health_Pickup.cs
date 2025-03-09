@@ -10,6 +10,7 @@ namespace Platformer
         [Header("Player Script Reference")]
         public Player_Health PHScript;
 
+        private GameObject HealthAnimUIObj;
         public Animator HealthAnimator;
 
         private SpriteRenderer SpriteRender;
@@ -19,6 +20,9 @@ namespace Platformer
         //public AudioSource SFX;
         void Start()
         {
+            HealthAnimUIObj = GameObject.Find("Health_Pickup_Anim");
+            HealthAnimator = HealthAnimator.GetComponent<Animator>();
+
             PHScript = FindAnyObjectByType<Player_Health>();
             //SFX = GetComponent<AudioSource>();
             SpriteRender = GetComponent<SpriteRenderer>();

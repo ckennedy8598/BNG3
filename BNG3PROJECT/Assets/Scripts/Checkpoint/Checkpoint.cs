@@ -28,6 +28,7 @@ namespace Platformer
         {
             if (other.CompareTag("Player"))
             {
+                Debug.Log("Checkpoint activated");
                 gm.LastCheckpointPOS = transform.position;
             }
         }
