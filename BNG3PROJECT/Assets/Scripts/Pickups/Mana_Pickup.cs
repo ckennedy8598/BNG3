@@ -9,6 +9,7 @@ namespace Platformer
         [Header("Player Script Reference")]
         public Player_Attacking PAttack_Script;
 
+        public GameObject ManaAnimUIObj;
         public Animator ManaAnimator;
 
         private SpriteRenderer SpriteRender;
@@ -18,7 +19,10 @@ namespace Platformer
         //public AudioSource SFX;
         void Start()
         {
-            //ManaAnimator = FindObject
+            // Get Animator UI Object Because Unity is AWFUL
+            ManaAnimUIObj = GameObject.Find("Mana_Pickup_Anim");
+            ManaAnimator = ManaAnimUIObj.GetComponent<Animator>();
+
             PAttack_Script = FindAnyObjectByType<Player_Attacking>();
             SpriteRender = GetComponent<SpriteRenderer>();
             SphereCollider = GetComponent<SphereCollider>();
