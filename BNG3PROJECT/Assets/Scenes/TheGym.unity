@@ -34827,11 +34827,6 @@ MonoBehaviour:
   points:
   - {fileID: 1325289297}
   - {fileID: 325067938}
-  checkDistance: 2
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  resetPosition: {fileID: 0}
 --- !u!114 &899504760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84347,21 +84342,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3466828790697331774, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.423
-      objectReference: {fileID: 0}
     - target: {fileID: 6942719053752765719, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
       propertyPath: m_Name
       value: Checkpoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 7471510242493098126, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
-      propertyPath: m_Radius
-      value: 0.8500218
-      objectReference: {fileID: 0}
-    - target: {fileID: 7471510242493098126, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
-      propertyPath: m_Center.z
-      value: -0.35002187
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -84869,6 +84852,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 586255181597439594, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1384595324893762744, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
       propertyPath: m_Name
       value: Bat Attack

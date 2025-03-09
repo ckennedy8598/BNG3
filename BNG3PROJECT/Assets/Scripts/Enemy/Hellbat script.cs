@@ -54,8 +54,11 @@ namespace Platformer
         }
         private void Update()
         {
+            //look at player function
             Vector3 targetPostition = new Vector3(player.position.x, this.transform.position.y, player.position.z);
             this.transform.LookAt(targetPostition);
+
+
             // Checking attack and sight range
 
             playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
