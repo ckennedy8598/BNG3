@@ -25134,11 +25134,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6540655386584867547, guid: bb707b9adb581ac4f96d3dec6e03016f, type: 3}
   m_PrefabInstance: {fileID: 648876204}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &654563129 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1677030043954195057, guid: a852ba5d8ccaef142b0a06b9fe943773, type: 3}
-  m_PrefabInstance: {fileID: 719215139}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &657093731
 Mesh:
   m_ObjectHideFlags: 0
@@ -28506,29 +28501,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4365603582745812538, guid: a852ba5d8ccaef142b0a06b9fe943773, type: 3}
-      propertyPath: enemyMelee
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4365603582745812538, guid: a852ba5d8ccaef142b0a06b9fe943773, type: 3}
-      propertyPath: playerHealth
-      value: 
-      objectReference: {fileID: 5737594334199941197}
-    - target: {fileID: 6618046611392371600, guid: a852ba5d8ccaef142b0a06b9fe943773, type: 3}
-      propertyPath: enemyMelee
-      value: 
-      objectReference: {fileID: 1211534957273779233, guid: 056d7a66a5092e542a7386226f758eb3, type: 3}
-    - target: {fileID: 6618046611392371600, guid: a852ba5d8ccaef142b0a06b9fe943773, type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 654563129}
     - target: {fileID: 8199070898651077198, guid: a852ba5d8ccaef142b0a06b9fe943773, type: 3}
       propertyPath: m_Name
       value: HellBat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1064004731736898313, guid: a852ba5d8ccaef142b0a06b9fe943773, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a852ba5d8ccaef142b0a06b9fe943773, type: 3}
@@ -84852,14 +84830,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 586255181597439594, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384595324893762744, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
-      propertyPath: m_Name
-      value: Bat Attack
-      objectReference: {fileID: 0}
     - target: {fileID: 4379309076040079803, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
       propertyPath: player
       value: 

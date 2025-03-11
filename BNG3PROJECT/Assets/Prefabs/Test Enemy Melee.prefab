@@ -244,6 +244,8 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 8
+  PA_Script: {fileID: 0}
+  EH_Script: {fileID: 0}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
   walkSpeed: 0
@@ -269,6 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  sprite: {fileID: 3089455503139881477}
 --- !u!1001 &281244643397474457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -279,7 +282,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1211534957273779233, guid: aef22bcb66a863a419b4eb11a4a42124, type: 3}
       propertyPath: m_Name
-      value: Melee Attack
+      value: Bat Attack
       objectReference: {fileID: 0}
     - target: {fileID: 1483887335182526708, guid: aef22bcb66a863a419b4eb11a4a42124, type: 3}
       propertyPath: m_LocalPosition.x

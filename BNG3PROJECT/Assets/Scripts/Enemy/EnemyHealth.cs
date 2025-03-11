@@ -10,6 +10,13 @@ namespace Platformer
         [SerializeField] float health;
         [SerializeField] float maxHealth = 100f;
 
+        private bool isHurt = false;
+
+        public SpriteRenderer sprite;
+
+        
+
+
         private void Die()
         {
             Debug.Log("Enemy has been slain");
@@ -18,13 +25,19 @@ namespace Platformer
         
         void Start()
         {
-        health = maxHealth;
+            //sprite = GetComponent<SpriteRenderer>();
+            health = maxHealth;
         }
 
         public void Hurt(float damage)
         {
+            isHurt = true;
+            damageFlash();
             //Debug.Log("Enemy has been hurt");
             health -= damage;
+
+            
+            
         }
         private void Update()
         {
@@ -32,6 +45,23 @@ namespace Platformer
             {
                 Die();
             }
+        }
+
+        public void damageFlash()
+        {
+            if(isHurt == true)
+            {
+                Debug.Log("Damage Flash");
+                sprite.color = Color.red;
+                Invoke(nameof(resetFlash), 0.1f);
+            }
+        }
+
+        public void resetFlash()
+        {
+            Debug.Log("Damage Flash Reset");
+            sprite.color = Color.white;
+            isHurt = false;
         }
     }
 
