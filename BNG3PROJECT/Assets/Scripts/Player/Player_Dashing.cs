@@ -18,6 +18,7 @@ namespace Platformer
         public float DashForce;
         public float DashUpwardForce;
         public float DashDuration;
+        public Vector3 OldVelocity;
 
         [Header("Cooldown")]
         public Animator anim;
@@ -60,9 +61,44 @@ namespace Platformer
             }
             _pm.Dashing = true;
             anim.SetTrigger("Dashed");
-            Vector3 appliedForce = OrientObject.forward * DashForce + OrientObject.up * DashUpwardForce;
-            delayedForceToApply = appliedForce;
-            
+
+            // Holder for old velocity
+            OldVelocity = new Vector3(_rb.velocity.x, 0, _rb.velocity.x);
+
+            Vector3 appliedForce;
+
+            // Set velocity to a neutral state of 0 so each direction feels the same
+            _rb.velocity = new Vector3(0f, 0f, 0);
+            if (Input.GetKey(KeyCode.S))
+            {
+                appliedForce = -OrientObject.forward * DashForce;
+                delayedForceToApply = appliedForce;
+            }
+            // Left Dashing
+            else if (Input.GetKey(KeyCode.A))
+            {
+                appliedForce = -OrientObject.right * DashForce;
+                delayedForceToApply = appliedForce;
+            }
+            // Right Dashing
+            else if (Input.GetKey(KeyCode.D))
+            {
+                appliedForce = OrientObject.right * DashForce;
+                delayedForceToApply = appliedForce;
+            }
+            // Forward Dashing
+            else
+            {
+                // Store old velocity and remove upward velocity
+                appliedForce = OrientObject.forward * DashForce + OrientObject.up * DashUpwardForce;
+                //_rb.velocity = new Vector3(0f, 0f, _rb.velocity.x);
+                delayedForceToApply = appliedForce;
+            }
+
+            // Turn off gravity and remove upward velocity to even out dash
+            _rb.useGravity = false;
+            _rb.velocity = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
+
             Invoke(nameof(_delayedDashForce), 0.025f);
 
             Invoke(nameof(_resetDash), DashDuration);

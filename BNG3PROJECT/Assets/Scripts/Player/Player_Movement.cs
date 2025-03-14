@@ -14,12 +14,15 @@ public class Player_Movement : MonoBehaviour
     public AudioSource JumpSource;
 
     [Header("Movement")]
+    private Transform _playerBody;
+    private Transform _playerOrientation;
     private float _lastDesiredMS;
     private float _desiredMS;
     public float MoveSpeed;
     public float DashSpeed;
     public float GroundDrag;
     public bool Dashing;
+    public bool CanMove;
 
     [Header("Jumping")]
     public float CoyoteTime;
@@ -72,6 +75,12 @@ public class Player_Movement : MonoBehaviour
         // Get ParentPlatform script reference
         PP_Script = FindAnyObjectByType<ParentPlatform>();
 
+        //ScoreUpdate = GameObject.Find("Score_Counter").GetComponent<TextMeshPro>();
+        Debug.Log("Score Counter Found!");
+
+        _playerBody = GameObject.Find("PlayerBody").GetComponent<Transform>();
+        _playerOrientation = GameObject.Find("PlayerOrientation").GetComponent<Transform>();
+
         //GroundCheckText.text = "Start! <3";
         PlayerScore = 0;
         _rb = GetComponent<Rigidbody>();
@@ -91,6 +100,9 @@ public class Player_Movement : MonoBehaviour
         _speedControl();
         StateHandler();
 
+        this.gameObject.transform.rotation = _playerOrientation.rotation;
+        _playerBody.rotation = _playerOrientation.rotation;
+
         // Jump Buffer
         if (Input.GetKeyDown(JumpKey))
         {
@@ -100,6 +112,8 @@ public class Player_Movement : MonoBehaviour
         {
             JumpBufferCounter -= Time.deltaTime;
         }
+
+        
     }
 
     private void FixedUpdate()
@@ -136,6 +150,10 @@ public class Player_Movement : MonoBehaviour
 
     private void _movePlayer()
     {
+        if (!CanMove)
+        {
+            return;
+        }
         // calculate movement direction
         _moveDirection = Orientation.forward * _vertiInput + Orientation.right * _horiInput;
 
@@ -245,8 +263,9 @@ public class Player_Movement : MonoBehaviour
         if (Dashing)
         {
             state = MovementState.dashing;
-            _rb.useGravity = false;
-            _rb.velocity = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
+            CanMove = false;
+            //_rb.useGravity = false;
+            //_rb.velocity = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
             _desiredMS = DashSpeed;
             _rb.drag = 0f;
             GroundCheckText.text = "Dashing"; // Remove before release
@@ -266,6 +285,7 @@ public class Player_Movement : MonoBehaviour
         // Ground or Air State
         if (_grounded)
         {
+            CanMove = true;
             state = MovementState.walking;
             if(!Dashing)
             {
@@ -289,6 +309,7 @@ public class Player_Movement : MonoBehaviour
         }
         else if (!_grounded && !Dashing)
         {
+            CanMove = true;
             state = MovementState.air;
             _rb.useGravity = true;
             _myInput();

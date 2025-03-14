@@ -43,11 +43,17 @@ public class Player_Cam : MonoBehaviour
             _loadSensitivity();
         }
 
+        // Find Slider and Components
+        SensSliderX = FindObjectOfType<Slider>();
+
+
         setRot = true;
         CanMoveCamera = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         //SensSliderX.value = 20; SensSliderY.value = 20;
+
+        Orientation = GameObject.Find("PlayerOrientation").transform;
 
         // Rotate Camera + Player Orientation On Level Start
         yRot = _levelStartRotation;
