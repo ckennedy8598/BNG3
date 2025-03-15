@@ -100,8 +100,8 @@ public class Player_Movement : MonoBehaviour
         _speedControl();
         StateHandler();
 
-        this.gameObject.transform.rotation = _playerOrientation.rotation;
-        _playerBody.rotation = _playerOrientation.rotation;
+        //this.gameObject.transform.rotation = _playerOrientation.rotation;
+        //_playerBody.rotation = _playerOrientation.rotation;
 
         // Jump Buffer
         if (Input.GetKeyDown(JumpKey))

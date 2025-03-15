@@ -108,6 +108,7 @@ namespace Platformer
         private Vector3 delayedForceToApply;
         private void _delayedDashForce()
         {
+            _rb.useGravity = false;
             _rb.AddForce(delayedForceToApply, ForceMode.Impulse);
         }
 
