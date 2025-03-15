@@ -44,7 +44,7 @@ public class Player_Cam : MonoBehaviour
         }
 
         // Find Slider and Components
-        SensSliderX = FindObjectOfType<Slider>();
+        //SensSliderX = FindObjectOfType<Slider>();
 
 
         setRot = true;
