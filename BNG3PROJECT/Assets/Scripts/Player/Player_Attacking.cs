@@ -134,6 +134,7 @@ namespace Platformer
 
                 // All combo variables
                 Anim.SetBool("Light_Attack_Combo_Allowed", false);
+                Anim.SetBool("Block_Bool_Loop", false);
                 Anim.ResetTrigger("Light_Attack_Combo_Trigger");
                 _comboTimer = 0; _blockTimer = 0;
                 _startTimer = false; IsBlocking = false;
@@ -256,6 +257,7 @@ namespace Platformer
                     _allowInvoke = true;
                 }
                 State = AttackState.Blocking;
+                Anim.SetBool("Block_Bool_Loop", true);
                 Debug.Log("Annoy Log For Blocking Lol");
             }
             else if (Input.GetKeyUp(KeyCode.LeftControl))
