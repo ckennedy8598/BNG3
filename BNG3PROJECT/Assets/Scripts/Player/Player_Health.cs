@@ -17,6 +17,9 @@ namespace Platformer
         public Slider HealthSlider;
 
         private float _maxHealth = 100f;
+        private float _dmgTimerCheck;
+        private float _dmgTimer = 1f;
+        private bool _damageCooldown;
         public bool CanBeDamaged;
         public float PlayerHealth = 20f;
         public TMP_Text HealthReadout;
@@ -105,8 +108,22 @@ namespace Platformer
                 else
                 {
                     PlayerHealth -= damage;
+                    _dmgCooldown();
+                    //Debug.Log("!!!!!!CALLED DAMAGE COOLDOWN: PLAYER STATE INVULNERABLE!!!!!!");
                 }
-            }          
+            }
+        }
+
+        private void _dmgCooldown()
+        {
+            CanBeDamaged = false;
+            Invoke("_resetDmgCooldown", 1f);
+        }
+
+        private void _resetDmgCooldown()
+        {
+            CanBeDamaged = true;
+            //Debug.Log("!!!!!PLAYER STATE CAN BE DAMAGED!!!!!");
         }
 
         private void _setDead()
