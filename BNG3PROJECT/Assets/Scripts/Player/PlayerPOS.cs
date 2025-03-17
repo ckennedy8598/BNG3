@@ -12,14 +12,22 @@ namespace Platformer
 
         void Start()
         {
+            
+        }
+
+        private void Awake()
+        {
+            Debug.Log("Spawning player");
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
             transform.position = gm.LastCheckpointPOS;
         }
-
         // Update is called once per frame
         void Update()
         {
         
         }
+
+          
+        
     }
 }

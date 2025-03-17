@@ -18,10 +18,7 @@ namespace Platformer
         // Update is called once per frame
         void Update()
         {
-            //if (Input.GetKeyUp(KeyCode.I)) 
-            //{
-            //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            //}
+            
         }
 
         void OnTriggerEnter(Collider other)
