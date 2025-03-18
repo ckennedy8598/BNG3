@@ -13,11 +13,14 @@ namespace Platformer
 
         public GameObject Player;
 
+        public bool isrespawning = true;
         private void Awake()
         {
-            
+            Player = GameObject.Find("Player");
+            Debug.Log("Player spawned");
 
-            if(instance == null)
+
+            if (instance == null)
             {
                 instance = this;
                 DontDestroyOnLoad(instance);
@@ -31,16 +34,22 @@ namespace Platformer
         void Start()
         {
 
-            Player = GameObject.Find("Player");
-            Debug.Log("Player spawned");
-            Player.transform.position = LastCheckpointPOS;
+            
 
         }
 
         // Update is called once per frame
         void Update()
         {
-        
+            //if (isrespawning == true)
+            //{
+               // Debug.Log("respawning true");
+               // if (Player != null)
+                //{
+                 //   Player.transform.position = LastCheckpointPOS;
+                 //   isrespawning = false;
+                //}
+            //}
         }
     }
 }
