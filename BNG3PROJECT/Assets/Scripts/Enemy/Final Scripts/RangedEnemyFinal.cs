@@ -26,6 +26,10 @@ namespace Platformer
 
         public LayerMask whatIsGround, whatIsPlayer;
 
+        private float bulletTime;
+
+        public bool stateRecheck = true;
+
         public DeviState State;
         public enum DeviState
         {
@@ -40,36 +44,49 @@ namespace Platformer
         }
         //Attacking timer
         public float timeBetweenAttacks = 5f;
-        bool alreadyAttacked;
+        bool alreadyAttacked = false;
 
         //Attacking Ranges
         public float sightRange, attackingRange;
         public bool playerInSightRange, playerInAttackRange;
 
-        
+        private void ResetState()
+        {
+            State = DeviState.Idle;
+        }
 
         private void StateHandler()
         {
             if(State == DeviState.Idle)
             {
                 //Idle animation will go here
+                //animator.SetBool("isIdle", true);
             }
 
             if(State == DeviState.Walk)
             {
-                //Walking animation will go here
+                Debug.Log("Walking");
+                
+                gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+                agent.SetDestination(player.position);
+                animator.SetBool("isIdle", false);
+                animator.SetBool("isWalking", true);
+                animator.SetBool("isShooting", false);
 
             }
 
             if(State == DeviState.Attack)
             {
+                Debug.Log("Attack!");
+                stateRecheck = false;
+                
                 //Attack animation will go here
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
                 animator.SetBool("isShooting", true);
                 animator.SetBool("isWalking", false);
                 animator.SetBool("isIdle", false);
 
-                Instantiate(enemyBullet, transform.Find("SpawnPoint").position, Quaternion.identity);
+                
 
 
                 if (!alreadyAttacked)
@@ -77,9 +94,10 @@ namespace Platformer
 
                     
                     Debug.Log("Attacking Player");
-
+                    ShootAtPlayer();
                     alreadyAttacked = true;
                     Invoke(nameof(ResetAttack), timeBetweenAttacks);
+                    //stateRecheck = true;
                 }
 
                 
@@ -96,13 +114,30 @@ namespace Platformer
             Debug.Log("Resetting Attack");
             alreadyAttacked = false;
         }
-        void Start()
+        void Awake()
         {
             spawnPoint = GetComponent<Transform>();
             player = GameObject.Find("Player").transform;
             agent = GetComponent<NavMeshAgent>();
 
-            animator = this.GetComponent<Animator>();
+            animator = this.GetComponentInChildren<Animator>();
+        }
+        void Start()
+        {
+         
+        }
+        void ShootAtPlayer()
+        {
+            bulletTime -= Time.deltaTime;
+
+            if (bulletTime > 0)
+            {
+                return;
+            }
+
+            Instantiate(enemyBullet, transform.Find("SpawnPoint").position, Quaternion.identity);
+            
+
         }
 
         // Update is called once per frame
@@ -111,10 +146,26 @@ namespace Platformer
             Vector3 targetPostition = new Vector3(player.position.x, this.transform.position.y, player.position.z);
             this.transform.LookAt(targetPostition);
             // Checking attack and sight range
-
+            StateHandler();
 
             playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
             playerInAttackRange = Physics.CheckSphere(transform.position, attackingRange, whatIsPlayer);
+
+            if (!playerInSightRange && !playerInAttackRange)
+            {
+                State = DeviState.Idle;
+            }
+            else if (playerInSightRange && !playerInAttackRange)
+            {
+                
+                    State = DeviState.Walk;   
+                  
+            }
+            else if (playerInSightRange && playerInAttackRange)
+            {
+
+                State = DeviState.Attack;
+            }
         }
     }
 }
