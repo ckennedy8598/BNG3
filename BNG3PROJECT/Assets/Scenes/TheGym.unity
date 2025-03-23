@@ -11132,13 +11132,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 2867588360507978647, guid: 4a0f7e8b6532ca846b81cd2264a9eac4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4844768096459703619, guid: 4a0f7e8b6532ca846b81cd2264a9eac4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.282516
       objectReference: {fileID: 0}
     - target: {fileID: 4844768096459703619, guid: 4a0f7e8b6532ca846b81cd2264a9eac4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.599998
+      value: 11.17
       objectReference: {fileID: 0}
     - target: {fileID: 4844768096459703619, guid: 4a0f7e8b6532ca846b81cd2264a9eac4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -84654,6 +84658,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4473704320128826865, guid: 2622608942a383b4b8f84e27c902954a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5737594334199941202}
+    - targetCorrespondingSourceObject: {fileID: 4473704320128826865, guid: 2622608942a383b4b8f84e27c902954a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5737594334199941207}
   m_SourcePrefab: {fileID: 100100000, guid: 2622608942a383b4b8f84e27c902954a, type: 3}
 --- !u!1001 &4596077549718150699
 PrefabInstance:
@@ -84934,6 +84941,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b0f4384cc36e84eb7557b751a963c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5737594334199941207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321577180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d92e8aa8f1bca48be55be2ae8bb59b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPoisoned: 0
+  poisonTick: 1
+  isBurned: 0
+  burnTick: 1
+  isFrosted: 0
+  frostTick: 1
+  playerHealth: {fileID: 0}
 --- !u!95 &5779953234210738623 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8724411031574186969, guid: 447badd187bea3049a8b2aac9782d9da, type: 3}

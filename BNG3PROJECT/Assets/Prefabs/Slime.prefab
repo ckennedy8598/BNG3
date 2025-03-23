@@ -311,7 +311,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2728895491912469084}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -348,6 +348,7 @@ MonoBehaviour:
     m_Bits: 8
   endZone: {fileID: 0}
   lineOfSight: {fileID: 0}
+  speed: 5
   playerSeen: 0
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
