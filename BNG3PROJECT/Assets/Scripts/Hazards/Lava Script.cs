@@ -11,6 +11,7 @@ namespace Platformer
         public float lavaDamage = 20f;
         public Player_Health playerHealth;
         public GameObject slime;
+        public PlayerTickDamage ptd;
 
         public GameObject player;
 
@@ -21,6 +22,8 @@ namespace Platformer
             playerHealth = FindAnyObjectByType<Player_Health>();
 
             slime = GameObject.Find("Slime");
+
+            ptd = FindAnyObjectByType<PlayerTickDamage>();
         }
 
         // Update is called once per frame
@@ -34,8 +37,8 @@ namespace Platformer
 
             if (other.gameObject.CompareTag("Player"))
             {
-                playerHealth.TakeDamage(lavaDamage);
-                Debug.Log("Player has been Killed by Lava");
+                ptd.isBurned = true;
+                Debug.Log("Player has been burned by Lava");
             }
             if (other.gameObject == slime)
             {

@@ -25,11 +25,11 @@ namespace Platformer
         public TMP_Text HealthReadout;
 
 
-        // These are variables for my poison damage method - Chris
-        private float poisonTimer = 4f;
-        public bool isPoisoned = false;
-        public bool poisonTick = true;
-        private float timeBetweenPoison = 4f;
+        // I moved the poison method to it's own script, as well as adding burn damage and frost damage. Nothing in the game
+        // currently calls those, but they will in the future. - Chris
+        //
+        // P.S. I hope I didn't break anything by removing my method. I always get afraid that if I go in someone else's script I will accidently
+        // mess something up lol
 
         // Start is called before the first frame update
         void Start()
@@ -45,39 +45,11 @@ namespace Platformer
             HealthReadout.text = "Health: " +  PlayerHealth.ToString();
             HealthSlider.value = PlayerHealth;
             _checkDead();
-            if (isPoisoned == true)
-            {
-                PoisonDamage();
-                
-            }
         }
 
         //Poison damage. Gonna rework this in the future. I want this to do a certian amount of damage a second - Chris
-        private void ResetPoisonTick()
-        {
-            poisonTick = true;
-        }
-        private void PoisonDamage()
-        {
-            if (CanBeDamaged == true && poisonTick == true)
-            {
-
-                PlayerHealth -= 3f;
-
-                poisonTimer -= 1f;
-                Debug.Log("Poison Damage");
-                poisonTick = false;
-
-                Invoke(nameof(ResetPoisonTick), timeBetweenPoison);
-            }
-            
-
-            
-            if (poisonTimer <= 0 )
-            {
-                isPoisoned = false;
-            }
-        }
+        
+        
 
         private void LateUpdate()
         {
