@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-//https://youtu.be/8oTYabhj248?si=sNnmE4SlLYG3s7JO
+// inspired by this tut https://youtu.be/8oTYabhj248?si=sNnmE4SlLYG3s7JO
 // some of this isnt used actually bc I dont currently want text to appear as soon as you spawn, if i change my mind, uncomment the stuff for something
 // like "Infernus" or the name of the level to always appear?
 
@@ -28,18 +28,18 @@ namespace Platformer
         }
 
         // Update is called once per frame
-        void Update()
+        void Update() //commented out bc I dont want mouse click progression and ending for now
         {
-            if(Input.GetMouseButtonDown(0))
+           // if(Input.GetMouseButtonDown(0))
             {
-                if (textComponent.text == lines[index])
+               // if (textComponent.text == lines[index])
                 {
-                    NextLine();
+               //     NextLine();
                 }
-                else
+               // else
                 {
-                    StopAllCoroutines();
-                    textComponent.text = lines[index];
+                //    StopAllCoroutines();
+                 //   textComponent.text = lines[index];
                 }
             }
         }
@@ -58,6 +58,9 @@ namespace Platformer
                 textComponent.text += c;
                 yield return new WaitForSeconds(textSpeed);
             }
+
+            yield return new WaitForSeconds(2f); // delay x secs before moving on
+            NextLine();
         }
 
         void NextLine()

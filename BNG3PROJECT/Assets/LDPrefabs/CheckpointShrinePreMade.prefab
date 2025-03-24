@@ -248,7 +248,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 478
+  m_VersionIndex: 499
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -841,7 +841,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 211
+  m_VersionIndex: 232
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1054,7 +1054,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9c7e0573a5f0c4f46b57f149ef11be11, type: 2}
     - target: {fileID: 1810661118502731626, guid: 37dcfed3ff0a1e040a78c51b64a7e1c7, type: 3}
       propertyPath: m_VersionIndex
-      value: 433
+      value: 454
       objectReference: {fileID: 0}
     - target: {fileID: 3962517596815220775, guid: 37dcfed3ff0a1e040a78c51b64a7e1c7, type: 3}
       propertyPath: m_Name
@@ -1124,7 +1124,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9c7e0573a5f0c4f46b57f149ef11be11, type: 2}
     - target: {fileID: 1810661118502731626, guid: 37dcfed3ff0a1e040a78c51b64a7e1c7, type: 3}
       propertyPath: m_VersionIndex
-      value: 24
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3962517596815220775, guid: 37dcfed3ff0a1e040a78c51b64a7e1c7, type: 3}
       propertyPath: m_Name
@@ -1244,6 +1244,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2267779821318150761, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
+      propertyPath: CheckpointSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 724ffccc137c75a4698bee9ecfe896a8, type: 3}
     - target: {fileID: 2719265788567704386, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
       propertyPath: m_Color.b
       value: 0.6037736
@@ -1267,6 +1271,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6942719053752765719, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3644348988461435559}
+    - targetCorrespondingSourceObject: {fileID: 6942719053752765719, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5338366514505898579}
   m_SourcePrefab: {fileID: 100100000, guid: 5ad4b67b5cbedbe4c85eff9557368e48, type: 3}
 --- !u!4 &241720661366927751 stripped
 Transform:
@@ -1299,6 +1306,23 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.065432
   m_Center: {x: -0.026661307, y: 0.14999999, z: -0.22}
+--- !u!114 &5338366514505898579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171490012003558315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4effc045e009ad44da4e4e7884940a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - Checkpoint Reached!
+  dialogueScript: {fileID: 0}
+  triggerOnce: 0
+  textComponent: {fileID: 0}
 --- !u!1001 &7829227986255776233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1313,7 +1337,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9c7e0573a5f0c4f46b57f149ef11be11, type: 2}
     - target: {fileID: 1810661118502731626, guid: 37dcfed3ff0a1e040a78c51b64a7e1c7, type: 3}
       propertyPath: m_VersionIndex
-      value: 24
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3962517596815220775, guid: 37dcfed3ff0a1e040a78c51b64a7e1c7, type: 3}
       propertyPath: m_Name
@@ -1383,7 +1407,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9c7e0573a5f0c4f46b57f149ef11be11, type: 2}
     - target: {fileID: 1810661118502731626, guid: 37dcfed3ff0a1e040a78c51b64a7e1c7, type: 3}
       propertyPath: m_VersionIndex
-      value: 24
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3962517596815220775, guid: 37dcfed3ff0a1e040a78c51b64a7e1c7, type: 3}
       propertyPath: m_Name
