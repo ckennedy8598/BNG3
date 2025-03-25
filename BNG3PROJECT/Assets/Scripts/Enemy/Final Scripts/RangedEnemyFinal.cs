@@ -30,6 +30,8 @@ namespace Platformer
 
         public bool stateRecheck = true;
 
+        public bool testbool = false;
+
         public DeviState State;
         public enum DeviState
         {
@@ -65,6 +67,7 @@ namespace Platformer
 
             if(State == DeviState.Walk)
             {
+                
                 Debug.Log("Walking");
                 
                 gameObject.GetComponent<NavMeshAgent>().isStopped = false;
@@ -154,11 +157,12 @@ namespace Platformer
             if (!playerInSightRange && !playerInAttackRange)
             {
                 State = DeviState.Idle;
+                testbool = true;
             }
-            else if (playerInSightRange && !playerInAttackRange)
+            else if (playerInSightRange && !playerInAttackRange && testbool == true)
             {
-                
-                    State = DeviState.Walk;   
+                testbool = false;
+                State = DeviState.Walk;   
                   
             }
             else if (playerInSightRange && playerInAttackRange)
