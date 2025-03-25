@@ -18428,6 +18428,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   stateRecheck: 1
+  testbool: 0
   State: 0
   timeBetweenAttacks: 5
   sightRange: 20
@@ -61427,6 +61428,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   stateRecheck: 1
+  testbool: 0
   State: 0
   timeBetweenAttacks: 5
   sightRange: 0
