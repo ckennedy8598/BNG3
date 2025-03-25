@@ -51,10 +51,10 @@ namespace Platformer
 
         private void Awake()
         {
-            player = GameObject.Find("Player").transform;
+            //player = GameObject.Find("Player").transform;
             agent = GetComponent<NavMeshAgent>();
-            endZone = GameObject.Find("EndZone").transform;
-            lineOfSight = GameObject.Find("LineOfSight");
+            //endZone = GameObject.Find("EndZone").transform;
+            //lineOfSight = GameObject.Find("LineOfSight");
 
 
         }
@@ -83,11 +83,11 @@ namespace Platformer
             //    AttackPlayer();
             //}
             Patroling();
-            var step = speed * Time.deltaTime;
-            if (playerSeen == true)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, endZone.position, step);
-            }
+            //var step = speed * Time.deltaTime;
+            //if (playerSeen == true)
+            //{
+                //transform.position = Vector3.MoveTowards(transform.position, endZone.position, step);
+            //}
 
         }
 
