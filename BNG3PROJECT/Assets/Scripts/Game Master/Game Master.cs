@@ -16,8 +16,8 @@ namespace Platformer
         public bool isrespawning = true;
         private void Awake()
         {
-            Player = GameObject.Find("Player");
-            Debug.Log("Player spawned");
+            
+            
 
 
             if (instance == null)
@@ -50,6 +50,12 @@ namespace Platformer
                  //   isrespawning = false;
                 //}
             //}
+
+            if (Player == null)
+            {
+                Player = GameObject.FindWithTag("Player");
+            }
+            
         }
     }
 }
