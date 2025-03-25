@@ -7,7 +7,6 @@ namespace Platformer
     public class PoisonTippedSpikesScript : MonoBehaviour
     {
         // Start is called before the first frame update
-        public float spikeDamage = 20f;
         public Player_Health playerHealth;
         public GameObject slime;
         public PlayerTickDamage ptd;
@@ -34,7 +33,6 @@ namespace Platformer
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                playerHealth.TakeDamage(spikeDamage);
                 ptd.isPoisoned = true;
                 Debug.Log("Player has be poked by spike");
             }

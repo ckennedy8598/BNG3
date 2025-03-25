@@ -8,7 +8,7 @@ namespace Platformer
     {
         // Start is called before the first frame update
 
-        public float lavaDamage = 30f;
+        public float lavaDamage = 20f;
         public Player_Health playerHealth;
         public GameObject slime;
         public PlayerTickDamage ptd;
@@ -37,7 +37,6 @@ namespace Platformer
 
             if (other.gameObject.CompareTag("Player"))
             {
-                playerHealth.TakeDamage(lavaDamage);
                 ptd.isBurned = true;
                 Debug.Log("Player has been burned by Lava");
             }

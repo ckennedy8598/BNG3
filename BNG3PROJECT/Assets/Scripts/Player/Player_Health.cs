@@ -23,7 +23,6 @@ namespace Platformer
         public bool CanBeDamaged;
         public float PlayerHealth = 20f;
         public TMP_Text HealthReadout;
-        public AudioSource HealthPickupSFX;
 
 
         // I moved the poison method to it's own script, as well as adding burn damage and frost damage. Nothing in the game
@@ -62,7 +61,6 @@ namespace Platformer
             if (PlayerHealth > 0)
             {
                 PlayerHealth += amount;
-                HealthPickupSFX.Play();
                 if (PlayerHealth >= _maxHealth)
                 {
                     PlayerHealth = _maxHealth;
