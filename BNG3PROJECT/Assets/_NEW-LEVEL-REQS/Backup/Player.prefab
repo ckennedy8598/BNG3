@@ -47,6 +47,8 @@ GameObject:
   - component: {fileID: 5693364405076419501}
   - component: {fileID: 6736992631126367313}
   - component: {fileID: 3018702076616494947}
+  - component: {fileID: 1244034324643940450}
+  - component: {fileID: 6863423125287865875}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -169,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OrientObject: {fileID: 6467647252861771760}
   PlayerCam: {fileID: 4927696856455303565}
-  DashForce: 20
+  DashForce: 40
   DashUpwardForce: 0
   DashDuration: 0.25
   OldVelocity: {x: 0, y: 0, z: 0}
@@ -324,7 +326,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0094e3dfc3762df46974e6e22d6bc352, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.101
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -408,6 +410,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1244034324643940450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4473704320128826865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b0f4384cc36e84eb7557b751a963c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6863423125287865875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4473704320128826865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d92e8aa8f1bca48be55be2ae8bb59b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPoisoned: 0
+  poisonTick: 1
+  isBurned: 0
+  burnTick: 1
+  isFrosted: 0
+  frostTick: 1
+  playerHealth: {fileID: 0}
 --- !u!1 &4632760846529015646
 GameObject:
   m_ObjectHideFlags: 0
