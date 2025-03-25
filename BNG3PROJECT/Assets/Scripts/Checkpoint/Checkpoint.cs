@@ -7,9 +7,10 @@ namespace Platformer
 {
     public class Checkpoint : MonoBehaviour
     {
-        // Start is called before the first frame update\
+        // Start is called before the first frame update
 
         private GameMaster gm;
+        public AudioClip CheckpointSFX;
         void Start()
         {
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
@@ -32,6 +33,7 @@ namespace Platformer
             {
                 Debug.Log("Checkpoint activated");
                 gm.LastCheckpointPOS = transform.position;
+                AudioSource.PlayClipAtPoint(CheckpointSFX, gameObject.transform.position);
             }
         }
     }
