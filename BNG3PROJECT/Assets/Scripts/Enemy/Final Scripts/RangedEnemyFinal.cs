@@ -63,6 +63,7 @@ namespace Platformer
             {
                 //Idle animation will go here
                 //animator.SetBool("isIdle", true);
+               
             }
 
             if(State == DeviState.Walk)
@@ -77,6 +78,10 @@ namespace Platformer
                 animator.SetBool("isShooting", false);
 
             }
+            //else
+            //{
+            //    animator.SetBool("isWalking", false);
+            //}
 
             if(State == DeviState.Attack)
             {
@@ -151,7 +156,7 @@ namespace Platformer
             // Checking attack and sight range
             StateHandler();
 
-            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+           // playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
             playerInAttackRange = Physics.CheckSphere(transform.position, attackingRange, whatIsPlayer);
 
             if (!playerInSightRange && !playerInAttackRange)
@@ -159,12 +164,12 @@ namespace Platformer
                 State = DeviState.Idle;
                 testbool = true;
             }
-            else if (playerInSightRange && !playerInAttackRange && testbool == true)
-            {
-                testbool = false;
-                State = DeviState.Walk;   
+            //else if (playerInSightRange && !playerInAttackRange && testbool == true)
+            //{
+            //    testbool = false;
+            //    State = DeviState.Walk;   
                   
-            }
+            //}
             else if (playerInSightRange && playerInAttackRange)
             {
 
