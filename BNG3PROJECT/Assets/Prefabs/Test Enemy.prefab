@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7562001946189556837}
   - component: {fileID: 907254949368070040}
   - component: {fileID: 1195348299117043709}
+  - component: {fileID: 8764113885506155894}
   m_Layer: 0
   m_Name: Test Enemy
   m_TagString: Enemy
@@ -94,7 +95,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649043069165151860}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 248ba8de98adccc4ab158e1ecc47d71d, type: 3}
   m_Name: 
@@ -156,6 +157,40 @@ MonoBehaviour:
   health: 0
   maxHealth: 150
   sprite: {fileID: 2849971565624339602}
+  deathTimer: 2
+  animator: {fileID: 0}
+--- !u!114 &8764113885506155894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649043069165151860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e623c9b3c352d824eb685a706d733cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 907254949368070040}
+  player: {fileID: 0}
+  enemyBullet: {fileID: 3177013235917468854, guid: a66e0e83580fa1a418957b7488be31db, type: 3}
+  spawnPoint: {fileID: 6783909673318847231}
+  sprite: {fileID: 2849971565624339602}
+  animator: {fileID: 8322640703122403252}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 8
+  stateRecheck: 1
+  testbool: 0
+  State: 0
+  timeBetweenAttacks: 5
+  sightRange: 20
+  attackingRange: 10
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!1 &3809360382464114735
 GameObject:
   m_ObjectHideFlags: 0
