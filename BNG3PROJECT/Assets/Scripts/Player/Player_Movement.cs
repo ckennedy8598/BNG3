@@ -297,10 +297,12 @@ public class Player_Movement : MonoBehaviour
             // turn off gravity on slope (so we don't slide)
             if (_onSlope())
             {
+                _rb.drag = GroundDrag * 2;
                 _rb.useGravity = false;
             }
             else
             {
+                _rb.drag = GroundDrag;
                 _rb.useGravity = true;
             }
             CoyoteTimeCounter = CoyoteTime;
