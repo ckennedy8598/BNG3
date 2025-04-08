@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 800
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -95,7 +95,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: player_fire_fixed_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 1400
+        height: 800
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f2f3d3c71468043ade84a238dea501
+      internalID: -1827529090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_fire_fixed_1
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2400
+        width: 1400
+        height: 800
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1723989bc235c284b9d79be367f6c505
+      internalID: 1874112376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_fire_fixed_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 1400
+        height: 800
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd83d4edf9a53264388b7edb92f66dd8
+      internalID: 177431310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_fire_fixed_3
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1600
+        width: 1400
+        height: 800
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35b987df8e918340b8e988fe88448c2
+      internalID: 104057870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_fire_fixed_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 1400
+        height: 800
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4284d52ed08434f980630a771daa32
+      internalID: -504910293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_fire_fixed_5
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 800
+        width: 1400
+        height: 800
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e47e8e75b8cdf41a7f1c58849c1c32
+      internalID: -1090053744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_fire_fixed_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1400
+        height: 800
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b4c955f04f30d48b2110eb4148e9f7
+      internalID: -1630189823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_fire_fixed_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 1400
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e98548f3c4e0784480f7ae58324d0c0
+      internalID: 1355946462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +274,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player_fire_fixed_0: -1827529090
+      player_fire_fixed_1: 1874112376
+      player_fire_fixed_2: 177431310
+      player_fire_fixed_3: 104057870
+      player_fire_fixed_4: -504910293
+      player_fire_fixed_5: -1090053744
+      player_fire_fixed_6: -1630189823
+      player_fire_fixed_7: 1355946462
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -47,8 +47,8 @@ GameObject:
   - component: {fileID: 5693364405076419501}
   - component: {fileID: 6736992631126367313}
   - component: {fileID: 3018702076616494947}
-  - component: {fileID: 1244034324643940450}
   - component: {fileID: 6863423125287865875}
+  - component: {fileID: 3041209094499508854}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -135,8 +135,8 @@ MonoBehaviour:
   PP_Script: {fileID: 0}
   JumpSource: {fileID: 6736992631126367313}
   MoveSpeed: 12
-  DashSpeed: 20
-  GroundDrag: 6
+  DashSpeed: 30
+  GroundDrag: 10
   Dashing: 0
   CanMove: 0
   CoyoteTime: 0.15
@@ -410,18 +410,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1244034324643940450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4473704320128826865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47b0f4384cc36e84eb7557b751a963c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6863423125287865875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,6 +429,18 @@ MonoBehaviour:
   isFrosted: 0
   frostTick: 1
   playerHealth: {fileID: 0}
+--- !u!114 &3041209094499508854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4473704320128826865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b0f4384cc36e84eb7557b751a963c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4632760846529015646
 GameObject:
   m_ObjectHideFlags: 0

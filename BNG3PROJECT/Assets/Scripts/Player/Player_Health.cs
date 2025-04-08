@@ -25,6 +25,9 @@ namespace Platformer
         public TMP_Text HealthReadout;
         public AudioSource HealthPickupSFX;
 
+        public GameObject UI;
+        private bool _UIBool = true;
+
 
         // I moved the poison method to it's own script, as well as adding burn damage and frost damage. Nothing in the game
         // currently calls those, but they will in the future. - Chris
@@ -46,6 +49,12 @@ namespace Platformer
             HealthReadout.text = "Health: " +  PlayerHealth.ToString();
             HealthSlider.value = PlayerHealth;
             _checkDead();
+
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                _UIBool = !_UIBool;
+                UI.SetActive(_UIBool);
+            }
         }
 
         //Poison damage. Gonna rework this in the future. I want this to do a certian amount of damage a second - Chris
