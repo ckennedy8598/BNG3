@@ -52,7 +52,7 @@ namespace Platformer
         public float sightRange, attackingRange;
         public bool playerInSightRange, playerInAttackRange;
 
-        private void ResetState()
+        public void ResetState()
         {
             State = DeviState.Idle;
         }
@@ -176,5 +176,7 @@ namespace Platformer
                 State = DeviState.Attack;
             }
         }
+
+        
     }
 }

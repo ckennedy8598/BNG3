@@ -4,31 +4,31 @@ using UnityEngine;
 
 namespace Platformer
 {
-    public class RESightRange : MonoBehaviour
+    public class BSightRange : MonoBehaviour
     {
-        public RangedEnemyFinal REFinal;
+        public BatFinal BF;
 
         
         void Awake()
         {
-            REFinal = GetComponentInParent<RangedEnemyFinal>();
+            BF = GetComponentInParent<BatFinal>();
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                REFinal.State = RangedEnemyFinal.DeviState.Walk;
+                BF.state = BatFinal.BatState.Walk;
             }
         }
-
         private void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.CompareTag("Player"))
+            if(other.gameObject.CompareTag("Player"))
             {
-                REFinal.ResetState();
+                BF.ResetState();
             }
         }
+        // Update is called once per frame
         void Update()
         {
         

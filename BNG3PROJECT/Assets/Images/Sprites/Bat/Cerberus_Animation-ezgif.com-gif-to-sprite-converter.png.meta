@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f08440911b94084aba1fcb46a9b96d5
+guid: 59f93b0476cdfc84d9b2215b2db0e30a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bat_enemy_Bite_0
+      name: Cerberus_Animation-ezgif.com-gif-to-sprite-converter_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 708
-        width: 300
-        height: 354
+        y: 1300
+        width: 650
+        height: 650
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd8a186e48a3a144f9866397b27c9634
-      internalID: -235729301
+      spriteID: 980719f1b73c11047a8830fcc7ec3d81
+      internalID: -1915241439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_enemy_Bite_1
+      name: Cerberus_Animation-ezgif.com-gif-to-sprite-converter_1
       rect:
         serializedVersion: 2
-        x: 300
-        y: 708
-        width: 300
-        height: 354
+        x: 650
+        y: 1300
+        width: 650
+        height: 650
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2026004a0a9e0f4abd070318c4a0345
-      internalID: -173311017
+      spriteID: 15b523244ce56cc4192c0d2193e7fdf8
+      internalID: 822816189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_enemy_Bite_2
+      name: Cerberus_Animation-ezgif.com-gif-to-sprite-converter_2
       rect:
         serializedVersion: 2
-        x: 600
-        y: 708
-        width: 300
-        height: 354
+        x: 1300
+        y: 1300
+        width: 650
+        height: 650
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3e5a10b1c791544bba99a1798704ad4
-      internalID: -138298973
+      spriteID: d98cfcf3e6cba754bb8f22cd6a1e9a5c
+      internalID: -1166530698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_enemy_Bite_3
+      name: Cerberus_Animation-ezgif.com-gif-to-sprite-converter_3
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1300
+        width: 650
+        height: 650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b44a614348cf944ae194cee3c25576
+      internalID: -243462245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cerberus_Animation-ezgif.com-gif-to-sprite-converter_4
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 1300
+        width: 650
+        height: 650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43cf98f1b92def48b8050dbb3543279
+      internalID: -51218947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cerberus_Animation-ezgif.com-gif-to-sprite-converter_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 354
-        width: 300
-        height: 354
+        y: 650
+        width: 650
+        height: 650
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f3dca652192758409910e65b5aef066
-      internalID: -412202614
+      spriteID: 0f44e0fb35aed0d41b943968d8f29b74
+      internalID: 1080961587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_enemy_Bite_4
+      name: Cerberus_Animation-ezgif.com-gif-to-sprite-converter_6
       rect:
         serializedVersion: 2
-        x: 300
-        y: 354
-        width: 300
-        height: 354
+        x: 650
+        y: 650
+        width: 650
+        height: 650
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34da7fa38ae18cb47a82559121bb4135
-      internalID: -691342138
+      spriteID: 6f24df96004beb34da1d79d05d8c310a
+      internalID: -1508945638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_enemy_Bite_5
+      name: Cerberus_Animation-ezgif.com-gif-to-sprite-converter_7
       rect:
         serializedVersion: 2
-        x: 600
-        y: 354
-        width: 300
-        height: 354
+        x: 1300
+        y: 650
+        width: 650
+        height: 650
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +271,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbd04b7a0d203ed4ca33780c5930c86f
-      internalID: 1210310330
+      spriteID: 979ba6e29cfaacd4eb9a61fded4f302b
+      internalID: 85649156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_enemy_Bite_6
+      name: Cerberus_Animation-ezgif.com-gif-to-sprite-converter_8
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 650
+        width: 650
+        height: 650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df068adc94ec1a241b1e9f84450ead25
+      internalID: -715935431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cerberus_Animation-ezgif.com-gif-to-sprite-converter_9
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 650
+        width: 650
+        height: 650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4149b0b1f7cc904e99514708aa84eff
+      internalID: 1909608105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cerberus_Animation-ezgif.com-gif-to-sprite-converter_10
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 300
-        height: 354
+        width: 650
+        height: 650
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,8 +334,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c296fd95fb426624c9ea158d5afd6c2b
-      internalID: -1268335526
+      spriteID: be9ac27f9135b5547b633d902edec989
+      internalID: 710025943
       vertices: []
       indices: 
       edges: []
@@ -259,7 +343,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: df1851e5610a1874293d23b4d4ee61c2
+    spriteID: a7d0ef522678824409e51f8c67eb8444
     internalID: 0
     vertices: []
     indices: 
@@ -267,13 +351,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bat_enemy_Bite_0: -235729301
-      bat_enemy_Bite_1: -173311017
-      bat_enemy_Bite_2: -138298973
-      bat_enemy_Bite_3: -412202614
-      bat_enemy_Bite_4: -691342138
-      bat_enemy_Bite_5: 1210310330
-      bat_enemy_Bite_6: -1268335526
+      Cerberus_Animation-ezgif.com-gif-to-sprite-converter_0: -1915241439
+      Cerberus_Animation-ezgif.com-gif-to-sprite-converter_1: 822816189
+      Cerberus_Animation-ezgif.com-gif-to-sprite-converter_10: 710025943
+      Cerberus_Animation-ezgif.com-gif-to-sprite-converter_2: -1166530698
+      Cerberus_Animation-ezgif.com-gif-to-sprite-converter_3: -243462245
+      Cerberus_Animation-ezgif.com-gif-to-sprite-converter_4: -51218947
+      Cerberus_Animation-ezgif.com-gif-to-sprite-converter_5: 1080961587
+      Cerberus_Animation-ezgif.com-gif-to-sprite-converter_6: -1508945638
+      Cerberus_Animation-ezgif.com-gif-to-sprite-converter_7: 85649156
+      Cerberus_Animation-ezgif.com-gif-to-sprite-converter_8: -715935431
+      Cerberus_Animation-ezgif.com-gif-to-sprite-converter_9: 1909608105
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
