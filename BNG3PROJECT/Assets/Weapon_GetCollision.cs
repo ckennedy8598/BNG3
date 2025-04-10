@@ -6,6 +6,7 @@ namespace Platformer
 {
     public class Weapon_GetCollision : MonoBehaviour
     {
+        public AudioSource HitSound;
         public EnemyHealth ehealth;
         public int Damage;
 
@@ -19,6 +20,8 @@ namespace Platformer
             {
                 //Debug.Log("Collided with " + other.gameObject.name);
                 //Debug.Log("Collided with " + gameObject.name);
+
+                HitSound.Play();
 
                 other.gameObject.GetComponent<EnemyHealth>().Hurt(Damage);
                 //Destroy(other.gameObject);

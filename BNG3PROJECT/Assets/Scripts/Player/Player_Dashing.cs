@@ -28,6 +28,8 @@ namespace Platformer
         [Header("Input")]
         public KeyCode DashKey = KeyCode.LeftShift;
 
+        public AudioSource DashSFX;
+
         void Start()
         {
             _rb = GetComponent<Rigidbody>();
@@ -98,6 +100,8 @@ namespace Platformer
             // Turn off gravity and remove upward velocity to even out dash
             _rb.useGravity = false;
             _rb.velocity = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
+
+            DashSFX.Play();
 
             Invoke(nameof(_delayedDashForce), 0.025f);
 
