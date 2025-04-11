@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 1466045684722223400}
   - component: {fileID: 565461817520836368}
   - component: {fileID: 4064986867148007336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 6956248418617472458}
   - component: {fileID: 4858290250056837610}
   - component: {fileID: 6213956611106650357}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Attack Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}

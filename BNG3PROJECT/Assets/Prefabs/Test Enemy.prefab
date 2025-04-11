@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 2136051283559798310}
   - component: {fileID: 4764732692945478248}
   - component: {fileID: 545345616768219712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 6716227700300803934}
   - component: {fileID: 3018066082299674784}
   - component: {fileID: 8341736210607122010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,6 +499,10 @@ PrefabInstance:
     - target: {fileID: 3177013235917468854, guid: a66e0e83580fa1a418957b7488be31db, type: 3}
       propertyPath: m_Name
       value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177013235917468854, guid: a66e0e83580fa1a418957b7488be31db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4510849637990488385, guid: a66e0e83580fa1a418957b7488be31db, type: 3}
       propertyPath: m_LocalPosition.x

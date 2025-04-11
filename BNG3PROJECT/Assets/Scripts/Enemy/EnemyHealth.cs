@@ -47,7 +47,7 @@ namespace Platformer
             if (health <= 0)
             {
                 sprite.color = Color.white;
-                animator.SetTrigger("isDead");
+                //animator.SetTrigger("isDead");
                 
                 Invoke(nameof(Die), deathTimer);
             }

@@ -88,6 +88,7 @@ namespace Platformer
             if (state == BatState.Die)
             {
                 //Death animation will go here
+                animator.SetTrigger("isDead");
             }
         }
         public void ResetState()

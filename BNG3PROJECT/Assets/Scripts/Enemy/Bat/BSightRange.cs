@@ -14,14 +14,14 @@ namespace Platformer
             BF = GetComponentInParent<BatFinal>();
         }
 
-        private void OnTriggerEnter(Collider other)
+        private void OnCollisionEnter(Collision other)
         {
             if (other.gameObject.CompareTag("Player"))
             {
                 BF.state = BatFinal.BatState.Walk;
             }
         }
-        private void OnTriggerExit(Collider other)
+        private void OnCollisionExit(Collision other)
         {
             if(other.gameObject.CompareTag("Player"))
             {

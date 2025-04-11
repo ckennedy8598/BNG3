@@ -114,6 +114,7 @@ namespace Platformer
             if(State == DeviState.Die)
             {
                 //Death animation will go here
+                animator.SetTrigger("isDead");
             }
         }
 
