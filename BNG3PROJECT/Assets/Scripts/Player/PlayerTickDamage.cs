@@ -51,7 +51,7 @@ namespace Platformer
             {
                 isBurned = false;
                 isFrosted = false;
-                playerHealth.PlayerHealth -= 4f;
+                playerHealth.TakeDamage(4);
 
                 poisonTimer -= 1f;
                 Debug.Log("Poison Damage");
