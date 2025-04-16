@@ -25,6 +25,7 @@ namespace Platformer
         public TMP_Text HealthReadout;
         public AudioSource HealthPickupSFX;
         public AudioSource OnHitSFX;
+        public Animator anim;
 
         public GameObject UI;
         private bool _UIBool = true;
@@ -92,6 +93,7 @@ namespace Platformer
                 else
                 {
                     OnHitSFX.Play();
+                    anim.SetTrigger("Player_Hurt");
                     PlayerHealth -= damage;
                     _dmgCooldown();
                     //Debug.Log("!!!!!!CALLED DAMAGE COOLDOWN: PLAYER STATE INVULNERABLE!!!!!!");
