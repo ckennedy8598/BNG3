@@ -32,7 +32,7 @@ namespace Platformer
         
         void Start()
         {
-            //sprite = GetComponent<SpriteRenderer>();
+            sprite = GetComponentInChildren<SpriteRenderer>();
             health = maxHealth;
             animator = this.GetComponentInChildren<Animator>();
 
