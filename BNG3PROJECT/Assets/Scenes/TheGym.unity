@@ -84180,7 +84180,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 649043069165151860, guid: 455a5803313079a4d8f8eb0b95a10934, type: 3}
       propertyPath: m_Name
-      value: Test Enemy
+      value: Ranged Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7562001946189556837, guid: 455a5803313079a4d8f8eb0b95a10934, type: 3}
       propertyPath: player
@@ -84580,6 +84580,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3371014044781470320, guid: ad4dbe6f1e1c4a444be4b1ad71d79f0f, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3371014044781470320, guid: ad4dbe6f1e1c4a444be4b1ad71d79f0f, type: 3}
+      propertyPath: m_MaxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3371014044781470320, guid: ad4dbe6f1e1c4a444be4b1ad71d79f0f, type: 3}
       propertyPath: m_TargetGraphic
       value: 
       objectReference: {fileID: 1534212350}
@@ -84885,10 +84893,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4147234092839384595, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
-      propertyPath: m_Name
-      value: MeleeSprite
-      objectReference: {fileID: 0}
     - target: {fileID: 4379309076040079803, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
       propertyPath: player
       value: 
@@ -84935,7 +84939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8494002195757013940, guid: 763cbd52b9b90554fb0d0a67e274f3ba, type: 3}
       propertyPath: m_Name
-      value: Test Enemy Melee
+      value: Melee Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
