@@ -14,10 +14,16 @@ namespace Platformer
         public GameObject CerbFire;
 
         public Animator animator;
+
+        public Transform cerbSpawnPoint;
+
+        public GameObject AR;
         void Start()
         {
             CF = GetComponentInParent<CerberusFinal>();
             animator = GetComponent<Animator>();
+            cerbSpawnPoint = GameObject.FindWithTag("CerbSpawnPoint").transform;
+            AR = GameObject.FindWithTag("CerberusAttackRange");
         }
 
         public void BigDie()
@@ -27,11 +33,21 @@ namespace Platformer
 
         public void Fireball()
         {
-            //Instantiate(CerbFire, transform.Find("CerbSpawnPoint").position, Quaternion.identity);
+            Instantiate(CerbFire, cerbSpawnPoint.position, Quaternion.identity);
             CF.isFiring = false;
             animator.SetTrigger("endShot");
             CF.ResetFireTime();
             
+        }
+
+        public void AttackActivate()
+        {
+            AR.SetActive(true);
+        }
+
+        public void AttackDeactivate()
+        {
+            AR.SetActive(false);
         }
 
         public void ResetWalk()

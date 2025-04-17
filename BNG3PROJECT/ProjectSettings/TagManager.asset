@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - GM
   - Reflected
+  - CerbSpawnPoint
+  - CerberusAttackRange
   layers:
   - Default
   - TransparentFX

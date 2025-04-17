@@ -20,6 +20,8 @@ namespace Platformer
         public Camera MainCamera;
         public GameObject enemyBullet;
         public GameObject player;
+
+        public Transform playerT;
         void Start()
         {
             rb = GetComponent<Rigidbody>();
@@ -31,10 +33,12 @@ namespace Platformer
             Vector3 direction = player.transform.position - transform.position;
             rb.velocity = new Vector3(direction.x, direction.y, direction.z).normalized * force;
             playerHealth = FindAnyObjectByType<Player_Health>();
+            playerT = GameObject.Find("Player").transform;
         }
         void Update()
         {
-
+            Vector3 targetPostition = new Vector3(playerT.position.x, this.transform.position.y, playerT.position.z);
+            this.transform.LookAt(targetPostition);
             timer += Time.deltaTime;
             if (timer > despawnTimer)
             {
