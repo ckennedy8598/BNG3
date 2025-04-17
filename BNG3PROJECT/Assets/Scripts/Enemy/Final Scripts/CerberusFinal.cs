@@ -87,6 +87,7 @@ namespace Platformer
 
             if(State == CerbState.Die)
             {
+                gameObject.GetComponent<NavMeshAgent>().isStopped = true;
                 isFiring = false;
                 isDead = true;
                 animator.SetTrigger("isDead");
