@@ -140,6 +140,7 @@ namespace Platformer
                 _startTimer = false; IsBlocking = false;
 
                 Player_Health_Script.CanBeDamaged = true;
+                Player_Health_Script.HalfDamage = false;
                 CanBlock = true;
                 _meleeAllowed = true;
                 AllowedToShoot = true;
@@ -150,19 +151,21 @@ namespace Platformer
             {
                 State_Shower.text = "Player State: Blocking";
                 IsBlocking = true;
-                Player_Health_Script.CanBeDamaged = false;
+                Player_Health_Script.HalfDamage = true;
                 AllowedToShoot = false;
                 _meleeAllowed = false;
                 if (_blockTimer < _blockTimerMax)
                 {
                     _blockTimer += Time.deltaTime;
                     CanParry = true;
+                    Player_Health_Script.CanBeDamaged = false;
                     parryText.text = "Parry State: True";
                     //Debug.Log("This is _canParry: " + _canParry);
                 }
                 else
                 {
                     CanParry = false;
+                    Player_Health_Script.CanBeDamaged = true;
                     parryText.text = "Parry State: False";
                     //Debug.Log("This is _canParry: " + _canParry);
                 }
