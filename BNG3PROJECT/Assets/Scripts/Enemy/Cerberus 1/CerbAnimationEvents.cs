@@ -18,6 +18,8 @@ namespace Platformer
         public Transform cerbSpawnPoint;
 
         public GameObject AR;
+
+        
         void Start()
         {
             CF = GetComponentInParent<CerberusFinal>();
@@ -33,11 +35,12 @@ namespace Platformer
 
         public void Fireball()
         {
+
             Instantiate(CerbFire, cerbSpawnPoint.position, Quaternion.identity);
             CF.isFiring = false;
-            animator.SetTrigger("endShot");
             CF.ResetFireTime();
-            
+            animator.SetTrigger("endShot");
+
         }
 
         public void AttackActivate()
@@ -54,6 +57,8 @@ namespace Platformer
         {
             CF.State = CerberusFinal.CerbState.Walk;
         }
+
+        
 
         // Update is called once per frame
         void Update()
