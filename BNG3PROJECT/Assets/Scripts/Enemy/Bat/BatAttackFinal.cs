@@ -21,6 +21,7 @@ namespace Platformer
         {
             if (other.gameObject.CompareTag("Player"))
             {
+                Debug.Log("Ouchie");
                 ph.TakeDamage(meleeDamage);
                 ptd.isPoisoned = true;
             }

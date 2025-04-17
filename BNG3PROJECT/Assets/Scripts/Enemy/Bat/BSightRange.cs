@@ -14,18 +14,27 @@ namespace Platformer
             BF = GetComponentInParent<BatFinal>();
         }
 
-        private void OnCollisionEnter(Collision other)
+        private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Player"))
+            if (BF.state != BatFinal.BatState.Die)
             {
-                BF.state = BatFinal.BatState.Walk;
+
+
+                if (other.gameObject.CompareTag("Player"))
+                {
+                    BF.state = BatFinal.BatState.Walk;
+                }
             }
+
         }
-        private void OnCollisionExit(Collision other)
+        private void OnTriggerExit(Collider other)
         {
-            if(other.gameObject.CompareTag("Player"))
+            if (BF.state != BatFinal.BatState.Die)
             {
-                BF.ResetState();
+                if (other.gameObject.CompareTag("Player"))
+                {
+                    BF.ResetState();
+                }
             }
         }
         // Update is called once per frame
