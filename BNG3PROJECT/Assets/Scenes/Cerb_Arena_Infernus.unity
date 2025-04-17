@@ -49075,6 +49075,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1450109326228865582, guid: 30643df75bb13984fb5b7ff2790bc9f7, type: 3}
+      propertyPath: m_Size.z
+      value: 4.2908697
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450109326228865582, guid: 30643df75bb13984fb5b7ff2790bc9f7, type: 3}
+      propertyPath: m_Center.z
+      value: 2.3454347
+      objectReference: {fileID: 0}
     - target: {fileID: 2316468142287040171, guid: 30643df75bb13984fb5b7ff2790bc9f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 108.86358
@@ -49114,6 +49122,10 @@ PrefabInstance:
     - target: {fileID: 2316468142287040171, guid: 30643df75bb13984fb5b7ff2790bc9f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825414534520932502, guid: 30643df75bb13984fb5b7ff2790bc9f7, type: 3}
+      propertyPath: meleeDamage
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3182737622548306733, guid: 30643df75bb13984fb5b7ff2790bc9f7, type: 3}
       propertyPath: m_Name
