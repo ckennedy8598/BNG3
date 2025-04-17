@@ -112,6 +112,7 @@ namespace Platformer
         }
         public void ResetFireTime()
         {
+            
             fireTime = 20f;
         }
 
