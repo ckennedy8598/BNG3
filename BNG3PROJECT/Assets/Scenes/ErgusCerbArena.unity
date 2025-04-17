@@ -520,11 +520,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &8639177 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 963181341}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &27418424
 Mesh:
   m_ObjectHideFlags: 0
@@ -1357,71 +1352,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1664642080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &100452613
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -92.175995
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.719078
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.006933
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (10)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!1001 &102484598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7288,141 +7218,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &324582603 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 968020128}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &343129147
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -155.286
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.73908
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 71.01307
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (5)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
---- !u!1001 &345121144
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -113.855995
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.719078
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -15.006933
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (12)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!43 &350308319
 Mesh:
   m_ObjectHideFlags: 0
@@ -8002,11 +7797,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6020354398544117820, guid: 72c3e04fccc7a554599b68656ec3b338, type: 3}
   m_PrefabInstance: {fileID: 367463913}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &367970582 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1181626144}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &375430797
 Mesh:
@@ -8774,11 +8564,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &396785553 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 531525050}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &397844715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5914374089155032863, guid: 18ce64dbbc523d4449dda8fb0b3dcca0, type: 3}
@@ -9386,11 +9171,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &409656649 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1157301544}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &411301901
 GameObject:
   m_ObjectHideFlags: 0
@@ -10834,11 +10614,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &448793849 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1246251181}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &449478155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11453,71 +11228,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &490508834
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -132.916
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.719078
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -14.406931
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (11)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!1 &495302559
 GameObject:
   m_ObjectHideFlags: 0
@@ -11956,80 +11666,10 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &507455804
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -132.916
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.719078
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 66.89307
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (7)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!4 &514515407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6063398936315476130, guid: fde79617931d61549bc2d00e32de3075, type: 3}
   m_PrefabInstance: {fileID: 667154432}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &517284535 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 507455804}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &517401496
 PrefabInstance:
@@ -13695,11 +13335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &526810954 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 343129147}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &526840570
 GameObject:
   m_ObjectHideFlags: 0
@@ -13784,71 +13419,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &531525050
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -74.106
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 30.249079
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 61.003067
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (24)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!1 &538551976
 GameObject:
   m_ObjectHideFlags: 0
@@ -13933,71 +13503,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1664642080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &540062609
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -154.31601
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.719078
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.5330677
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (15)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!43 &542081106
 Mesh:
   m_ObjectHideFlags: 0
@@ -14900,11 +14405,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &587759269 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 345121144}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &594478344
 Mesh:
   m_ObjectHideFlags: 0
@@ -15635,11 +15135,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &608031682 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1439141794}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &613182720
 GameObject:
   m_ObjectHideFlags: 0
@@ -15957,136 +15452,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &631663453
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -22.106003
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 30.249079
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -12.026934
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (19)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
---- !u!1001 &632082365
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -154.486
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.719078
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 39.503067
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (16)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!43 &634939985
 Mesh:
   m_ObjectHideFlags: 0
@@ -20275,7 +19640,7 @@ LightingSettings:
   m_BounceScale: 1
   m_AlbedoBoost: 1
   m_IndirectOutputScale: 1
-  m_UsingShadowmask: 1
+  m_UsingShadowmask: 0
   m_BakeBackend: 1
   m_LightmapMaxSize: 1024
   m_BakeResolution: 40
@@ -20286,7 +19651,7 @@ LightingSettings:
   m_CompAOExponent: 1
   m_CompAOExponentDirect: 0
   m_ExtractAO: 0
-  m_MixedBakeMode: 2
+  m_MixedBakeMode: 0
   m_LightmapsBakeMode: 1
   m_FilterMode: 1
   m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
@@ -20587,11 +19952,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6020354398544117820, guid: 72c3e04fccc7a554599b68656ec3b338, type: 3}
   m_PrefabInstance: {fileID: 673260940}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &680605341 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1935802688}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &690195204
 Mesh:
@@ -25389,11 +24749,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ce64dbbc523d4449dda8fb0b3dcca0, type: 3}
---- !u!4 &854474548 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 540062609}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &856582307
 Mesh:
   m_ObjectHideFlags: 0
@@ -28848,141 +28203,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &963181341
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -22.106003
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 30.249079
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 15.923067
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (20)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!4 &966294447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1091330795420455396, guid: 68c462f5fc82815449be171a818ffe39, type: 3}
   m_PrefabInstance: {fileID: 307067261}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &968020128
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -72.796005
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 30.249079
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -11.016932
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (17)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!43 &970900212
 Mesh:
   m_ObjectHideFlags: 0
@@ -32621,11 +31846,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1136103838 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1748888383}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1138702822
 Mesh:
   m_ObjectHideFlags: 0
@@ -33794,71 +33014,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &1157301544
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -51.475998
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 30.249079
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 67.033066
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (23)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!43 &1158613152
 Mesh:
   m_ObjectHideFlags: 0
@@ -34093,71 +33248,171 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fde79617931d61549bc2d00e32de3075, type: 3}
---- !u!1001 &1162427520
-PrefabInstance:
+--- !u!43 &1159026907
+Mesh:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 11
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 30
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 10
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000002000100020003000100020004000300040005000300040006000500060007000500060008000700080009000700000000000000000000000000
+  m_VertexData:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -180.636
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.73908
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.246933
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
+    m_VertexCount: 10
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 480
+    _typelessdata: 000000bf000000bf000000000000008000000080000080bfc7c6c63e0000000003e8683d0000803f00000000000000000000003f000000bf000000000000008000000080000080bfc7c6c63e0000000003e8683d0000803f0000803f00000000000000bffcfe7c3e000000000000008000000080000080bf5cd9e73e8379e33c0578453e0000803f00000000bf3f3f3f0000003ffcfe7c3e000000000000008000000080000080bf5cd9e73e8379e33c0578453e0000803f0000803fbf3f3f3f000000bfa6a5a53e000000000000008000000080000080bf3bb3e43eb1d0c53c7ce6403e0000803f00000000d3d2523f0000003fa6a5a53e000000000000008000000080000080bf3bb3e43eb1d0c53c7ce6403e0000803f0000803fd3d2523f000000bfc4c3c33e000000000000008000000080000080bfb8b2cf3e00000000386e223e0000803f00000000e2e1613f0000003fc4c3c33e000000000000008000000080000080bfb8b2cf3e00000000386e223e0000803f0000803fe2e1613f000000bf0000003f000000000000008000000080000080bff639a43e000000008c38203e0000803f000000000000803f0000003f0000003f000000000000008000000080000080bff639a43e000000008c38203e0000803f0000803f0000803f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0.5, z: 0}
+  m_MeshUsageFlags: 0
+  m_CookingOptions: 30
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &1165421525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34977,100 +34232,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1235975390}
-  - {fileID: 1696322314}
-  - {fileID: 2141638593}
-  - {fileID: 680605341}
-  - {fileID: 526810954}
-  - {fileID: 448793849}
-  - {fileID: 2030423212}
-  - {fileID: 517284535}
-  - {fileID: 1446671158}
-  - {fileID: 367970582}
-  - {fileID: 1520939537}
-  - {fileID: 1564654764}
-  - {fileID: 854474548}
-  - {fileID: 1391701675}
-  - {fileID: 1322858348}
-  - {fileID: 1966296597}
-  - {fileID: 587759269}
-  - {fileID: 324582603}
-  - {fileID: 1504827374}
-  - {fileID: 1313716087}
-  - {fileID: 8639177}
-  - {fileID: 608031682}
-  - {fileID: 1543082580}
-  - {fileID: 409656649}
-  - {fileID: 396785553}
-  - {fileID: 1136103838}
   - {fileID: 636923428}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1181626144
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -154.786
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.73908
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.206934
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (9)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!1 &1181850137
 GameObject:
   m_ObjectHideFlags: 0
@@ -38738,11 +37902,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &1235975390 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1280496246}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1239176390
 GameObject:
   m_ObjectHideFlags: 0
@@ -38871,71 +38030,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1001 &1246251181
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -220.786
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.719078
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 56.19307
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (4)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!1 &1246933169
 GameObject:
   m_ObjectHideFlags: 0
@@ -39719,71 +38813,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1280496246
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -219.036
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.73908
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.246933
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!1 &1282883731
 GameObject:
   m_ObjectHideFlags: 0
@@ -40253,71 +39282,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5122553156586085615, guid: ad4dbe6f1e1c4a444be4b1ad71d79f0f, type: 3}
   m_PrefabInstance: {fileID: 1292261696}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1296828580
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -180.636
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.73908
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 26.843067
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!1 &1297347973
 GameObject:
   m_ObjectHideFlags: 0
@@ -41471,11 +40435,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 842133525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1313716087 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 631663453}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1321803055
 Mesh:
   m_ObjectHideFlags: 0
@@ -41641,11 +40600,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &1322858348 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1555041936}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1329912622
 GameObject:
   m_ObjectHideFlags: 0
@@ -44079,71 +43033,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ce64dbbc523d4449dda8fb0b3dcca0, type: 3}
---- !u!1001 &1348595601
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -46.196
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 30.249079
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10.476931
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (18)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!43 &1352753434
 Mesh:
   m_ObjectHideFlags: 0
@@ -45499,71 +44388,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1091330795420455396, guid: 68c462f5fc82815449be171a818ffe39, type: 3}
   m_PrefabInstance: {fileID: 1373297600}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1378149066
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -26.196
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 30.249079
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 68.26307
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (22)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!43 &1378410920
 Mesh:
   m_ObjectHideFlags: 0
@@ -45894,11 +44718,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &1391701675 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 632082365}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1392356233
 GameObject:
   m_ObjectHideFlags: 0
@@ -48685,76 +47504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1439141794
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -22.106003
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 30.249079
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 41.033066
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (21)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
---- !u!4 &1446671158 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1667735623}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1449235703
 Mesh:
   m_ObjectHideFlags: 0
@@ -49483,171 +48232,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6020354398544117820, guid: 72c3e04fccc7a554599b68656ec3b338, type: 3}
   m_PrefabInstance: {fileID: 1474372369}
   m_PrefabAsset: {fileID: 0}
---- !u!43 &1480991022
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 11
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 30
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 10
-    localAABB:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0.5, z: 0}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000002000100020003000100020004000300040005000300040006000500060007000500060008000700080009000700000000000000000000000000
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 10
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 40
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 480
-    _typelessdata: 000000bf000000bf000000000000008000000080000080bfc7c6c63e0000000003e8683d0000803f00000000000000000000003f000000bf000000000000008000000080000080bfc7c6c63e0000000003e8683d0000803f0000803f00000000000000bffcfe7c3e000000000000008000000080000080bf5cd9e73e8379e33c0578453e0000803f00000000bf3f3f3f0000003ffcfe7c3e000000000000008000000080000080bf5cd9e73e8379e33c0578453e0000803f0000803fbf3f3f3f000000bfa6a5a53e000000000000008000000080000080bf3bb3e43eb1d0c53c7ce6403e0000803f00000000d3d2523f0000003fa6a5a53e000000000000008000000080000080bf3bb3e43eb1d0c53c7ce6403e0000803f0000803fd3d2523f000000bfc4c3c33e000000000000008000000080000080bfb8b2cf3e00000000386e223e0000803f00000000e2e1613f0000003fc4c3c33e000000000000008000000080000080bfb8b2cf3e00000000386e223e0000803f0000803fe2e1613f000000bf0000003f000000000000008000000080000080bff639a43e000000008c38203e0000803f000000000000803f0000003f0000003f000000000000008000000080000080bff639a43e000000008c38203e0000803f0000803f0000803f
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.5, y: 0.5, z: 0}
-  m_MeshUsageFlags: 0
-  m_CookingOptions: 30
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &1496132794
 GameObject:
   m_ObjectHideFlags: 0
@@ -50035,76 +48619,6 @@ Transform:
   - {fileID: 1291400107}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1499764791
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -88.48599
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.719078
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 6.593067
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (13)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
---- !u!4 &1504827374 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1348595601}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1505822612
 GameObject:
   m_ObjectHideFlags: 0
@@ -50937,11 +49451,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5914374089155032863, guid: 18ce64dbbc523d4449dda8fb0b3dcca0, type: 3}
   m_PrefabInstance: {fileID: 1413936561}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1520939537 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 100452613}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1522595013
 Mesh:
   m_ObjectHideFlags: 0
@@ -51525,11 +50034,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1543082580 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1378149066}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1544732251
 Mesh:
   m_ObjectHideFlags: 0
@@ -51860,71 +50364,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &1555041936
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -88.886
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.719078
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 38.56307
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (14)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!1001 &1556332772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51986,11 +50425,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6020354398544117820, guid: 72c3e04fccc7a554599b68656ec3b338, type: 3}
   m_PrefabInstance: {fileID: 1556332772}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1564654764 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1499764791}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1579118676 stripped
 Transform:
@@ -53142,71 +51576,6 @@ Transform:
   - {fileID: 1670775143}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1667735623
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -113.855995
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.719078
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 66.39307
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (8)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!43 &1668424384
 Mesh:
   m_ObjectHideFlags: 0
@@ -54340,11 +52709,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &1696322314 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1162427520}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1697345173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56247,71 +54611,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1748888383
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -68.226
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 30.249079
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 27.913067
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (25)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!1 &1760992155 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7299547325590856350, guid: 447badd187bea3049a8b2aac9782d9da, type: 3}
@@ -60341,71 +58640,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1935802688
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -178.386
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.73908
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 62.393066
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!1001 &1942395738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61202,11 +59436,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 842133525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1966296597 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 490508834}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1966719801
 Mesh:
   m_ObjectHideFlags: 0
@@ -63222,11 +61451,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65ccec9b91e53b499053c1dc959598d, type: 3}
---- !u!4 &2030423212 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 2112384799}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2037456769
 GameObject:
   m_ObjectHideFlags: 0
@@ -64643,71 +62867,6 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   placeAtClippingPlane: 0
   childObject: {fileID: 2003040470}
---- !u!1001 &2112384799
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1179894899}
-    m_Modifications:
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Range
-      value: 58.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394610848283424101, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Intensity
-      value: 2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -92.175995
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.719078
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 68.94307
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742514942138005300, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-      propertyPath: m_Name
-      value: Lava Point Light (6)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
 --- !u!1 &2114912698
 GameObject:
   m_ObjectHideFlags: 0
@@ -65548,11 +63707,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 842133525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2141638593 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2692787609685337474, guid: 530333aa5e4b69d46a8b2f1fdf3fc360, type: 3}
-  m_PrefabInstance: {fileID: 1296828580}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3458938030826943219
 PrefabInstance:
   m_ObjectHideFlags: 0
