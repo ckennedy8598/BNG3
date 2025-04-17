@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: be7284fd0df040546a6717b5b22e8b54
+guid: 6c8c7450b6838fb409c9209650b6ac68
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 225
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: melee_enemy_walking_1_0
+      name: cerberus_walking_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 812
-        width: 599.6667
-        height: 812
+        y: 5200
+        width: 2600
+        height: 2600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4ec048b9224e624cb11ade8f1b287bf
-      internalID: 499478824
+      spriteID: 45600facc8fc93646959e5699f9b56df
+      internalID: -434312353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_walking_1_1
+      name: cerberus_walking_1
       rect:
         serializedVersion: 2
-        x: 599
-        y: 812
-        width: 599.6667
-        height: 812
+        x: 2600
+        y: 5200
+        width: 2600
+        height: 2600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 591e44cee74fb634cbc2683ac820a69c
-      internalID: 640013343
+      spriteID: ea81e9ce2477aad478edfecac8af6dc6
+      internalID: -985695445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_walking_1_2
+      name: cerberus_walking_2
       rect:
         serializedVersion: 2
-        x: 1198
-        y: 812
-        width: 599.6667
-        height: 812
+        x: 5200
+        y: 5200
+        width: 2600
+        height: 2600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3a70518740a1f041b9267f4c3fb772b
-      internalID: -1032040230
+      spriteID: 94a9118bf0bd8814bbd102bcb9481427
+      internalID: 345147822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_walking_1_3
+      name: cerberus_walking_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2600
+        width: 2600
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e11c539ce91aa43b62d9974c627603
+      internalID: 160023817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cerberus_walking_4
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 2600
+        width: 2600
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efbd42bb4f7b553448de161be7f255ef
+      internalID: -839205144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cerberus_walking_5
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 2600
+        width: 2600
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd33a7714c1c0a439f8cce24b0163fc
+      internalID: 1772229298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cerberus_walking_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 599.6667
-        height: 812
+        width: 2600
+        height: 2600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,50 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9beea17c7421277498c6b1054f6c4c6e
-      internalID: 319656035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: melee_enemy_walking_1_4
-      rect:
-        serializedVersion: 2
-        x: 599
-        y: 0
-        width: 599.6667
-        height: 812
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba8ace851e4166e45851844e7606bec8
-      internalID: 1177151920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: melee_enemy_walking_1_5
-      rect:
-        serializedVersion: 2
-        x: 1198
-        y: 0
-        width: 599.6667
-        height: 812
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19f5949787ebd3544a160100d3967ec1
-      internalID: -922990276
+      spriteID: 27f467f0fcb587349bb516b7aea5c5e2
+      internalID: 1224664306
       vertices: []
       indices: 
       edges: []
@@ -238,7 +259,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1ff33b413a1d9c140b07759874d5196a
+    spriteID: 58b4396f5de5d88438ac1da2792c68fb
     internalID: 0
     vertices: []
     indices: 
@@ -246,12 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      melee_enemy_walking_1_0: 499478824
-      melee_enemy_walking_1_1: 640013343
-      melee_enemy_walking_1_2: -1032040230
-      melee_enemy_walking_1_3: 319656035
-      melee_enemy_walking_1_4: 1177151920
-      melee_enemy_walking_1_5: -922990276
+      cerberus_walking_0: -434312353
+      cerberus_walking_1: -985695445
+      cerberus_walking_2: 345147822
+      cerberus_walking_3: 160023817
+      cerberus_walking_4: -839205144
+      cerberus_walking_5: 1772229298
+      cerberus_walking_6: 1224664306
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

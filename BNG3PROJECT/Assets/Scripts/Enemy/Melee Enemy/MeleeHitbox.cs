@@ -4,29 +4,28 @@ using UnityEngine;
 
 namespace Platformer
 {
-    public class BatAttackFinal : MonoBehaviour
+    public class MeleeHitbox : MonoBehaviour
     {
-        public PlayerTickDamage ptd;
-        public float meleeDamage = 15f;
+        public float meleeDamage = 30f;
         public Player_Health ph;
-        //public Animator animator;
-        void Start()
+        void Start ()
         {
-            ptd = FindAnyObjectByType<PlayerTickDamage>();
             ph = FindAnyObjectByType<Player_Health>();
-            //animator = this.GetComponent<Animator>();
         }
+        // Update is called once per frame
 
+        public void BigDie()
+        {
+            Destroy(transform.parent.gameObject);
+        }
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Ouchie");
                 ph.TakeDamage(meleeDamage);
-                ptd.isPoisoned = true;
+                
             }
         }
-        // Update is called once per frame
         void Update()
         {
         

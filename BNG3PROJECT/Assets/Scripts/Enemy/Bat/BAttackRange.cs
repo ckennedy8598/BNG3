@@ -16,17 +16,26 @@ namespace Platformer
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Player"))
+            if (BF.state != BatFinal.BatState.Die)
             {
-                BF.state = BatFinal.BatState.Attack;
+
+
+              if (other.gameObject.CompareTag("Player"))
+                {
+                    BF.state = BatFinal.BatState.Attack;
+                }
             }
+            
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.CompareTag("Player"))
+            if (BF.state != BatFinal.BatState.Die)
             {
-                BF.ResetState();
+                if (other.gameObject.CompareTag("Player"))
+                {
+                    BF.ResetState();
+                }
             }
         }
         // Update is called once per frame

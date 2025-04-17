@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: be7284fd0df040546a6717b5b22e8b54
+guid: 7c367769b5874be4eace5f44291511e3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 225
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: melee_enemy_walking_1_0
+      name: cerberus_death_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 812
-        width: 599.6667
-        height: 812
+        y: 7800
+        width: 2600
+        height: 2600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4ec048b9224e624cb11ade8f1b287bf
-      internalID: 499478824
+      spriteID: 7dc0444d5c31cd94584d862a5ef91c95
+      internalID: 1656025170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_walking_1_1
+      name: cerberus_death_1
       rect:
         serializedVersion: 2
-        x: 599
-        y: 812
-        width: 599.6667
-        height: 812
+        x: 2600
+        y: 7800
+        width: 2600
+        height: 2600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 591e44cee74fb634cbc2683ac820a69c
-      internalID: 640013343
+      spriteID: c19632a4c4b099644bbadb21bf18e031
+      internalID: 515051519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_walking_1_2
+      name: cerberus_death_2
       rect:
         serializedVersion: 2
-        x: 1198
-        y: 812
-        width: 599.6667
-        height: 812
+        x: 5200
+        y: 7800
+        width: 2600
+        height: 2600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,146 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3a70518740a1f041b9267f4c3fb772b
-      internalID: -1032040230
+      spriteID: 35e4c01a7a8f2da49b3bbf191692552c
+      internalID: -1963863372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_walking_1_3
+      name: cerberus_death_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5200
+        width: 2600
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa14ff4f9382393458b3a7db7fb1992d
+      internalID: -182995227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cerberus_death_4
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 5200
+        width: 2600
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31c38adafd7562429cc82a2eda626bd
+      internalID: -1439206065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cerberus_death_5
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 5200
+        width: 2600
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a42cb8f57e8e214bb8b5bc1a01dda59
+      internalID: 1910633840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cerberus_death_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2600
+        width: 2600
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dda06a2ac2e74b4ab612cb09ab59da6
+      internalID: -696115403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cerberus_death_7
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 2600
+        width: 2600
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9d632a7bbf48b40be5895960093dd9
+      internalID: 2066168557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cerberus_death_8
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 2600
+        width: 2600
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9ab06e18b3d43489de574ca2fa6508
+      internalID: 1328990685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cerberus_death_9
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 599.6667
-        height: 812
+        width: 2600
+        height: 2600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9beea17c7421277498c6b1054f6c4c6e
-      internalID: 319656035
+      spriteID: 3fc2d85b9ae738e419e33864e6d51272
+      internalID: 339583845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_walking_1_4
+      name: cerberus_death_10
       rect:
         serializedVersion: 2
-        x: 599
+        x: 2600
         y: 0
-        width: 599.6667
-        height: 812
+        width: 2600
+        height: 2600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,29 +334,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba8ace851e4166e45851844e7606bec8
-      internalID: 1177151920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: melee_enemy_walking_1_5
-      rect:
-        serializedVersion: 2
-        x: 1198
-        y: 0
-        width: 599.6667
-        height: 812
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19f5949787ebd3544a160100d3967ec1
-      internalID: -922990276
+      spriteID: 47dca16af6a9a4f419d5b91434afcf00
+      internalID: -504775483
       vertices: []
       indices: 
       edges: []
@@ -238,7 +343,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1ff33b413a1d9c140b07759874d5196a
+    spriteID: 1150e7a71a5432c4f8b207f143f09e1c
     internalID: 0
     vertices: []
     indices: 
@@ -246,12 +351,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      melee_enemy_walking_1_0: 499478824
-      melee_enemy_walking_1_1: 640013343
-      melee_enemy_walking_1_2: -1032040230
-      melee_enemy_walking_1_3: 319656035
-      melee_enemy_walking_1_4: 1177151920
-      melee_enemy_walking_1_5: -922990276
+      cerberus_death_0: 1656025170
+      cerberus_death_1: 515051519
+      cerberus_death_10: -504775483
+      cerberus_death_2: -1963863372
+      cerberus_death_3: -182995227
+      cerberus_death_4: -1439206065
+      cerberus_death_5: 1910633840
+      cerberus_death_6: -696115403
+      cerberus_death_7: 2066168557
+      cerberus_death_8: 1328990685
+      cerberus_death_9: 339583845
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -37,7 +37,7 @@ namespace Platformer
             if (state == BatState.Idle)
             {
                 //Idle animation will go here
-                //animator.SetBool("isIdle", true);
+                animator.SetBool("isIdle", true);
 
             }
 
@@ -50,7 +50,7 @@ namespace Platformer
                 agent.SetDestination(player.position);
                 animator.SetBool("isIdle", false);
                 animator.SetBool("isWalking", true);
-                animator.SetBool("isShooting", false);
+                animator.SetBool("isAttacking", false);
 
             }
             //else
@@ -60,27 +60,27 @@ namespace Platformer
 
             if (state == BatState.Attack)
             {
-                Debug.Log("Attack!");
+                //Debug.Log("Attack!");
                 
 
                 //Attack animation will go here
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
-                animator.SetBool("isShooting", true);
+                animator.SetBool("isAttacking", true);
                 animator.SetBool("isWalking", false);
                 animator.SetBool("isIdle", false);
 
 
 
 
-                if (!alreadyAttacked)
-                {
+                //if (!alreadyAttacked)
+                //{
 
 
-                    Debug.Log("Attacking Player");
-                    alreadyAttacked = true;
-                    Invoke(nameof(ResetAttack), timeBetweenAttacks);
-                    //stateRecheck = true;
-                }
+                //    Debug.Log("Attacking Player");
+                //    alreadyAttacked = true;
+                //    Invoke(nameof(ResetAttack), timeBetweenAttacks);
+                //    //stateRecheck = true;
+                //}
 
 
             }
@@ -104,7 +104,7 @@ namespace Platformer
         {
             player = GameObject.Find("Player").transform;
             agent = GetComponent<NavMeshAgent>();
-            animator = this.GetComponent<Animator>();
+            animator = this.GetComponentInChildren<Animator>();
         }
 
         // Update is called once per frame
@@ -114,6 +114,7 @@ namespace Platformer
             Vector3 targetPostition = new Vector3(player.position.x, this.transform.position.y, player.position.z);
             this.transform.LookAt(targetPostition);
 
+            StateHandler();
 
             // Attack and Sight range checkspheres.
 

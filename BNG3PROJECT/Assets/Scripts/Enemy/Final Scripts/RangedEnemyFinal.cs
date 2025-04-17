@@ -62,8 +62,9 @@ namespace Platformer
             if(State == DeviState.Idle)
             {
                 //Idle animation will go here
-                //animator.SetBool("isIdle", true);
-               
+                animator.SetBool("isIdle", true);
+                gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+
             }
 
             if(State == DeviState.Walk)
@@ -86,7 +87,7 @@ namespace Platformer
             if(State == DeviState.Attack)
             {
                 Debug.Log("Attack!");
-                stateRecheck = false;
+                
                 
                 //Attack animation will go here
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
@@ -97,24 +98,24 @@ namespace Platformer
                 
 
 
-                if (!alreadyAttacked)
-                {
+                //if (!alreadyAttacked)
+                //{
 
                     
-                    Debug.Log("Attacking Player");
-                    ShootAtPlayer();
-                    alreadyAttacked = true;
-                    Invoke(nameof(ResetAttack), timeBetweenAttacks);
-                    //stateRecheck = true;
-                }
+                //    Debug.Log("Attacking Player");
+                //    ShootAtPlayer();
+                //    alreadyAttacked = true;
+                //    Invoke(nameof(ResetAttack), timeBetweenAttacks);
+                //    //stateRecheck = true;
+                //}
 
                 
             }
 
             if(State == DeviState.Die)
             {
-                //Death animation will go here
-                animator.SetTrigger("isDead");
+                gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+                
             }
         }
 
@@ -157,25 +158,31 @@ namespace Platformer
             // Checking attack and sight range
             StateHandler();
 
-           // playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-            playerInAttackRange = Physics.CheckSphere(transform.position, attackingRange, whatIsPlayer);
-
-            if (!playerInSightRange && !playerInAttackRange)
-            {
-                State = DeviState.Idle;
-                testbool = true;
-            }
-            //else if (playerInSightRange && !playerInAttackRange && testbool == true)
+            ////playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+            //playerInAttackRange = Physics.CheckSphere(transform.position, attackingRange, whatIsPlayer);
+            //if (State != DeviState.Die)
             //{
-            //    testbool = false;
-            //    State = DeviState.Walk;   
-                  
-            //}
-            else if (playerInSightRange && playerInAttackRange)
-            {
+            //    if (!playerInSightRange && !playerInAttackRange)
+            //    {
+            //        State = DeviState.Idle;
+            //        testbool = true;
+            //    }
+            //    //else if (playerInSightRange && !playerInAttackRange && testbool == true)
+            //    //{
+            //    //    testbool = false;
+            //    //    State = DeviState.Walk;
 
-                State = DeviState.Attack;
-            }
+            //    //}
+            //    else if (playerInSightRange && playerInAttackRange)
+            //    {
+
+            //        State = DeviState.Attack;
+            //    }
+            //}
+            //else
+            //{
+            //    return;
+            //}
         }
 
         

@@ -4,39 +4,38 @@ using UnityEngine;
 
 namespace Platformer
 {
-    public class BSightRange : MonoBehaviour
+    public class MeleeAttackRange : MonoBehaviour
     {
-        public BatFinal BF;
-
-        
-        void Awake()
+        // Start is called before the first frame update
+        public MeleeEnemyFinal MF;
+        void Start()
         {
-            BF = GetComponentInParent<BatFinal>();
+            MF = GetComponentInParent<MeleeEnemyFinal>();
         }
-
         private void OnTriggerEnter(Collider other)
         {
-            if (BF.state != BatFinal.BatState.Die)
+            if (MF.State != MeleeEnemyFinal.MeleeState.Die)
             {
 
 
                 if (other.gameObject.CompareTag("Player"))
                 {
-                    BF.state = BatFinal.BatState.Walk;
+                    MF.State = MeleeEnemyFinal.MeleeState.Attack;
                 }
             }
 
         }
         private void OnTriggerExit(Collider other)
         {
-            if (BF.state != BatFinal.BatState.Die)
+            if (MF.State != MeleeEnemyFinal.MeleeState.Die)
             {
                 if (other.gameObject.CompareTag("Player"))
                 {
-                    BF.ResetState();
+                    MF.State = MeleeEnemyFinal.MeleeState.Walk;
                 }
             }
         }
+
         // Update is called once per frame
         void Update()
         {

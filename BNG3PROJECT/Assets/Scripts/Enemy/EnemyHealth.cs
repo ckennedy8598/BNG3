@@ -18,6 +18,11 @@ namespace Platformer
 
         public Animator animator;
 
+        //public GameObject AR;
+
+        //public GameObject SR;
+
+
 
         private void Die()
         {
@@ -30,6 +35,7 @@ namespace Platformer
             //sprite = GetComponent<SpriteRenderer>();
             health = maxHealth;
             animator = this.GetComponentInChildren<Animator>();
+
         }
 
         public void Hurt(float damage)
@@ -47,9 +53,9 @@ namespace Platformer
             if (health <= 0)
             {
                 sprite.color = Color.white;
-                //animator.SetTrigger("isDead");
+                animator.SetTrigger("isDead");
                 
-                Invoke(nameof(Die), deathTimer);
+                //Invoke(nameof(Die), deathTimer);
             }
         }
 

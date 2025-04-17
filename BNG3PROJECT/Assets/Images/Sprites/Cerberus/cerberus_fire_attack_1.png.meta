@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: be7284fd0df040546a6717b5b22e8b54
+guid: b4c208b9aa901ad4f90cb114e08976e5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 225
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: melee_enemy_walking_1_0
+      name: cerberus_fire_attack_1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 812
-        width: 599.6667
-        height: 812
+        y: 5200
+        width: 2600
+        height: 2600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4ec048b9224e624cb11ade8f1b287bf
-      internalID: 499478824
+      spriteID: 4f46f0d9d964f8644a81cc3ee5910d67
+      internalID: 1181993811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_walking_1_1
+      name: cerberus_fire_attack_1_1
       rect:
         serializedVersion: 2
-        x: 599
-        y: 812
-        width: 599.6667
-        height: 812
+        x: 2600
+        y: 5200
+        width: 2600
+        height: 2600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 591e44cee74fb634cbc2683ac820a69c
-      internalID: 640013343
+      spriteID: ec6b240d25d86444d84e05941e31c63f
+      internalID: -653876508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_walking_1_2
+      name: cerberus_fire_attack_1_2
       rect:
         serializedVersion: 2
-        x: 1198
-        y: 812
-        width: 599.6667
-        height: 812
+        x: 5200
+        y: 5200
+        width: 2600
+        height: 2600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3a70518740a1f041b9267f4c3fb772b
-      internalID: -1032040230
+      spriteID: 33e233cf2a6d5334682019957b1bfa53
+      internalID: 1601171452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_walking_1_3
+      name: cerberus_fire_attack_1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2600
+        width: 2600
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f466938200ff814ebc043a2d2caf314
+      internalID: 300280701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cerberus_fire_attack_1_4
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 2600
+        width: 2600
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a6c29d374b8c4448662e776d8c8956
+      internalID: 404428195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cerberus_fire_attack_1_5
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 2600
+        width: 2600
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a288c2283bb0df14e84d8482a8ef76b9
+      internalID: -1113356227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cerberus_fire_attack_1_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 599.6667
-        height: 812
+        width: 2600
+        height: 2600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,50 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9beea17c7421277498c6b1054f6c4c6e
-      internalID: 319656035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: melee_enemy_walking_1_4
-      rect:
-        serializedVersion: 2
-        x: 599
-        y: 0
-        width: 599.6667
-        height: 812
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba8ace851e4166e45851844e7606bec8
-      internalID: 1177151920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: melee_enemy_walking_1_5
-      rect:
-        serializedVersion: 2
-        x: 1198
-        y: 0
-        width: 599.6667
-        height: 812
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19f5949787ebd3544a160100d3967ec1
-      internalID: -922990276
+      spriteID: ad2777b0ddb49e042a704a345c660138
+      internalID: -1323577752
       vertices: []
       indices: 
       edges: []
@@ -238,7 +259,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1ff33b413a1d9c140b07759874d5196a
+    spriteID: 7abadbd364bff3b4093b994f3842c9e9
     internalID: 0
     vertices: []
     indices: 
@@ -246,12 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      melee_enemy_walking_1_0: 499478824
-      melee_enemy_walking_1_1: 640013343
-      melee_enemy_walking_1_2: -1032040230
-      melee_enemy_walking_1_3: 319656035
-      melee_enemy_walking_1_4: 1177151920
-      melee_enemy_walking_1_5: -922990276
+      cerberus_fire_attack_1_0: 1181993811
+      cerberus_fire_attack_1_1: -653876508
+      cerberus_fire_attack_1_2: 1601171452
+      cerberus_fire_attack_1_3: 300280701
+      cerberus_fire_attack_1_4: 404428195
+      cerberus_fire_attack_1_5: -1113356227
+      cerberus_fire_attack_1_6: -1323577752
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
