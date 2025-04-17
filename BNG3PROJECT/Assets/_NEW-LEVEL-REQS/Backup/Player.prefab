@@ -51,6 +51,8 @@ GameObject:
   - component: {fileID: 623633764635531602}
   - component: {fileID: 6863423125287865875}
   - component: {fileID: 3041209094499508854}
+  - component: {fileID: 7784383881146294151}
+  - component: {fileID: 7436844077875625815}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -122,6 +124,7 @@ MonoBehaviour:
   HealthReadout: {fileID: 0}
   HealthPickupSFX: {fileID: 3018702076616494947}
   OnHitSFX: {fileID: 7371663992504287112}
+  anim: {fileID: 0}
   UI: {fileID: 0}
 --- !u!114 &5187883471847569615
 MonoBehaviour:
@@ -145,7 +148,7 @@ MonoBehaviour:
   CanMove: 0
   CoyoteTime: 0.15
   CoyoteTimeCounter: 0
-  JumpForce: 11
+  JumpForce: 10
   JumpCooldown: 0.25
   JumpBufferTime: 0.3
   JumpBufferCounter: 0
@@ -627,6 +630,30 @@ MonoBehaviour:
   frostTick: 1
   playerHealth: {fileID: 0}
 --- !u!114 &3041209094499508854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4473704320128826865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b0f4384cc36e84eb7557b751a963c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7784383881146294151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4473704320128826865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b0f4384cc36e84eb7557b751a963c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7436844077875625815
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
