@@ -371,7 +371,7 @@ namespace Platformer
             State = AttackState.Light_Attack;
             
             // Deal Light Attack Damage on Collision
-            Weapon_Collision_Script.DealDamage(50);
+            Weapon_Collision_Script.DealDamage(25);
             Anim.SetTrigger("Light_Attack_Trigger");
             _comboTimerMethod();
 
@@ -404,7 +404,7 @@ namespace Platformer
                 _allowInvoke = true;
             }
 
-            Weapon_Collision_Script.DealDamage(50);
+            Weapon_Collision_Script.DealDamage(25);
             Anim.SetTrigger("Light_Attack_Combo_Trigger");
 
             if (_allowInvoke)
@@ -420,7 +420,7 @@ namespace Platformer
             State = AttackState.Heavy_Attack;
 
             // Deal Heavy Attack Damage on Collision
-            Weapon_Collision_Script.DealDamage(200);
+            Weapon_Collision_Script.DealDamage(100);
             Anim.SetTrigger("Heavy_Attack_Trigger");
 
             if (_allowInvoke)

@@ -5,6 +5,8 @@ using UnityEngine;
 using TMPro;
 using System;
 using System.Runtime.CompilerServices;
+//using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
 
 namespace Platformer
 {
@@ -62,10 +64,19 @@ namespace Platformer
             HealthSlider.value = PlayerHealth;
             _checkDead();
 
+
+            // Turn off HUD
             if (Input.GetKeyDown(KeyCode.K))
             {
                 _UIBool = !_UIBool;
                 UI.SetActive(_UIBool);
+            }
+
+            // Button for Cerb Arena
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                SceneManager.LoadScene(2);
+                this.transform.position = new Vector3(9.74f, 1.11f, 2.33f);
             }
 
             if (HalfDamage)

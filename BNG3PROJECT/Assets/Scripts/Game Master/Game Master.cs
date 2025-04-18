@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Platformer
 {
@@ -33,8 +34,6 @@ namespace Platformer
         }
         void Start()
         {
-
-            
 
         }
 
