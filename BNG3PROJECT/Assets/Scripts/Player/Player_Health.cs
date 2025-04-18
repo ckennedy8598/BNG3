@@ -11,6 +11,10 @@ namespace Platformer
     public class Player_Health : MonoBehaviour
     {
         [Header("Pause_Menu.cs Reference")]
+        /*private Player_Health _ph_Script;
+        private Player_Movement _player_M_Script;
+        private Player_Dashing _pd_Script;
+        private Player_Attacking _pa_Script;*/
         public Pause_Menu PM_Script;
 
         [Header("Health Bar")]
@@ -42,6 +46,10 @@ namespace Platformer
         // Start is called before the first frame update
         void Start()
         {
+            /*_ph_Script = GetComponent<Player_Health>();
+            _player_M_Script = GetComponent<Player_Movement>();
+            _pd_Script = GetComponent<Player_Dashing>();
+            _pa_Script = GetComponent<Player_Attacking>();*/
             PM_Script = FindAnyObjectByType<Pause_Menu>();
             CanBeDamaged = true;
         }
@@ -126,6 +134,12 @@ namespace Platformer
         {
             if (PM_Script.PlayerDead)
             {
+                /*
+                _ph_Script.enabled = false;
+                _pa_Script.enabled = false;
+                _player_M_Script.enabled = false;
+                _pd_Script.enabled = false;*/
+
                 gameObject.SetActive(false);
             }
         }
