@@ -11,6 +11,8 @@ namespace Platformer
         public Animator animator;
 
         public RangedEnemyFinal RF;
+
+        public AudioClip AU;
         public void spawnProjectile()
         {
             Instantiate(enemyBullet, transform.Find("SpawnPoint").position, Quaternion.identity);
@@ -27,7 +29,14 @@ namespace Platformer
         void Start()
         {
             animator = GetComponent<Animator>();
+            //AU = GetComponent<AudioClip>();
         }
+
+        public void ShootSound()
+        {
+            AudioSource.PlayClipAtPoint(AU, transform.position, 0.2f);
+        }
+
 
         // Update is called once per frame
         void Update()

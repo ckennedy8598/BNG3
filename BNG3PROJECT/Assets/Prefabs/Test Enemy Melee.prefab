@@ -159,6 +159,7 @@ MonoBehaviour:
   MF: {fileID: 0}
   animator: {fileID: 0}
   player: {fileID: 0}
+  AU: {fileID: 8300000, guid: eca1e9f1a2580bf4482d063a93e8d8d8, type: 3}
 --- !u!1 &4801687026667566463
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +171,7 @@ GameObject:
   - component: {fileID: 7460300730695446980}
   - component: {fileID: 2336988013183683464}
   - component: {fileID: 8609362543942428900}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +238,7 @@ GameObject:
   - component: {fileID: 7800967319200015830}
   - component: {fileID: 7766663849486951981}
   - component: {fileID: 7376964929021267979}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,6 +445,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   State: 0
+  isDead: 0
 --- !u!136 &7702233002748317837
 CapsuleCollider:
   m_ObjectHideFlags: 0

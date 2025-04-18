@@ -20,6 +20,8 @@ namespace Platformer
         public float sightRange, attackingRange;
         //public bool playerInSightRange, playerInAttackRange;
 
+        public bool isDead = false;
+
         public float timeBetweenAttacks = 5f;
         bool alreadyAttacked;
 
@@ -34,7 +36,7 @@ namespace Platformer
         }
         private void StateHandler()
         {
-            if (state == BatState.Idle)
+            if (state == BatState.Idle && isDead == false)
             {
                 //Idle animation will go here
                 animator.SetBool("isIdle", true);
@@ -44,7 +46,7 @@ namespace Platformer
 
             }
 
-            if (state == BatState.Walk)
+            if (state == BatState.Walk && isDead == false)
             {
 
                 Debug.Log("Walking");
@@ -62,7 +64,7 @@ namespace Platformer
             //    animator.SetBool("isWalking", false);
             //}
 
-            if (state == BatState.Attack)
+            if (state == BatState.Attack && isDead == false)
             {
                 //Debug.Log("Attack!");
                 
@@ -89,7 +91,7 @@ namespace Platformer
 
             }
 
-            if (state == BatState.Die)
+            if (state == BatState.Die && isDead == true)
             {
                 //Death animation will go here
                 animator.SetTrigger("isDead");

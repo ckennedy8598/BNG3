@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 1466045684722223400}
   - component: {fileID: 565461817520836368}
   - component: {fileID: 4064986867148007336}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,6 +441,7 @@ MonoBehaviour:
     m_Bits: 8
   sightRange: 0
   attackingRange: 0
+  isDead: 0
   timeBetweenAttacks: 5
   state: 0
 --- !u!1 &8683029062915295266
@@ -454,8 +455,8 @@ GameObject:
   - component: {fileID: 6956248418617472458}
   - component: {fileID: 4858290250056837610}
   - component: {fileID: 6213956611106650357}
-  m_Layer: 8
-  m_Name: Attack Range
+  m_Layer: 2
+  m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

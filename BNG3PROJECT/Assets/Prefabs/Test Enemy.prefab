@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 2136051283559798310}
   - component: {fileID: 4764732692945478248}
   - component: {fileID: 545345616768219712}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 8
+  m_Radius: 15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &545345616768219712
 MonoBehaviour:
@@ -373,6 +373,7 @@ MonoBehaviour:
   enemyBullet: {fileID: 3177013235917468854, guid: a66e0e83580fa1a418957b7488be31db, type: 3}
   animator: {fileID: 0}
   RF: {fileID: 0}
+  AU: {fileID: 8300000, guid: 28aaa2bb57b4f2f4a8bff19a23f08887, type: 3}
 --- !u!1 &5201729215330651557
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,7 +385,7 @@ GameObject:
   - component: {fileID: 6716227700300803934}
   - component: {fileID: 3018066082299674784}
   - component: {fileID: 8341736210607122010}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: SightRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,7 +426,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 15
+  m_Radius: 20
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8341736210607122010
 MonoBehaviour:

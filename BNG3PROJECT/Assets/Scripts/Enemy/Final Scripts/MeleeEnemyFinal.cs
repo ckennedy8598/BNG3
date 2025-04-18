@@ -22,6 +22,8 @@ namespace Platformer
 
         public MeleeState State;
 
+        public bool isDead = false;
+
         public enum MeleeState
         {
             Idle,
@@ -82,7 +84,7 @@ namespace Platformer
 
         private void StateHandler()
         {
-            if (State == MeleeState.Idle)
+            if (State == MeleeState.Idle && isDead == false)
             {
                 //Idle animation will go here
                 animator.SetBool("isIdle", true);
@@ -92,7 +94,7 @@ namespace Platformer
 
             }
 
-            if (State == MeleeState.Walk)
+            if (State == MeleeState.Walk && isDead == false)
             {
 
                 Debug.Log("Walking");
@@ -110,7 +112,7 @@ namespace Platformer
             //    animator.SetBool("isWalking", false);
             //}
 
-            if (State == MeleeState.Attack)
+            if (State == MeleeState.Attack && isDead == false)
             {
                 Debug.Log("Attack!");
                 
@@ -138,10 +140,11 @@ namespace Platformer
 
             }
 
-            if (State == MeleeState.Die)
+            if (State == MeleeState.Die && isDead == true)
             {
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
                 //leave this empty
+                // lol jk
                 
             }
         }

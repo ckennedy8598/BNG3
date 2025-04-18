@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 400
+  maxHealth: 500
   sprite: {fileID: 0}
   deathTimer: 1
   animator: {fileID: 0}

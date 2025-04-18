@@ -30,6 +30,8 @@ namespace Platformer
 
         public bool stateRecheck = true;
 
+       // public AudioClip AU;
+
         public bool testbool = false;
 
         public DeviState State;
@@ -187,7 +189,14 @@ namespace Platformer
             //    return;
             //}
         }
+        //private void OnTriggerEnter(Collider other)
+        //{
+        //    if (other.gameObject.CompareTag("Fireball")) 
+        //    {
+        //        AudioSource.PlayClipAtPoint(AU, transform.position, 0.4f);
+        //    }
+            
+        //}
 
-        
     }
 }

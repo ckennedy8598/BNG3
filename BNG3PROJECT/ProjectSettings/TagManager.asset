@@ -9,6 +9,7 @@ TagManager:
   - Reflected
   - CerbSpawnPoint
   - CerberusAttackRange
+  - Fireball
   layers:
   - Default
   - TransparentFX
