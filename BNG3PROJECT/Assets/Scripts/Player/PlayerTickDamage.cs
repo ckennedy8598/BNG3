@@ -13,11 +13,11 @@ namespace Platformer
         public bool poisonTick = true;
         private float timeBetweenPoison = 4f;
 
-        // Burn timer is going to change. I'm thinking more damage but less ticks to make it different
+        // Burn timer is going to change. I'm thinking more damage but less ticks to make it different.
         private float burnTimer = 3f;
         public bool isBurned = false;
         public bool burnTick = true;
-        private float timeBetweenBurn = 5f;
+        private float timeBetweenBurn = 2f;
 
         // Frost timer is going to change. i'm thinking less damage but the ticks are quicker.
         private float frostTimer = 5f;
@@ -74,7 +74,7 @@ namespace Platformer
             {
                 isPoisoned = false;
                 isFrosted = false;
-                playerHealth.PlayerHealth -= 7f;
+                playerHealth.PlayerHealth -= 10f;
 
                 burnTimer -= 1f;
                 Debug.Log("Burn Damage");
