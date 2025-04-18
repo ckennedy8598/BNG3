@@ -29,6 +29,7 @@ namespace Platformer
         private float _blockTimer;
         public BoxCollider MeleeHitbox;
         public TMP_Text BlockIndicator;
+        public AudioSource ParrySound;
         public bool CanParry;
         public bool CanBlock;
         public bool IsBlocking;

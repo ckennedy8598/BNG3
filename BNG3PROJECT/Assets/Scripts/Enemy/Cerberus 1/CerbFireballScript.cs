@@ -48,21 +48,22 @@ namespace Platformer
         private void OnTriggerEnter(Collider other)
         {
 
-            
+
             if (other.gameObject.CompareTag("Player"))
             {
-                //if (PA_Script.CanParry || PA_Script.IsBlocking) // - B
-                //{
-                //    rb.position = new Vector3(MainCamera.transform.position.x, MainCamera.transform.position.y - .25f, MainCamera.transform.position.z);
-                //    rb.velocity = MainCamera.transform.forward * force;
-                //    gameObject.tag = "Reflected";
-                //}
-                //else
-                //{
+                if (PA_Script.CanParry) // - B
+                {
+                    rb.position = new Vector3(MainCamera.transform.position.x, MainCamera.transform.position.y - .25f, MainCamera.transform.position.z);
+                    rb.velocity = MainCamera.transform.forward * force;
+                    gameObject.tag = "Reflected";
+                    PA_Script.ParrySound.Play();
+                }
+                else
+                {
                     playerHealth.TakeDamage(bulletDamage);
                     Debug.Log("Player has been shot D:");
                     Destroy(gameObject);
-                //}
+                }
             }
             else if (other.gameObject.CompareTag("Enemy") && gameObject.tag == "Reflected") // - B
             {

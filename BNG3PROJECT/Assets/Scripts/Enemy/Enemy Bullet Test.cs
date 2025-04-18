@@ -52,6 +52,7 @@ public class EnemyBulletTest : MonoBehaviour
                 rb.position = new Vector3(MainCamera.transform.position.x, MainCamera.transform.position.y - .25f, MainCamera.transform.position.z);
                 rb.velocity = MainCamera.transform.forward * force;
                 gameObject.tag = "Reflected";
+                PA_Script.ParrySound.Play();
             }
             else
             {
