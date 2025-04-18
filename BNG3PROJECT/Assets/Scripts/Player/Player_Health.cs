@@ -19,8 +19,10 @@ namespace Platformer
         private float _maxHealth = 100f;
         private float _dmgTimerCheck;
         private float _dmgTimer = 1f;
+        public float HalfDamageValue = 1f;
         private bool _damageCooldown;
         public bool CanBeDamaged;
+        public bool HalfDamage;
         public float PlayerHealth = 20f;
         public TMP_Text HealthReadout;
         public AudioSource HealthPickupSFX;
@@ -48,7 +50,7 @@ namespace Platformer
         void Update()
         {
             // Update UI Element
-            HealthReadout.text = "Health: " +  PlayerHealth.ToString();
+            HealthReadout.text = "Health: " + PlayerHealth.ToString();
             HealthSlider.value = PlayerHealth;
             _checkDead();
 
@@ -57,6 +59,13 @@ namespace Platformer
                 _UIBool = !_UIBool;
                 UI.SetActive(_UIBool);
             }
+
+            if (HalfDamage)
+            {
+                HalfDamageValue = .5f;
+            }
+            else
+                HalfDamageValue = 1f;
         }
 
         //Poison damage. Gonna rework this in the future. I want this to do a certian amount of damage a second - Chris
@@ -94,7 +103,7 @@ namespace Platformer
                 {
                     OnHitSFX.Play();
                     anim.SetTrigger("Player_Hurt");
-                    PlayerHealth -= damage;
+                    PlayerHealth -= damage * HalfDamageValue;
                     _dmgCooldown();
                     //Debug.Log("!!!!!!CALLED DAMAGE COOLDOWN: PLAYER STATE INVULNERABLE!!!!!!");
                 }

@@ -47,7 +47,7 @@ public class EnemyBulletTest : MonoBehaviour
     
         if (other.gameObject.CompareTag("Player"))
         {
-            if (PA_Script.CanParry || PA_Script.IsBlocking) // - B
+            if (PA_Script.CanParry) // - B
             {
                 rb.position = new Vector3(MainCamera.transform.position.x, MainCamera.transform.position.y - .25f, MainCamera.transform.position.z);
                 rb.velocity = MainCamera.transform.forward * force;
