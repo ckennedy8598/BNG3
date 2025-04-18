@@ -43,6 +43,7 @@ namespace Platformer
         public void ResetState()
         {
             State = MeleeState.Idle;
+            animator.SetBool("isIdle", true);
         }
 
         void Update()
@@ -84,7 +85,9 @@ namespace Platformer
             if (State == MeleeState.Idle)
             {
                 //Idle animation will go here
-                //animator.SetBool("isIdle", true);
+                animator.SetBool("isIdle", true);
+                animator.SetBool("isWalking", false);
+                animator.SetBool("isAttacking", false);
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
 
             }
@@ -99,6 +102,7 @@ namespace Platformer
                 animator.SetBool("isIdle", false);
                 animator.SetBool("isWalking", true);
                 animator.SetBool("isAttacking", false);
+                animator.SetTrigger("endAttack");
 
             }
             //else

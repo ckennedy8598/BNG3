@@ -38,6 +38,9 @@ namespace Platformer
             {
                 //Idle animation will go here
                 animator.SetBool("isIdle", true);
+                animator.SetBool("isWalking", false);
+                animator.SetBool("isAttacking", false);
+                gameObject.GetComponent<NavMeshAgent>().isStopped = true;
 
             }
 
@@ -51,6 +54,7 @@ namespace Platformer
                 animator.SetBool("isIdle", false);
                 animator.SetBool("isWalking", true);
                 animator.SetBool("isAttacking", false);
+                animator.SetTrigger("endAttack");
 
             }
             //else
@@ -94,11 +98,6 @@ namespace Platformer
         public void ResetState()
         {
             state = BatState.Idle;
-        }
-        private void ResetAttack()
-        {
-            Debug.Log("Resetting Attack");
-            alreadyAttacked = false;
         }
         void Awake()
         {

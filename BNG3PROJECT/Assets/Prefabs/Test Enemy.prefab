@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8913056581336362824}
   - component: {fileID: 7045586589724993814}
   - component: {fileID: 5379241433133510484}
-  - component: {fileID: 7562001946189556837}
   - component: {fileID: 907254949368070040}
   - component: {fileID: 1195348299117043709}
   - component: {fileID: 8764113885506155894}
@@ -89,38 +88,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7562001946189556837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649043069165151860}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 248ba8de98adccc4ab158e1ecc47d71d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 907254949368070040}
-  player: {fileID: 0}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 8
-  walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 5
-  walkSpeed: 0
-  timeBetweenAttacks: 5
-  sightRange: 20
-  attackingRange: 10
-  playerInSightRange: 0
-  playerInAttackRange: 0
-  animator: {fileID: 8322640703122403252}
-  enemyBullet: {fileID: 3177013235917468854, guid: a66e0e83580fa1a418957b7488be31db, type: 3}
-  spawnPoint: {fileID: 6783909673318847231}
-  timer: 10
 --- !u!195 &907254949368070040
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -404,6 +371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 3177013235917468854, guid: a66e0e83580fa1a418957b7488be31db, type: 3}
+  animator: {fileID: 0}
+  RF: {fileID: 0}
 --- !u!1 &5201729215330651557
 GameObject:
   m_ObjectHideFlags: 0

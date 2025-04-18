@@ -7,6 +7,10 @@ namespace Platformer
     public class ProjSpawner : MonoBehaviour
     {
         public GameObject enemyBullet;
+
+        public Animator animator;
+
+        public RangedEnemyFinal RF;
         public void spawnProjectile()
         {
             Instantiate(enemyBullet, transform.Find("SpawnPoint").position, Quaternion.identity);
@@ -16,9 +20,13 @@ namespace Platformer
         {
             Destroy(transform.parent.gameObject);
         }
+        public void ResetShot()
+        {
+            animator.SetTrigger("endAttack");
+        }
         void Start()
         {
-        
+            animator = GetComponent<Animator>();
         }
 
         // Update is called once per frame

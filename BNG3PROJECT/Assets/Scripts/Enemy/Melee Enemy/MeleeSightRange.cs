@@ -24,6 +24,7 @@ namespace Platformer
             }
 
         }
+        
         private void OnTriggerExit(Collider other)
         {
             if (MF.State != MeleeEnemyFinal.MeleeState.Die)

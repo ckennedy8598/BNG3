@@ -63,6 +63,8 @@ namespace Platformer
             {
                 //Idle animation will go here
                 animator.SetBool("isIdle", true);
+                animator.SetBool("isWalking", false);
+                animator.SetBool("isShooting", false);
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
 
             }
@@ -77,6 +79,7 @@ namespace Platformer
                 animator.SetBool("isIdle", false);
                 animator.SetBool("isWalking", true);
                 animator.SetBool("isShooting", false);
+                animator.SetTrigger("endAttack");
 
             }
             //else

@@ -84,6 +84,18 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: endAttack
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: startAttack
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -111,13 +123,13 @@ AnimatorStateMachine:
     m_Position: {x: 30, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2087896115293572102}
-    m_Position: {x: 30, y: -80, z: 0}
+    m_Position: {x: -10, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2145201978642070503}
-    m_Position: {x: 30, y: -180, z: 0}
+    m_Position: {x: 270, y: -110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7450168087014559915}
-    m_Position: {x: 280, y: 20, z: 0}
+    m_Position: {x: 520, y: 110, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 6460777253789648296}
@@ -137,8 +149,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: isAttacking
+  - m_ConditionMode: 1
+    m_ConditionEvent: endAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2087896115293572102}
@@ -217,9 +229,6 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: isWalking
-    m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: isIdle
     m_EventTreshold: 0
