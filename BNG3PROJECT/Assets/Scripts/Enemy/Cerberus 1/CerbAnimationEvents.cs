@@ -45,6 +45,8 @@ namespace Platformer
 
         }
 
+
+
         public void AttackActivate()
         {
             AR.SetActive(true);
@@ -62,6 +64,8 @@ namespace Platformer
 
         public void StartDeath()
         {
+            CF.isDead = true;
+            CF.State = CerberusFinal.CerbState.Die;
             gameObject.GetComponentInParent<NavMeshAgent>().isStopped = true;
         }
 
