@@ -14,6 +14,7 @@ namespace Platformer
         private HingeJoint doorHinge;
         private bool isDoorLocked = true; // Door is locked initially
 
+        public bool requiresPuzzleLock = false;
         public bool isPuzzleGateUnlocked = false;
 
         // Start is called before the first frame update
@@ -59,9 +60,10 @@ namespace Platformer
         // only works with fireball for the time being since I adapted a portion of the Target's code here
         void OnTriggerEnter(Collider other)
         {
-            if (!isPuzzleGateUnlocked) return;
+            if (requiresPuzzleLock && !isPuzzleGateUnlocked)
+                return;
 
-            if (other.gameObject.name == "Fireball(Clone)" || other.CompareTag("Reflected"))
+            if (other.gameObject.name == "Fireball(Clone)" || other.CompareTag("Fireball") || other.CompareTag("Reflected"))
             {
                 // Simulate damage on keypad and unlock the door
                 DamageKeypad();
