@@ -21,6 +21,9 @@ namespace Platformer
 
         private bool isDoorLocked = true;
 
+        public bool requiresPuzzleLock = false;
+        public bool isPuzzleGateUnlocked = false;
+
         void Start()
         {
             // Freeze both doors at start
@@ -63,6 +66,12 @@ namespace Platformer
 
         public void DamageKeypad()
         {
+            if (requiresPuzzleLock && !isPuzzleGateUnlocked)
+            {
+                Debug.Log("Gate is puzzle-locked. Cannot open yet.");
+                return; // do nothing until puzzle is solved
+            }
+
             if (isDoorLocked)
             {
                 UnlockDoor();
