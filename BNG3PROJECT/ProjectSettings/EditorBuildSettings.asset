@@ -15,11 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Cerb_Arena_Infernus.unity
     guid: 6551ae04179fd8a4c9afdefa755c7742
   - enabled: 1
-    path: Assets/Scenes/Demo_ThankYou.unity
-    guid: 84e256ed5d3c6f849a038ba71f532130
-  - enabled: 0
     path: Assets/Scenes/Ergus.unity
     guid: 3671af2f613a20747bd30ac87228b9d2
+  - enabled: 1
+    path: Assets/Scenes/ErgusCerbArena.unity
+    guid: 1e8f9d44a1e1c824391c6cb06cc2db04
+  - enabled: 1
+    path: Assets/Scenes/Demo_ThankYou.unity
+    guid: 84e256ed5d3c6f849a038ba71f532130
   - enabled: 0
     path: Assets/Scenes/TheGym.unity
     guid: 7e80d22c0c9a20a40927e7b109b87e39
