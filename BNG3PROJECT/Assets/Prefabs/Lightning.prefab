@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 2210488866870239163}
   m_Layer: 0
   m_Name: Lightning
-  m_TagString: Untagged
+  m_TagString: Lightning
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5022048920357911036
 Transform:
   m_ObjectHideFlags: 0

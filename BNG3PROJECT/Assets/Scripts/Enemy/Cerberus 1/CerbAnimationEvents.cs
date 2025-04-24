@@ -21,6 +21,10 @@ namespace Platformer
         public GameObject AR;
 
         public NavMeshAgent agent;
+
+        public GameObject CerbCloud;
+
+        public Cerb2 C2;
         void Start()
         {
             CF = GetComponentInParent<CerberusFinal>();
@@ -28,6 +32,9 @@ namespace Platformer
             cerbSpawnPoint = GameObject.FindWithTag("CerbSpawnPoint").transform;
             AR = GameObject.FindWithTag("CerberusAttackRange");
             agent = GetComponentInParent<NavMeshAgent>();
+
+            C2 = GetComponentInParent<Cerb2>();
+
         }
 
         public void BigDie()
@@ -41,6 +48,15 @@ namespace Platformer
             Instantiate(CerbFire, cerbSpawnPoint.position, Quaternion.identity);
             CF.isFiring = false;
             CF.ResetFireTime();
+            animator.SetTrigger("endShot");
+
+        }
+
+        public void LightningStrike()
+        {
+            Instantiate(CerbCloud, cerbSpawnPoint.position, Quaternion.identity);
+            C2.isFiring = false;
+            C2.ResetFireTime();
             animator.SetTrigger("endShot");
 
         }
@@ -62,10 +78,22 @@ namespace Platformer
             CF.State = CerberusFinal.CerbState.Walk;
         }
 
+        public void Cerb2ResetWalk()
+        {
+            C2.State = Cerb2.CerbState.Walk;
+        }
+
         public void StartDeath()
         {
             CF.isDead = true;
             CF.State = CerberusFinal.CerbState.Die;
+            gameObject.GetComponentInParent<NavMeshAgent>().isStopped = true;
+        }
+
+        public void Cerb2StartDeath()
+        {
+            C2.isDead = true;
+            C2.State = Cerb2.CerbState.Die;
             gameObject.GetComponentInParent<NavMeshAgent>().isStopped = true;
         }
 

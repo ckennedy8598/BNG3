@@ -11,6 +11,8 @@ TagManager:
   - CerberusAttackRange
   - Fireball
   - CloudSpawnPoint
+  - Lightning
+  - CerbCloud
   layers:
   - Default
   - TransparentFX

@@ -15,6 +15,10 @@ namespace Platformer
         public GameObject Lightning;
 
         public NavMeshAgent agent;
+
+        public BoxCollider BC;
+
+        public float strikeTimer = 10f;
         void Start()
         {
             animator = this.GetComponent<Animator>();
@@ -22,12 +26,26 @@ namespace Platformer
             cloudSpawnPoint = GameObject.FindWithTag("CloudSpawnPoint").transform;
 
             agent = GetComponentInParent<NavMeshAgent>();
+
+            //Lightning = GameObject.FindWithTag("Lightning");
+
+            BC = GetComponent<BoxCollider>();
+
+            BC.enabled = true;
+
         }
 
         // Update is called once per frame
         void Update()
         {
         
+            strikeTimer -= Time.deltaTime;
+
+            if (strikeTimer <= 0) 
+           {
+                BC.enabled = false;
+                animator.SetTrigger("Attack");
+           }
         }
         public void OnTriggerEnter(Collider other)
         {
@@ -40,7 +58,7 @@ namespace Platformer
         }
         public void Strike()
         {
-            Instantiate(Lightning, cloudSpawnPoint.position, Quaternion.identity);
+            Instantiate( Lightning, cloudSpawnPoint.position, Quaternion.identity);
         }
 
         public void BigDie()
