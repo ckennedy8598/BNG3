@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace Platformer
 {
-    public class CerbAnimationEvents : MonoBehaviour
+    public class Cerb2AnimationEvents : MonoBehaviour
     {
         // Start is called before the first frame update
+        public GameObject CerbCloud;
 
-        public CerberusFinal CF;
-
-        public GameObject CerbFire;
+        public Cerb2 C2;
 
         public Animator animator;
 
@@ -21,38 +19,40 @@ namespace Platformer
         public GameObject AR;
 
         public NavMeshAgent agent;
-
-        
         void Start()
         {
-            CF = GetComponentInParent<CerberusFinal>();
+            C2 = GetComponentInParent<Cerb2>();
             animator = GetComponent<Animator>();
             cerbSpawnPoint = GameObject.FindWithTag("CerbSpawnPoint").transform;
             AR = GameObject.FindWithTag("CerberusAttackRange");
             agent = GetComponentInParent<NavMeshAgent>();
+        }
 
-            
+        public void LightningStrike()
+        {
+            Instantiate(CerbCloud, cerbSpawnPoint.position, Quaternion.identity);
+            C2.isFiring = false;
+            C2.ResetFireTime();
+            animator.SetTrigger("endShot");
 
+        }
+
+        public void Cerb2ResetWalk()
+        {
+            C2.State = Cerb2.CerbState.Walk;
+        }
+
+        public void Cerb2StartDeath()
+        {
+            C2.isDead = true;
+            C2.State = Cerb2.CerbState.Die;
+            gameObject.GetComponentInParent<NavMeshAgent>().isStopped = true;
         }
 
         public void BigDie()
         {
             Destroy(transform.parent.gameObject);
         }
-
-        public void Fireball()
-        {
-
-            Instantiate(CerbFire, cerbSpawnPoint.position, Quaternion.identity);
-            CF.isFiring = false;
-            CF.ResetFireTime();
-            animator.SetTrigger("endShot");
-
-        }
-
-        
-
-
 
         public void AttackActivate()
         {
@@ -63,22 +63,6 @@ namespace Platformer
         {
             AR.SetActive(false);
         }
-
-        public void ResetWalk()
-        {
-            CF.State = CerberusFinal.CerbState.Walk;
-        }
-
-        
-
-        public void StartDeath()
-        {
-            CF.isDead = true;
-            CF.State = CerberusFinal.CerbState.Die;
-            gameObject.GetComponentInParent<NavMeshAgent>().isStopped = true;
-        }
-
-        
 
         // Update is called once per frame
         void Update()
