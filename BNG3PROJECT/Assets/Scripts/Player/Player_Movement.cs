@@ -23,6 +23,8 @@ public class Player_Movement : MonoBehaviour
     public float GroundDrag;
     public bool Dashing;
     public bool CanMove;
+    // To be used by other scripts
+    public bool StopMovement;
 
     [Header("Jumping")]
     public float CoyoteTime;
@@ -87,6 +89,7 @@ public class Player_Movement : MonoBehaviour
         _rb.freezeRotation = true; // Otherwise player falls over
         _readyToJump = true;
         Time.timeScale = 1f;
+        StopMovement = false;
     }
 
     // Update is called once per frame
@@ -256,6 +259,12 @@ public class Player_Movement : MonoBehaviour
         {
             state = MovementState.paused;
             GroundCheckText.text = "Paused!";
+            return;
+        }
+        
+        if (StopMovement)
+        {
+            _rb.velocity = Vector3.zero;
             return;
         }
 

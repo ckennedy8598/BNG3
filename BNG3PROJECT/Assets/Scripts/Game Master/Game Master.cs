@@ -15,6 +15,14 @@ namespace Platformer
         public GameObject Player;
 
         public bool isrespawning = true;
+
+        private int _sceneNumber;
+
+        // Variables for player abilities
+        [Header("Collected Abilities")]
+        public bool Dash;
+        public bool SoulOverflow;
+        public bool Ashes;
         private void Awake()
         {
             
@@ -34,7 +42,8 @@ namespace Platformer
         }
         void Start()
         {
-
+            _sceneNumber = SceneManager.GetActiveScene().buildIndex;
+            _sceneAbilities();
         }
 
         // Update is called once per frame
@@ -55,6 +64,23 @@ namespace Platformer
                 Player = GameObject.FindWithTag("Player");
             }
             
+        }
+
+        private void _sceneAbilities()
+        {
+            if (_sceneNumber == 1)
+            {
+                Dash = false;
+                SoulOverflow = false;
+                Ashes = false;
+            }
+            else if (_sceneNumber == 2 || _sceneNumber == 3)
+            {
+                Dash = true;
+                SoulOverflow = false;
+                Ashes = false;
+            }
+            // else if last scene set do something
         }
     }
 }

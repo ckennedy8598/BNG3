@@ -36,6 +36,7 @@ namespace Platformer
         public Animator anim;
 
         public GameObject UI;
+        public GameObject Weapon;
         private bool _UIBool = true;
 
 
@@ -69,6 +70,7 @@ namespace Platformer
             if (Input.GetKeyDown(KeyCode.K))
             {
                 _UIBool = !_UIBool;
+                Weapon.SetActive(_UIBool);
                 UI.SetActive(_UIBool);
             }
 

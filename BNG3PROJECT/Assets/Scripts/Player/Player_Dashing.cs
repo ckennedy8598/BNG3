@@ -30,15 +30,20 @@ namespace Platformer
 
         public AudioSource DashSFX;
 
+        public GameObject GameMaster;
+        public GameMaster GameMasterScript;
+
         void Start()
         {
             _rb = GetComponent<Rigidbody>();
             _pm = GetComponent<Player_Movement>();
+            GameMaster = GameObject.Find("Game Master");
+            GameMasterScript = GameMaster.GetComponent<GameMaster>();
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(DashKey))
+            if (Input.GetKeyDown(DashKey) && GameMasterScript.Dash)
             {
                 _dash();
                 //Debug.Log("Player_Dashing.cs Script: LeftShiftKey Down");
@@ -47,6 +52,11 @@ namespace Platformer
             if (_dashCDTimer >= 0)
             {
                 _dashCDTimer -= Time.deltaTime;
+            }
+
+            if (GameMasterScript == null)
+            {
+                GameMasterScript = GameMaster.GetComponent<GameMaster>();
             }
         }
 
