@@ -160,14 +160,14 @@ namespace Platformer
                     _blockTimer += Time.deltaTime;
                     CanParry = true;
                     Player_Health_Script.CanBeDamaged = false;
-                    parryText.text = "Parry State: True";
+                    //parryText.text = "Parry State: True";
                     //Debug.Log("This is _canParry: " + _canParry);
                 }
                 else
                 {
                     CanParry = false;
                     Player_Health_Script.CanBeDamaged = true;
-                    parryText.text = "Parry State: False";
+                    //parryText.text = "Parry State: False";
                     //Debug.Log("This is _canParry: " + _canParry);
                 }
             }
