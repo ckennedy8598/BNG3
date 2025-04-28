@@ -13,6 +13,7 @@ TagManager:
   - CloudSpawnPoint
   - Lightning
   - CerbCloud
+  - Wall
   layers:
   - Default
   - TransparentFX
