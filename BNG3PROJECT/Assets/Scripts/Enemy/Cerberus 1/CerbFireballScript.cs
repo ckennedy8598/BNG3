@@ -48,6 +48,16 @@ namespace Platformer
         private void OnTriggerEnter(Collider other)
         {
 
+            if (other.gameObject.CompareTag("Wall"))
+            {
+                Destroy(gameObject);
+            }
+
+            if (other.gameObject.CompareTag("Ground"))
+            {
+                //put the spawning of the 'fire' object here
+                Debug.Log("Fire!");
+            }
 
             if (other.gameObject.CompareTag("Player"))
             {
