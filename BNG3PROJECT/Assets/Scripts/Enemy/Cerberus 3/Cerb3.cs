@@ -5,9 +5,8 @@ using UnityEngine.AI;
 
 namespace Platformer
 {
-    public class Cerb2 : MonoBehaviour
+    public class Cerb3 : MonoBehaviour
     {
-        // Start is called before the first frame update
         public NavMeshAgent agent;
 
         public Transform player;
@@ -24,7 +23,7 @@ namespace Platformer
 
         public bool isDead = false;
 
-        public float fireTime = 30f;
+        public float fireTime = 7f;
 
         public bool isFiring = false;
 
@@ -106,13 +105,13 @@ namespace Platformer
 
         void Start()
         {
-            fireTime = 30f;
+            fireTime = 7f;
             State = CerbState.Walk;
         }
         public void ResetFireTime()
         {
 
-            fireTime = 30f;
+            fireTime = 7f;
         }
 
         // Update is called once per frame
