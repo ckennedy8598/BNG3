@@ -24,7 +24,7 @@ namespace Platformer
 
             // Lock the door initially by freezing position and rotation
             LockDoor();
-            Debug.Log("Door has been initially locked");
+            //Debug.Log("Door has been initially locked");
         }
 
 
@@ -33,7 +33,7 @@ namespace Platformer
             // Unfreeze position and rotation so the door can move
             doorRigidbody.constraints = RigidbodyConstraints.None;
             isDoorLocked = false;
-            Debug.Log("Door has been unlocked");
+            //Debug.Log("Door has been unlocked");
         }
 
         // Call this function to lock the door
@@ -42,7 +42,7 @@ namespace Platformer
             // Lock position and rotation to prevent movement
             doorRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
             isDoorLocked = true;
-            Debug.Log("Door has been locked");
+            //Debug.Log("Door has been locked");
         }
 
         // Function to handle keypad damage
@@ -52,7 +52,7 @@ namespace Platformer
             if (isDoorLocked)
             {
                 UnlockDoor();
-                Debug.Log("Door has been unlocked due to damage");
+                //Debug.Log("Door has been unlocked due to damage");
               
             }
         }
@@ -67,7 +67,7 @@ namespace Platformer
             {
                 // Simulate damage on keypad and unlock the door
                 DamageKeypad();
-                Debug.Log("Keypad has been damaged by fireball");
+                //Debug.Log("Keypad has been damaged by fireball");
                 if (TargetHit != null)
                 {
                     AudioSource.PlayClipAtPoint(TargetHit, gameObject.transform.position);

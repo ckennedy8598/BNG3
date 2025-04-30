@@ -98,13 +98,10 @@ public class Player_Movement : MonoBehaviour
         // Score Update
         ScoreUpdate.text = PlayerScore.ToString();
         // Ground Check
-        _grounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.2f, IsGround);
+        _grounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.09f, IsGround);
 
         _speedControl();
         StateHandler();
-
-        //this.gameObject.transform.rotation = _playerOrientation.rotation;
-        //_playerBody.rotation = _playerOrientation.rotation;
 
         // Jump Buffer
         if (Input.GetKeyDown(JumpKey))

@@ -9,17 +9,16 @@ namespace Platformer
         // Start is called before the first frame update
 
         private GameMaster gm;
+        private bool _needRespawn;
 
         void Start()
         {
-            
+            _needRespawn = true;
         }
 
         private void Awake()
         {
-            Debug.Log("Spawning player");
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-            transform.position = gm.LastCheckpointPOS;
         }
         // Update is called once per frame
         void Update()
@@ -27,7 +26,18 @@ namespace Platformer
         
         }
 
-          
-        
+        private void LateUpdate()
+        {
+            if (_needRespawn)
+            {
+                transform.position = gm.LastCheckpointPOS;
+                Debug.Log("Spawning player at coords: " + gm.LastCheckpointPOS);
+                Debug.Log("Actual Player Coords: " + this.gameObject.transform.position);
+                _needRespawn = false;
+            }
+        }
+
+
+
     }
 }

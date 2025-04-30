@@ -49,7 +49,7 @@ namespace Platformer
             if (state == BatState.Walk && isDead == false)
             {
 
-                Debug.Log("Walking");
+                //Debug.Log("Walking");
 
                 gameObject.GetComponent<NavMeshAgent>().isStopped = false;
                 agent.SetDestination(player.position);

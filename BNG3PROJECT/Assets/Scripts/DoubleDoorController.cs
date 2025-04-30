@@ -35,13 +35,13 @@ namespace Platformer
             if (leftdoorRigidbody != null)
             {
                 leftdoorRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
-                Debug.Log("Left Door locked.");
+                //Debug.Log("Left Door locked.");
             }
 
             if (rightdoorRigidbody != null)
             {
                 rightdoorRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
-                Debug.Log("Right Door locked.");
+                //Debug.Log("Right Door locked.");
             }
 
             isDoorLocked = true;

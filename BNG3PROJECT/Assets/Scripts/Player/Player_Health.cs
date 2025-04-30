@@ -14,9 +14,10 @@ namespace Platformer
     {
         [Header("Pause_Menu.cs Reference")]
         /*private Player_Health _ph_Script;
-        private Player_Movement _player_M_Script;
+        
         private Player_Dashing _pd_Script;
-        private Player_Attacking _pa_Script;*/
+        private Player_Attacking _pa_Script;
+        private Player_Movement _player_M_Script;*/
         public Pause_Menu PM_Script;
 
         [Header("Health Bar")]
@@ -50,9 +51,10 @@ namespace Platformer
         void Start()
         {
             /*_ph_Script = GetComponent<Player_Health>();
-            _player_M_Script = GetComponent<Player_Movement>();
+            
             _pd_Script = GetComponent<Player_Dashing>();
-            _pa_Script = GetComponent<Player_Attacking>();*/
+            _pa_Script = GetComponent<Player_Attacking>();
+            _player_M_Script = GetComponent<Player_Movement>();*/
             PM_Script = FindAnyObjectByType<Pause_Menu>();
             CanBeDamaged = true;
         }

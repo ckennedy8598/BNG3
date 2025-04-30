@@ -74,7 +74,7 @@ namespace Platformer
             if(State == DeviState.Walk)
             {
                 
-                Debug.Log("Walking");
+                //Debug.Log("Walking");
                 
                 gameObject.GetComponent<NavMeshAgent>().isStopped = false;
                 agent.SetDestination(player.position);

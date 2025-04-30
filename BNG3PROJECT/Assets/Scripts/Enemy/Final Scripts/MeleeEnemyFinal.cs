@@ -97,7 +97,7 @@ namespace Platformer
             if (State == MeleeState.Walk && isDead == false)
             {
 
-                Debug.Log("Walking");
+                //Debug.Log("Walking");
 
                 gameObject.GetComponent<NavMeshAgent>().isStopped = false;
                 agent.SetDestination(player.position);
@@ -114,7 +114,7 @@ namespace Platformer
 
             if (State == MeleeState.Attack && isDead == false)
             {
-                Debug.Log("Attack!");
+                //Debug.Log("Attack!");
                 
 
                 //Attack animation will go here

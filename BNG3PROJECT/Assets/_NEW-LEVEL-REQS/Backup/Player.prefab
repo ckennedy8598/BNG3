@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3612288947939897248}
   - component: {fileID: 4670365898954884052}
+  - component: {fileID: 3041209094499508854}
   - component: {fileID: 7185679126083412256}
   - component: {fileID: 5187883471847569615}
   - component: {fileID: 6147061432627669349}
@@ -50,9 +51,6 @@ GameObject:
   - component: {fileID: 7371663992504287112}
   - component: {fileID: 623633764635531602}
   - component: {fileID: 6863423125287865875}
-  - component: {fileID: 3041209094499508854}
-  - component: {fileID: 7784383881146294151}
-  - component: {fileID: 7436844077875625815}
   - component: {fileID: 3122057666647623863}
   m_Layer: 3
   m_Name: Player
@@ -106,6 +104,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &3041209094499508854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4473704320128826865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b0f4384cc36e84eb7557b751a963c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7185679126083412256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +139,7 @@ MonoBehaviour:
   OnHitSFX: {fileID: 7371663992504287112}
   anim: {fileID: 0}
   UI: {fileID: 0}
+  Weapon: {fileID: 0}
 --- !u!114 &5187883471847569615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +160,7 @@ MonoBehaviour:
   GroundDrag: 10
   Dashing: 0
   CanMove: 0
+  StopMovement: 0
   CoyoteTime: 0.15
   CoyoteTimeCounter: 0
   JumpForce: 10
@@ -190,6 +202,8 @@ MonoBehaviour:
   DashCD: 1.5
   DashKey: 304
   DashSFX: {fileID: 623633764635531602}
+  GameMaster: {fileID: 0}
+  GameMasterScript: {fileID: 0}
 --- !u!114 &5693364405076419501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +244,8 @@ MonoBehaviour:
   Player_Health_Script: {fileID: 0}
   PauseScript: {fileID: 0}
   State_Shower: {fileID: 0}
+  GameMaster: {fileID: 0}
+  GameMasterScript: {fileID: 0}
   State: 0
 --- !u!82 &6736992631126367313
 AudioSource:
@@ -634,42 +650,6 @@ MonoBehaviour:
   isFrosted: 0
   frostTick: 1
   playerHealth: {fileID: 0}
---- !u!114 &3041209094499508854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4473704320128826865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47b0f4384cc36e84eb7557b751a963c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7784383881146294151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4473704320128826865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47b0f4384cc36e84eb7557b751a963c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7436844077875625815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4473704320128826865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47b0f4384cc36e84eb7557b751a963c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &3122057666647623863
 AudioSource:
   m_ObjectHideFlags: 0
