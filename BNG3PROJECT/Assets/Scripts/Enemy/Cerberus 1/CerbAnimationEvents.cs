@@ -22,9 +22,10 @@ namespace Platformer
 
         public NavMeshAgent agent;
 
-        
+        public Player_Health playerHealth;
         void Start()
         {
+            playerHealth = FindAnyObjectByType<Player_Health>();
             CF = GetComponentInParent<CerberusFinal>();
             animator = GetComponent<Animator>();
             cerbSpawnPoint = GameObject.FindWithTag("CerbSpawnPoint").transform;
@@ -42,8 +43,10 @@ namespace Platformer
 
         public void Fireball()
         {
-
-            Instantiate(CerbFire, cerbSpawnPoint.position, Quaternion.identity);
+            if(playerHealth.PlayerHealth > 0 ){
+                Instantiate(CerbFire, cerbSpawnPoint.position, Quaternion.identity);
+            }
+            
             CF.isFiring = false;
             CF.ResetFireTime();
             animator.SetTrigger("endShot");

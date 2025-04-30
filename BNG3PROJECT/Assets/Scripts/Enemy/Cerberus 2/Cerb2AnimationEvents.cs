@@ -19,8 +19,11 @@ namespace Platformer
         public GameObject AR;
 
         public NavMeshAgent agent;
+
+        public Player_Health playerHealth;
         void Start()
         {
+            playerHealth = FindAnyObjectByType<Player_Health>();
             C2 = GetComponentInParent<Cerb2>();
             animator = GetComponent<Animator>();
             cerbSpawnPoint = GameObject.FindWithTag("CerbSpawnPoint").transform;
@@ -30,7 +33,11 @@ namespace Platformer
 
         public void LightningStrike()
         {
-            Instantiate(CerbCloud, cerbSpawnPoint.position, Quaternion.identity);
+            if(playerHealth.PlayerHealth > 0 )
+            {
+               Instantiate(CerbCloud, cerbSpawnPoint.position, Quaternion.identity);
+            }
+            
             C2.isFiring = false;
             C2.ResetFireTime();
             animator.SetTrigger("endShot");

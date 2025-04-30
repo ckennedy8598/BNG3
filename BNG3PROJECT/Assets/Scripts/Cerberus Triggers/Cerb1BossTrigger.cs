@@ -8,7 +8,7 @@ namespace Platformer
     {
         // Start is called before the first frame update
 
-        public GameObject Cerb1;
+        public GameObject Cerb;
 
         public GameObject EGate;
         void Start()
@@ -20,7 +20,7 @@ namespace Platformer
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                Cerb1.SetActive(true);
+                Cerb.SetActive(true);
                 EGate.SetActive(false);
                 Destroy(gameObject);
             }

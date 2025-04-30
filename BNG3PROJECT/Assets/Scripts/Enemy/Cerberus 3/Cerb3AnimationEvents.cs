@@ -20,9 +20,10 @@ namespace Platformer
 
         public NavMeshAgent agent;
 
-
+        public Player_Health playerHealth;
         void Start()
         {
+            playerHealth = FindAnyObjectByType<Player_Health>();
             C3 = GetComponentInParent<Cerb3>();
             animator = GetComponent<Animator>();
             cerbSpawnPoint = GameObject.FindWithTag("CerbSpawnPoint").transform;
@@ -39,7 +40,11 @@ namespace Platformer
         }
         public void IcicleShoot()
         {
-            Instantiate(Icicle, cerbSpawnPoint.position, Quaternion.identity);
+          if (playerHealth.PlayerHealth > 0)
+            {
+                Instantiate(Icicle, cerbSpawnPoint.position, Quaternion.identity);
+            }
+            
             C3.isFiring = false;
             C3.ResetFireTime();
             animator.SetTrigger("endShot");
