@@ -129,6 +129,8 @@ MonoBehaviour:
   MainCamera: {fileID: 0}
   enemyBullet: {fileID: 0}
   player: {fileID: 0}
+  groundFire: {fileID: 8247621341066529337, guid: bb8c9d84a57712e408f4725f6f70a82c, type: 3}
+  playerT: {fileID: 0}
 --- !u!54 &5816675857890458897
 Rigidbody:
   m_ObjectHideFlags: 0

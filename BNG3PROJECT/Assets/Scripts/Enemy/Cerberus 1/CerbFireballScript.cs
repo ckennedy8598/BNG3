@@ -20,6 +20,7 @@ namespace Platformer
         public Camera MainCamera;
         public GameObject enemyBullet;
         public GameObject player;
+        public GameObject groundFire;
 
         public Transform playerT;
         void Start()
@@ -29,11 +30,13 @@ namespace Platformer
             MainCamera = FindAnyObjectByType<Camera>();
             PA_Script = FindAnyObjectByType<Player_Attacking>();
             EH_Script = FindAnyObjectByType<EnemyHealth>();
+            //groundFire = GameObject.FindGameObjectWithTag("GroundFire");
 
             Vector3 direction = player.transform.position - transform.position;
             rb.velocity = new Vector3(direction.x, direction.y, direction.z).normalized * force;
             playerHealth = FindAnyObjectByType<Player_Health>();
             playerT = GameObject.Find("Player").transform;
+
         }
         void Update()
         {
@@ -47,7 +50,7 @@ namespace Platformer
         }
         private void OnTriggerEnter(Collider other)
         {
-
+            var displacer = new Vector3(0, -1, 0);
             if (other.gameObject.CompareTag("Wall"))
             {
                 Destroy(gameObject);
@@ -57,6 +60,8 @@ namespace Platformer
             {
                 //put the spawning of the 'fire' object here
                 Debug.Log("Fire!");
+                Instantiate(groundFire, this.transform.position + displacer, Quaternion.identity);
+                Destroy(gameObject);
             }
 
             if (other.gameObject.CompareTag("Player"))

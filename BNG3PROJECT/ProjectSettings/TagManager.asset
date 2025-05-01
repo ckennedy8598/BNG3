@@ -15,6 +15,7 @@ TagManager:
   - CerbCloud
   - Wall
   - Ground
+  - GroundFire
   layers:
   - Default
   - TransparentFX
