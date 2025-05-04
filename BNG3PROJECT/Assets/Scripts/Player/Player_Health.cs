@@ -40,6 +40,8 @@ namespace Platformer
         public GameObject Weapon;
         private bool _UIBool = true;
 
+        public GymTransition GymTransition_Script;
+
 
         // I moved the poison method to it's own script, as well as adding burn damage and frost damage. Nothing in the game
         // currently calls those, but they will in the future. - Chris
@@ -56,6 +58,7 @@ namespace Platformer
             _pa_Script = GetComponent<Player_Attacking>();
             _player_M_Script = GetComponent<Player_Movement>();*/
             PM_Script = FindAnyObjectByType<Pause_Menu>();
+            GymTransition_Script = FindAnyObjectByType<GymTransition>();
             CanBeDamaged = true;
         }
 
@@ -79,8 +82,8 @@ namespace Platformer
             // Button for Cerb Arena
             if (Input.GetKeyDown(KeyCode.N))
             {
-                SceneManager.LoadScene(2);
-                this.transform.position = new Vector3(9.74f, 1.11f, 2.33f);
+                GymTransition_Script._setLevelRespawnCoords();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
 
             if (HalfDamage)

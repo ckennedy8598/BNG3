@@ -32,6 +32,9 @@ namespace Platformer
                     case 3:
                         GameMasterScript.SoulOverflow = true;
                         break;
+                    case 5:
+                        GameMasterScript.Ashes = true;
+                        break;
                     default:
                         Debug.Log("Sphere Default Case");
                         break;

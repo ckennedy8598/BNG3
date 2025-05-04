@@ -10,16 +10,17 @@ namespace Platformer
 
         private GameMaster gm;
         private bool _needRespawn;
-
-        void Start()
-        {
-            _needRespawn = true;
-        }
-
         private void Awake()
         {
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         }
+
+        void Start()
+        {
+            _needRespawn = true;
+            gm.UpdateScore();
+        }
+
         // Update is called once per frame
         void Update()
         {

@@ -62,6 +62,7 @@ public class Player_Movement : MonoBehaviour
     public TMP_Text ScoreUpdate; // Score Counter
 
     public bool PauseScript;
+    public bool CheckScore;
 
     public MovementState state;
     public enum MovementState
@@ -84,7 +85,7 @@ public class Player_Movement : MonoBehaviour
         _playerOrientation = GameObject.Find("PlayerOrientation").GetComponent<Transform>();
 
         //GroundCheckText.text = "Start! <3";
-        PlayerScore = 0;
+        //PlayerScore = 0;
         _rb = GetComponent<Rigidbody>();
         _rb.freezeRotation = true; // Otherwise player falls over
         _readyToJump = true;
@@ -112,8 +113,6 @@ public class Player_Movement : MonoBehaviour
         {
             JumpBufferCounter -= Time.deltaTime;
         }
-
-        
     }
 
     private void FixedUpdate()
