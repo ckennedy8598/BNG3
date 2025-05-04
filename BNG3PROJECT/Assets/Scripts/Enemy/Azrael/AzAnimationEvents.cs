@@ -117,6 +117,11 @@ namespace Platformer
             gameObject.GetComponentInParent<NavMeshAgent>().isStopped = true;
         }
 
+        public void ResetFire()
+        {
+            AZ.ResetFireTime();
+        }
+
         // Update is called once per frame
         void Update()
         {

@@ -18,6 +18,8 @@ namespace Platformer
 
         public BoxCollider BC;
 
+        public Player_Health playerHealth;
+
         public float strikeTimer = 10f;
         void Start()
         {
@@ -33,6 +35,7 @@ namespace Platformer
 
             BC.enabled = true;
 
+            playerHealth = FindAnyObjectByType<Player_Health>();
         }
 
         // Update is called once per frame
@@ -40,20 +43,25 @@ namespace Platformer
         {
         
             strikeTimer -= Time.deltaTime;
-
-            if (strikeTimer <= 0) 
-           {
-                BC.enabled = false;
-                animator.SetTrigger("Attack");
-           }
+            if (playerHealth.PlayerHealth > 0)
+            {
+                if (strikeTimer <= 0)
+                {
+                    BC.enabled = false;
+                    animator.SetTrigger("Attack");
+                }
+            }
         }
         public void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Player"))
+            if (playerHealth.PlayerHealth > 0)
             {
-                gameObject.GetComponentInParent<NavMeshAgent>().isStopped = true;
-                animator.SetTrigger("Attack");
-                
+                if (other.gameObject.CompareTag("Player"))
+                {
+                    gameObject.GetComponentInParent<NavMeshAgent>().isStopped = true;
+                    animator.SetTrigger("Attack");
+
+                }
             }
         }
         public void Strike()
