@@ -22,8 +22,12 @@ public class EnemyBulletTest : MonoBehaviour
     public GameObject player;
     void Start()
     {
+       
+    }
+    void Awake()
+    {
         rb = GetComponent<Rigidbody>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = player = GameObject.Find("Player");
         MainCamera = FindAnyObjectByType<Camera>();
         PA_Script = FindAnyObjectByType<Player_Attacking>();
         EH_Script = FindAnyObjectByType<EnemyHealth>();

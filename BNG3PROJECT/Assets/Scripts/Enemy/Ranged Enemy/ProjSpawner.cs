@@ -13,9 +13,16 @@ namespace Platformer
         public RangedEnemyFinal RF;
 
         public AudioClip AU;
+
+        public Player_Health playerHealth;
+
         public void spawnProjectile()
         {
-            Instantiate(enemyBullet, transform.Find("SpawnPoint").position, Quaternion.identity);
+            if(playerHealth.PlayerHealth >= 0)
+            {
+                Instantiate(enemyBullet, transform.Find("SpawnPoint").position, Quaternion.identity);
+            }
+            
         }
 
         public void BigDie()
@@ -30,6 +37,7 @@ namespace Platformer
         {
             animator = GetComponent<Animator>();
             //AU = GetComponent<AudioClip>();
+            playerHealth = FindAnyObjectByType<Player_Health>();
         }
 
         public void ShootSound()
