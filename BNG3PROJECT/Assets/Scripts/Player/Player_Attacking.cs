@@ -438,7 +438,6 @@ namespace Platformer
             // Deal Heavy Attack Damage on Collision
             _ashesCooldown = _ashesCooldownMax;
             AshesAnim.SetTrigger("AshesTrigger");
-            _pm.StopMovement = true;
             Weapon_Collision_Script.DealDamage(500);
             Anim.SetTrigger("Heavy_Attack_Trigger");
 
