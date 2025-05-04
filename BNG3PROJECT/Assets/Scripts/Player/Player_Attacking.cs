@@ -25,8 +25,8 @@ namespace Platformer
 
         [Header("Melee Variables")]
         private bool _meleeAllowed;
-        private float _blockTimerMax = .25f;
-        private float _blockTimer;
+        [SerializeField] private float _parryTimeMax = .75f;
+        private float _parryTime;
         private float _ashesCooldown = 0f;
         private float _ashesCooldownMax = 30f;
         public Animator AshesAnim;
@@ -151,7 +151,7 @@ namespace Platformer
                 Anim.SetBool("Light_Attack_Combo_Allowed", false);
                 Anim.SetBool("Block_Bool_Loop", false);
                 Anim.ResetTrigger("Light_Attack_Combo_Trigger");
-                _comboTimer = 0; _blockTimer = 0;
+                _comboTimer = 0; _parryTime = 0;
                 _startTimer = false; IsBlocking = false;
 
                 Player_Health_Script.CanBeDamaged = true;
@@ -170,9 +170,9 @@ namespace Platformer
                 Player_Health_Script.HalfDamage = true;
                 AllowedToShoot = false;
                 _meleeAllowed = false;
-                if (_blockTimer < _blockTimerMax)
+                if (_parryTime < _parryTimeMax)
                 {
-                    _blockTimer += Time.deltaTime;
+                    _parryTime += Time.deltaTime;
                     CanParry = true;
                     Player_Health_Script.CanBeDamaged = false;
                     //parryText.text = "Parry State: True";
