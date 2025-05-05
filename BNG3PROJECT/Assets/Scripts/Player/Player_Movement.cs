@@ -99,7 +99,7 @@ public class Player_Movement : MonoBehaviour
         // Score Update
         ScoreUpdate.text = PlayerScore.ToString();
         // Ground Check
-        _grounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.09f, IsGround);
+        _grounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.175f, IsGround);
 
         _speedControl();
         StateHandler();

@@ -21,7 +21,7 @@ namespace Platformer
 
         private void LateUpdate()
         {
-            if (!_gotGM)
+            if (!_gotGM || GameMaster == null)
             {
                 GameMaster = GameObject.Find("Game Master");
                 gm_script = GameMaster.GetComponent<GameMaster>();

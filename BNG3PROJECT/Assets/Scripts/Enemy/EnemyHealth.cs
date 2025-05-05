@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Platformer
 {
     public class EnemyHealth : MonoBehaviour
     {
         // Start is called before the first frame update
-        [SerializeField] float health;
-        [SerializeField] float maxHealth = 100f;
+        [SerializeField] public float health;
+        [SerializeField] public float maxHealth = 100f;
 
-        private bool isHurt = false;
+        public bool isHurt = false;
 
         public SpriteRenderer sprite;
 
@@ -35,7 +36,6 @@ namespace Platformer
             sprite = GetComponentInChildren<SpriteRenderer>();
             health = maxHealth;
             animator = this.GetComponentInChildren<Animator>();
-
         }
 
         public void Hurt(float damage)
@@ -75,6 +75,8 @@ namespace Platformer
             sprite.color = Color.white;
             isHurt = false;
         }
+
+
     }
 
         // Update is called once per frame
