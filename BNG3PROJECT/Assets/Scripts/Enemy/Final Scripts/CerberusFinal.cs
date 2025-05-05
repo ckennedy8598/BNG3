@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 namespace Platformer
 {
     public class CerberusFinal : MonoBehaviour
     {
+        // Bob ---------------------
+        public Slider healthSlider;
+        public GameObject HealthBar;
+        public GameObject BarArt;
+        public EnemyHealth EnemyHealthScript;
+        // --------------------------
+
         // Start is called before the first frame update
         public NavMeshAgent agent;
 
@@ -90,6 +98,7 @@ namespace Platformer
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
                 isFiring = false;
                 isDead = true;
+                _setHealthBarInactive();
                 animator.SetTrigger("isDead");
                 Debug.Log("Cerb is dead");
 
@@ -102,7 +111,10 @@ namespace Platformer
 
             animator = this.GetComponentInChildren<Animator>();
 
-            
+            EnemyHealthScript = FindAnyObjectByType<EnemyHealth>();
+            _setHealthBarActive();
+            healthSlider.maxValue = EnemyHealthScript.maxHealth;
+            healthSlider.value = healthSlider.maxValue;
         }
 
          void Start()
@@ -130,6 +142,25 @@ namespace Platformer
                 isFiring = true;
                 State = CerbState.Shoot;
             }
+
+            // Bob - Check if hurt then update slider
+            if (EnemyHealthScript.isHurt)
+            {
+                healthSlider.value = EnemyHealthScript.health;
+            }
+        }
+
+        // Bob ------------------
+        private void _setHealthBarActive()
+        {
+            HealthBar.SetActive(true);
+            BarArt.SetActive(true);
+        }
+
+        private void _setHealthBarInactive()
+        {
+            HealthBar.SetActive(false);
+            BarArt.SetActive(false);
         }
     }
 }
