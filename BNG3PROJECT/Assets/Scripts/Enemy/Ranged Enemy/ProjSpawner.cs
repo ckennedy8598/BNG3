@@ -18,9 +18,13 @@ namespace Platformer
 
         public void spawnProjectile()
         {
-            if(playerHealth.PlayerHealth >= 0)
+            if (playerHealth != null)
             {
-                Instantiate(enemyBullet, transform.Find("SpawnPoint").position, Quaternion.identity);
+
+                if (playerHealth.PlayerHealth >= 0)
+                {
+                    Instantiate(enemyBullet, transform.Find("SpawnPoint").position, Quaternion.identity);
+                }
             }
             
         }
