@@ -162,6 +162,7 @@ public class Pause_Menu : MonoBehaviour
     }
     public void OnMainMenuButton()
     {
+        GameMasterScript.SetMainMenuTrue();
         SceneManager.LoadScene(0);
     }
     public void OnQuitButton()

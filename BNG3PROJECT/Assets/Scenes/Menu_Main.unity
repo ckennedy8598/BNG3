@@ -422,6 +422,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1080777632}
+        m_TargetAssemblyTypeName: Platformer.GameMaster, Assembly-CSharp
+        m_MethodName: SetNewGameSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 286657337}
         m_TargetAssemblyTypeName: Menu_Main, Assembly-CSharp
         m_MethodName: OnPlayButtion
@@ -1583,6 +1595,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &1080777631
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3705266848891488625, guid: ef648903370216646b7121d02f0be4a5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.812952
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705266848891488625, guid: ef648903370216646b7121d02f0be4a5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705266848891488625, guid: ef648903370216646b7121d02f0be4a5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -41.15325
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705266848891488625, guid: ef648903370216646b7121d02f0be4a5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705266848891488625, guid: ef648903370216646b7121d02f0be4a5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705266848891488625, guid: ef648903370216646b7121d02f0be4a5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705266848891488625, guid: ef648903370216646b7121d02f0be4a5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705266848891488625, guid: ef648903370216646b7121d02f0be4a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705266848891488625, guid: ef648903370216646b7121d02f0be4a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705266848891488625, guid: ef648903370216646b7121d02f0be4a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5619017940237376052, guid: ef648903370216646b7121d02f0be4a5, type: 3}
+      propertyPath: m_Name
+      value: Game Master
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef648903370216646b7121d02f0be4a5, type: 3}
+--- !u!114 &1080777632 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5569890779895721280, guid: ef648903370216646b7121d02f0be4a5, type: 3}
+  m_PrefabInstance: {fileID: 1080777631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f468bac888f41c14183329c386e4bb21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1194090336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2645,3 +2725,4 @@ SceneRoots:
   - {fileID: 1953295012}
   - {fileID: 98383887}
   - {fileID: 320014358}
+  - {fileID: 1080777631}

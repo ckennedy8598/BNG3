@@ -18,6 +18,9 @@ namespace Platformer
         void Start()
         {
             _needRespawn = true;
+            gm.CheckedAbilities = false;
+            gm.MainMenu = false;
+            Debug.Log("Check Scene Number");
             gm.UpdateScore();
         }
 

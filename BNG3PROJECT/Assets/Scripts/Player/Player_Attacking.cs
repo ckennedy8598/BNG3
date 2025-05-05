@@ -150,6 +150,7 @@ namespace Platformer
                 // All combo variables
                 Anim.SetBool("Light_Attack_Combo_Allowed", false);
                 Anim.SetBool("Block_Bool_Loop", false);
+                Anim.SetBool("Heavy_Attack_Bool", false);
                 Anim.ResetTrigger("Light_Attack_Combo_Trigger");
                 _comboTimer = 0; _parryTime = 0;
                 _startTimer = false; IsBlocking = false;
@@ -434,6 +435,7 @@ namespace Platformer
         private void _ashesOfTheFallen()
         {
             State = AttackState.Heavy_Attack;
+            Anim.SetBool("Heavy_Attack_Bool", true);
 
             // Deal Heavy Attack Damage on Collision
             _ashesCooldown = _ashesCooldownMax;
@@ -443,7 +445,7 @@ namespace Platformer
 
             if (_allowInvoke)
             {
-                Invoke("_resetState", 2.2f);
+                Invoke("_resetState", 2.65f);
                 _allowInvoke = false;
             }
         }

@@ -17,7 +17,11 @@ namespace Platformer
 
         private bool _gotPlayer;
         private bool _scoreUpdated;
+        
+        // CheckedAbilities referenced in PlayerPOS script
+        public bool CheckedAbilities = false;
         public bool isrespawning = true;
+        public bool MainMenu = true;
 
         private int _sceneNumber;
         private int _oldScore = 0;
@@ -41,58 +45,76 @@ namespace Platformer
 
             _oldScore = 0;
             NewScore = 0;
+            LastCheckpointPOS = new Vector3(4f, 1.5f, 5.5f);
 
             _gotPlayer = false;
             _scoreUpdated = false;
         }
         void Start()
         {
-            Player = GameObject.FindWithTag("Player");
-            PlayerMovement_Script = Player.GetComponent<Player_Movement>();
-
             _sceneNumber = SceneManager.GetActiveScene().buildIndex;
-            _sceneAbilities();
-            //_setLevelRespawnCoords();
+            if (MainMenu)
+            {
+                return;
+            }
+            else
+            {
+                Player = GameObject.FindWithTag("Player");
+                PlayerMovement_Script = Player.GetComponent<Player_Movement>();
+                _sceneAbilities();
+            }
         }
 
         // Update is called once per frame
         void Update()
         {
-            //if (isrespawning == true)
-            //{
-               // Debug.Log("respawning true");
-               // if (Player != null)
-                //{
-                 //   Player.transform.position = LastCheckpointPOS;
-                 //   isrespawning = false;
-                //}
-            //}
-
-            if (Player == null)
+            if (MainMenu)
             {
-                Player = GameObject.Find("Player");
+                return;
             }
+            else
+            {
+                if (Player == null)
+                {
+                    Player = GameObject.Find("Player");
+                }
+
+                if (!CheckedAbilities)
+                {
+                    _sceneNumber = SceneManager.GetActiveScene().buildIndex;
+                    _sceneAbilities();
+                    CheckedAbilities = true;
+                }
+            }            
         }
 
         private void LateUpdate()
         {
-            if (!_gotPlayer)
+            if (MainMenu)
             {
-                Player = GameObject.Find("Player");
-                PlayerMovement_Script = Player.GetComponent<Player_Movement>();
-                _gotPlayer = true;
+                return;
             }
-
-            if (PlayerMovement_Script == null)
+            else
             {
-                PlayerMovement_Script = Player.GetComponent<Player_Movement>();
-            }
+                if (!_gotPlayer)
+                {
+                    Player = GameObject.Find("Player");
+                    PlayerMovement_Script = Player.GetComponent<Player_Movement>();
+                    _gotPlayer = true;
+                }
 
-            if (PlayerMovement_Script.PlayerScore < NewScore)
-            {
-                PlayerMovement_Script.PlayerScore = NewScore;
+                if (PlayerMovement_Script == null)
+                {
+                    PlayerMovement_Script = Player.GetComponent<Player_Movement>();
+                }
+
+                if (PlayerMovement_Script.PlayerScore < NewScore)
+                {
+                    PlayerMovement_Script.PlayerScore = NewScore;
+                }
             }
         }
+        
 
         // Set player abilities unlocked by scene
         private void _sceneAbilities()
@@ -170,6 +192,19 @@ namespace Platformer
             }
         }*/
 
+        public void SetNewGameSettings()
+        {
+            LastCheckpointPOS = new Vector3(4f, 1.5f, 5.5f);
+            _oldScore = 0;
+            NewScore = 0;
+            MainMenu = false;
+            Debug.Log("SET NEW GAME SETTINGS!");
+        }
+
+        public void SetMainMenuTrue()
+        {
+            MainMenu = true;
+        }
         public void GetNewScore()
         {
             NewScore = PlayerMovement_Script.PlayerScore;
