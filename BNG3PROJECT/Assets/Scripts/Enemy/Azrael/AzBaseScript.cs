@@ -23,7 +23,7 @@ namespace Platformer
 
         public bool isDead = false;
 
-        public float fireTime = 20f;
+        public float fireTime = 10f;
 
         public bool isFiring = false;
 
@@ -139,13 +139,13 @@ namespace Platformer
 
         void Start()
         {
-            fireTime = 20f;
+            fireTime = 10f;
             State = AzState.Walk;
         }
         public void ResetFireTime()
         {
 
-            fireTime = 20f;
+            fireTime = 10f;
         }
 
         // Update is called once per frame

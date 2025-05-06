@@ -33,9 +33,12 @@ namespace Platformer
 
         public void LightningStrike()
         {
-            if(playerHealth.PlayerHealth > 0 )
+            if (playerHealth != null)
             {
-               Instantiate(CerbCloud, cerbSpawnPoint.position, Quaternion.identity);
+                if (playerHealth.PlayerHealth > 0)
+                {
+                    Instantiate(CerbCloud, cerbSpawnPoint.position, Quaternion.identity);
+                }
             }
             
             C2.isFiring = false;

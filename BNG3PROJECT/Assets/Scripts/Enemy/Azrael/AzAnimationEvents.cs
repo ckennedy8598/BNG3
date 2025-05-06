@@ -48,10 +48,12 @@ namespace Platformer
 
         public void AZFireball()
         {
-            
-            if (playerHealth.PlayerHealth > 0)
+            if (playerHealth != null)
             {
-                Instantiate(CerbFire, cerbSpawnPoint.position, Quaternion.identity);
+                if (playerHealth.PlayerHealth > 0)
+                {
+                    Instantiate(CerbFire, cerbSpawnPoint.position, Quaternion.identity);
+                }
             }
 
             AZ.isFiring = false;
@@ -65,10 +67,13 @@ namespace Platformer
             var displacer = new Vector3(0, 3, 0);
 
             var replacer = new Vector3(0, -3, 0);
-            if (playerHealth.PlayerHealth > 0)
+            if (playerHealth != null)
             {
-                cerbSpawnPoint.transform.position += displacer;
-                Instantiate(CerbCloud, cerbSpawnPoint.position, Quaternion.identity);
+                if (playerHealth.PlayerHealth > 0)
+                {
+                    cerbSpawnPoint.transform.position += displacer;
+                    Instantiate(CerbCloud, cerbSpawnPoint.position, Quaternion.identity);
+                }
             }
 
             AZ.isFiring = false;
@@ -80,10 +85,14 @@ namespace Platformer
 
         public void IcicleShoot()
         {
-            if (playerHealth.PlayerHealth > 0)
+            if(playerHealth != null)
             {
-                Instantiate(Icicle, cerbSpawnPoint.position, Quaternion.identity);
+                if (playerHealth.PlayerHealth > 0)
+                {
+                    Instantiate(Icicle, cerbSpawnPoint.position, Quaternion.identity);
+                }
             }
+            
 
             AZ.isFiring = false;
             AZ.ResetFireTime();
