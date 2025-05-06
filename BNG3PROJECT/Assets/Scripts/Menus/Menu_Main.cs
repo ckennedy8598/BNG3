@@ -26,6 +26,11 @@ public class Menu_Main : MonoBehaviour
         Debug.Log("New Game!");
     }
 
+    public void OnCreditsButton()
+    {
+        SceneManager.LoadScene(8);
+    }
+
     public void OnQuitButton()
     {
         Application.Quit();
