@@ -43,8 +43,12 @@ namespace Platformer
 
         public void Fireball()
         {
-            if(playerHealth.PlayerHealth > 0 ){
-                Instantiate(CerbFire, cerbSpawnPoint.position, Quaternion.identity);
+            if (playerHealth != null)
+            {
+                if (playerHealth.PlayerHealth > 0)
+                {
+                    Instantiate(CerbFire, cerbSpawnPoint.position, Quaternion.identity);
+                }
             }
             
             CF.isFiring = false;

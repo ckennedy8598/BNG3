@@ -54,13 +54,16 @@ namespace Platformer
         }
         public void OnTriggerEnter(Collider other)
         {
-            if (playerHealth.PlayerHealth > 0)
+            if (playerHealth != null)
             {
-                if (other.gameObject.CompareTag("Player"))
+                if (playerHealth.PlayerHealth > 0)
                 {
-                    gameObject.GetComponentInParent<NavMeshAgent>().isStopped = true;
-                    animator.SetTrigger("Attack");
+                    if (other.gameObject.CompareTag("Player"))
+                    {
+                        gameObject.GetComponentInParent<NavMeshAgent>().isStopped = true;
+                        animator.SetTrigger("Attack");
 
+                    }
                 }
             }
         }

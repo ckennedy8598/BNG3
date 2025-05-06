@@ -40,9 +40,12 @@ namespace Platformer
         }
         public void IcicleShoot()
         {
-          if (playerHealth.PlayerHealth > 0)
+            if (playerHealth != null)
             {
-                Instantiate(Icicle, cerbSpawnPoint.position, Quaternion.identity);
+                if (playerHealth.PlayerHealth > 0)
+                {
+                    Instantiate(Icicle, cerbSpawnPoint.position, Quaternion.identity);
+                }
             }
             
             C3.isFiring = false;
