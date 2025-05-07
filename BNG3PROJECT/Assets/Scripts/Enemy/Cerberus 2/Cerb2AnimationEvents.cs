@@ -21,6 +21,8 @@ namespace Platformer
         public NavMeshAgent agent;
 
         public Player_Health playerHealth;
+
+        public AudioClip AU;
         void Start()
         {
             playerHealth = FindAnyObjectByType<Player_Health>();
@@ -72,6 +74,11 @@ namespace Platformer
         public void AttackDeactivate()
         {
             AR.SetActive(false);
+        }
+
+        public void PlayCloudSound()
+        {
+            AudioSource.PlayClipAtPoint(AU, transform.position, 1f);
         }
 
         // Update is called once per frame
