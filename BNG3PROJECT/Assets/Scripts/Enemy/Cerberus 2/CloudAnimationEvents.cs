@@ -69,7 +69,10 @@ namespace Platformer
         }
         public void Strike()
         {
-            Instantiate( Lightning, cloudSpawnPoint.position, Quaternion.identity);
+            if (playerHealth != null)
+            {
+                Instantiate(Lightning, cloudSpawnPoint.position, Quaternion.identity);
+            }
         }
 
         public void BigDie()
