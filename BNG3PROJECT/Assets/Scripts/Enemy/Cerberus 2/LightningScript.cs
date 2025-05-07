@@ -19,14 +19,20 @@ namespace Platformer
         // Update is called once per frame
         void Update()
         {
-            Vector3 targetPostition = new Vector3(player.position.x, this.transform.position.y, player.position.z);
-            this.transform.LookAt(targetPostition);
+            if (player != null)
+            {
+                Vector3 targetPostition = new Vector3(player.position.x, this.transform.position.y, player.position.z);
+                this.transform.LookAt(targetPostition);
+            }
         }
         public void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Player"))
+            if (playerHealth != null)
             {
-                playerHealth.TakeDamage(damage);
+                if (other.gameObject.CompareTag("Player"))
+                {
+                    playerHealth.TakeDamage(damage);
+                }
             }
         }
 

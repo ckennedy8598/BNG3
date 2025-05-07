@@ -32,7 +32,7 @@ namespace Platformer
 
         public bool isDead = false;
 
-        public float fireTime = 30f;
+        public float fireTime = 15f;
 
         public bool isFiring = false;
 
@@ -118,13 +118,13 @@ namespace Platformer
 
         void Start()
         {
-            fireTime = 30f;
+            fireTime = 15f;
             State = CerbState.Walk;
         }
         public void ResetFireTime()
         {
 
-            fireTime = 30f;
+            fireTime = 15f;
         }
 
         // Update is called once per frame
