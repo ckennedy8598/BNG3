@@ -143,5 +143,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PAttack_Script: {fileID: 0}
   ManaAnimUIObj: {fileID: 0}
-  ManaAnimator: {fileID: 0}
+  ManaAnimator: {fileID: 1933417377502279058}
   ManaAmount: 5

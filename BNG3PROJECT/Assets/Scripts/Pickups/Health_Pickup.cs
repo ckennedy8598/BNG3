@@ -21,7 +21,7 @@ namespace Platformer
         void Start()
         {
             HealthAnimUIObj = GameObject.Find("Health_Pickup_Anim");
-            HealthAnimator = HealthAnimator.GetComponent<Animator>();
+            HealthAnimator = HealthAnimUIObj.GetComponent<Animator>();
 
             PHScript = FindAnyObjectByType<Player_Health>();
             //SFX = GetComponent<AudioSource>();
@@ -31,6 +31,7 @@ namespace Platformer
 
         private void LateUpdate()
         {
+
             transform.forward = Camera.main.transform.forward;
         }
 

@@ -142,5 +142,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PHScript: {fileID: 0}
-  HealthAnimator: {fileID: 0}
+  HealthAnimator: {fileID: 6121423324385915354}
   HealingAmount: 10
