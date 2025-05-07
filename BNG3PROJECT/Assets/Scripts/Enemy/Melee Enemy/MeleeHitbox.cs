@@ -22,8 +22,10 @@ namespace Platformer
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                ph.TakeDamage(meleeDamage);
-                
+                if (ph != null)
+                {
+                    ph.TakeDamage(meleeDamage);
+                }
             }
         }
         void Update()
