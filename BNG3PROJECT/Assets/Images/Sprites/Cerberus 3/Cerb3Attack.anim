@@ -206,14 +206,14 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1
+  - time: 0.8888889
     functionName: Cerb3ResetWalk
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1
+  - time: 0.8888889
     functionName: AttackActivate
     data: 
     objectReferenceParameter: {fileID: 0}
