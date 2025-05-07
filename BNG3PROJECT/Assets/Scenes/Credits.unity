@@ -313,12 +313,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Character Art    ||     Michael Hernandez\n\n2D Asset Art    ||         
-    Hector Castillo\n\t\t         Michael Hernandez\n\n2D Texture Art    ||      
-    Hector Castillo\n\n3D Asset Art    ||          Evan Rosado\n\nEnvironment Artist   
-    ||    Carmen Kennedy\n\nLighting    ||    Carmen Kennedy\n\nGameplay Animation   
-    ||    Bobby Lapadula\n\t\t\t     Chris Bunnell\n\nAudio Implementation    ||   
-    Bobby Lapadula\n\t\t\t      Carmen Kennedy\n\t\t\t      Chris Bunnell"
+  m_text: "Character Art          ||  Michael Hernandez\n\n2D Asset Art           
+    ||        Hector Castillo\n                \t\t         Michael Hernandez\n\n2D
+    Texture Art          ||        Hector Castillo\n\n3D Asset Art             ||         
+    Evan Rosado\n\nEnvironment Artist     ||    Carmen Kennedy\n\nLighting    \t\t||   
+    Carmen Kennedy\n\nGameplay Animation   ||      Bobby Lapadula\n\t\t\t     Chris
+    Bunnell\n\nAudio Implementation   ||       Bobby Lapadula\n\t\t\t      Carmen
+    Kennedy\n\t\t\t      Chris Bunnell"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3c53deb6a98107141b2aa7c7eae0c938, type: 2}
   m_sharedMaterial: {fileID: 7509318962134607871, guid: 3c53deb6a98107141b2aa7c7eae0c938, type: 2}
@@ -638,11 +639,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Anthony Cartelle
+  m_text: '@Anthony Cartelle
 
-    Anthony Cartelle
+    @Anthony Cartelle
 
-    Anthony Cartelle
+    @Anthony Cartelle
 
 
     Camden
@@ -886,7 +887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &253367568
 RectTransform:
   m_ObjectHideFlags: 0

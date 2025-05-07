@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 namespace Platformer
 {
     public class Cerb3 : MonoBehaviour
     {
+        // Bob ---------------------
+        public Slider healthSlider;
+        public GameObject HealthBar;
+        public GameObject BarArt;
+        public EnemyHealth EnemyHealthScript;
+        // --------------------------
         public NavMeshAgent agent;
 
         public Transform player;
@@ -88,6 +95,7 @@ namespace Platformer
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
                 isFiring = false;
                 isDead = true;
+                _setHealthBarInactive();
                 animator.SetTrigger("isDead");
                 Debug.Log("Cerb is dead");
 
@@ -100,7 +108,9 @@ namespace Platformer
 
             animator = this.GetComponentInChildren<Animator>();
 
-
+            _setHealthBarActive();
+            healthSlider.maxValue = EnemyHealthScript.maxHealth;
+            healthSlider.value = healthSlider.maxValue;
         }
 
         void Start()
@@ -128,6 +138,17 @@ namespace Platformer
                 isFiring = true;
                 State = CerbState.Shoot;
             }
+        }
+        private void _setHealthBarActive()
+        {
+            HealthBar.SetActive(true);
+            BarArt.SetActive(true);
+        }
+
+        private void _setHealthBarInactive()
+        {
+            HealthBar.SetActive(false);
+            BarArt.SetActive(false);
         }
     }
 }
