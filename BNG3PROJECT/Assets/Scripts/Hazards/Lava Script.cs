@@ -36,7 +36,7 @@ namespace Platformer
             if (other.gameObject.CompareTag("Player"))
             {
                 playerHealth.TakeDamage(lavaDamage);
-                ptd.isBurned = true;
+               // ptd.isBurned = true;
                 playerInLava = true;
                 delayedDamageCoroutine = StartCoroutine(DelayedSecondHit());
                 Debug.Log("Player hit from lava hit");

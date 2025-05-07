@@ -20,7 +20,7 @@ namespace Platformer
         private float timeBetweenBurn = 2f;
 
         // Frost timer is going to change. i'm thinking less damage but the ticks are quicker.
-        private float frostTimer = 5f;
+        private float frostTimer = 2f;
         public bool isFrosted = false;
         public bool frostTick = true;
         private float timeBetweenFrost = 2f;
@@ -95,7 +95,7 @@ namespace Platformer
             {
                 isPoisoned = false;
                 isBurned = false;
-                playerHealth.PlayerHealth -= 3f;
+                playerHealth.PlayerHealth -= 2f;
                 frostTimer -= 1f;
                 Debug.Log("Frost Damage");
                 frostTick = false;
