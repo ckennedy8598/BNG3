@@ -23,7 +23,7 @@ namespace Platformer
 
         private IEnumerator CreditsButtonTimer()
         {
-            yield return new WaitForSeconds(59f);
+            yield return new WaitForSeconds(115f);
             button.SetActive(true);
         }
 
