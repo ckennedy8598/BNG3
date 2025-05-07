@@ -23,6 +23,8 @@ namespace Platformer
         public NavMeshAgent agent;
 
         public Player_Health playerHealth;
+
+        public AudioClip AU;
         void Start()
         {
             playerHealth = FindAnyObjectByType<Player_Health>();
@@ -58,7 +60,10 @@ namespace Platformer
         }
 
         
-
+        public void PlayBreathSound()
+        {
+            AudioSource.PlayClipAtPoint(AU, transform.position, 1f);
+        }
 
 
         public void AttackActivate()

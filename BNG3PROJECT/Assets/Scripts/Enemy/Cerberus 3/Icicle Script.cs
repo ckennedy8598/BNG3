@@ -24,6 +24,8 @@ namespace Platformer
 
         public PlayerTickDamage ptd;
         public Transform playerT;
+
+        public AudioClip AU;
         void Start()
         {
             rb = GetComponent<Rigidbody>();
@@ -55,13 +57,15 @@ namespace Platformer
 
             if (other.gameObject.CompareTag("Wall"))
             {
+                AudioSource.PlayClipAtPoint(AU, transform.position, 1f);
                 Destroy(gameObject);
             }
 
             if (other.gameObject.CompareTag("Ground"))
             {
                 //put the spawning of the 'fire' object here
-                Debug.Log("Fire!");
+                AudioSource.PlayClipAtPoint(AU, transform.position, 1f);
+                Debug.Log("hit ground");
             }
 
             if (other.gameObject.CompareTag("Player"))
@@ -76,6 +80,7 @@ namespace Platformer
                 else
                 {
                     playerHealth.TakeDamage(bulletDamage);
+                    AudioSource.PlayClipAtPoint(AU, transform.position, 1f);
                     //ptd is causing a crash that I will fix later maybe - Chris
                     //ptd.isFrosted = true;
                     Debug.Log("Player has been shot D:");

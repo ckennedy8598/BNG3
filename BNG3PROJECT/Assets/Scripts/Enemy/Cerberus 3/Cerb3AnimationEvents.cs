@@ -21,6 +21,9 @@ namespace Platformer
         public NavMeshAgent agent;
 
         public Player_Health playerHealth;
+
+        public AudioClip AU;
+
         void Start()
         {
             playerHealth = FindAnyObjectByType<Player_Health>();
@@ -70,6 +73,11 @@ namespace Platformer
             C3.isDead = true;
             C3.State = Cerb3.CerbState.Die;
             gameObject.GetComponentInParent<NavMeshAgent>().isStopped = true;
+        }
+
+        public void PlayIcicleBreathSound()
+        {
+            AudioSource.PlayClipAtPoint(AU, transform.position, 1f);
         }
 
 
