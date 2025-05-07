@@ -21,9 +21,12 @@ namespace Platformer
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Ouchie");
-                ph.TakeDamage(meleeDamage);
-                ptd.isPoisoned = true;
+                if (ph != null)
+                {
+                    Debug.Log("Ouchie");
+                    ph.TakeDamage(meleeDamage);
+                    ptd.isPoisoned = true;
+                }
             }
         }
         // Update is called once per frame

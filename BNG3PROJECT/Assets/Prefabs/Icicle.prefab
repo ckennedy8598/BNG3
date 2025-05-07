@@ -79,6 +79,7 @@ MonoBehaviour:
   player: {fileID: 0}
   ptd: {fileID: 0}
   playerT: {fileID: 0}
+  AU: {fileID: 8300000, guid: 4e10e3a3d10fd8045b3b03fd7f6ba675, type: 3}
 --- !u!54 &6391012242285564691
 Rigidbody:
   m_ObjectHideFlags: 0
