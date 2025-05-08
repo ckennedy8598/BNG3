@@ -108,6 +108,7 @@ namespace Platformer
 
             animator = this.GetComponentInChildren<Animator>();
 
+            EnemyHealthScript = FindAnyObjectByType<EnemyHealth>();
             _setHealthBarActive();
             healthSlider.maxValue = EnemyHealthScript.maxHealth;
             healthSlider.value = healthSlider.maxValue;
@@ -137,6 +138,12 @@ namespace Platformer
                 Debug.Log("fireTime is 0");
                 isFiring = true;
                 State = CerbState.Shoot;
+            }
+
+            // Bob - Check if hurt then update slider
+            if (EnemyHealthScript.isHurt)
+            {
+                healthSlider.value = EnemyHealthScript.health;
             }
         }
         private void _setHealthBarActive()

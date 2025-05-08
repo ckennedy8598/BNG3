@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 namespace Platformer
 {
     public class AzBaseScript : MonoBehaviour
     {
+        // Bob ---------------------
+        public Slider healthSlider;
+        public GameObject HealthBar;
+        public GameObject BarArt;
+        public EnemyHealth EnemyHealthScript;
+        // --------------------------
         public NavMeshAgent agent;
 
         public Transform player;
@@ -122,6 +129,7 @@ namespace Platformer
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
                 isFiring = false;
                 isDead = true;
+                _setHealthBarInactive();
                 animator.SetTrigger("isDead");
                 Debug.Log("Az is dead");
 
@@ -134,7 +142,10 @@ namespace Platformer
 
             animator = this.GetComponentInChildren<Animator>();
 
-
+            EnemyHealthScript = FindAnyObjectByType<EnemyHealth>();
+            _setHealthBarActive();
+            healthSlider.maxValue = EnemyHealthScript.maxHealth;
+            healthSlider.value = healthSlider.maxValue;
         }
 
         void Start()
@@ -191,6 +202,23 @@ namespace Platformer
                 
                 ShotTypeManager();
             }
+
+            // Bob - Check if hurt then update slider
+            if (EnemyHealthScript.isHurt)
+            {
+                healthSlider.value = EnemyHealthScript.health;
+            }
+        }
+        private void _setHealthBarActive()
+        {
+            HealthBar.SetActive(true);
+            BarArt.SetActive(true);
+        }
+
+        private void _setHealthBarInactive()
+        {
+            HealthBar.SetActive(false);
+            BarArt.SetActive(false);
         }
     }
 }
