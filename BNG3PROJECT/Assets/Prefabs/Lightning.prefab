@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1568805734575551595}
   - component: {fileID: 4050101798696208899}
   - component: {fileID: 2210488866870239163}
+  - component: {fileID: 2167192218653025912}
   m_Layer: 0
   m_Name: Lightning
   m_TagString: Lightning
@@ -105,6 +106,21 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2167192218653025912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977783416074219707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df75bf6519cf8d4a8470101d05efdb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerHealth: {fileID: 0}
+  damage: 30
 --- !u!1 &3979692755152721103
 GameObject:
   m_ObjectHideFlags: 0

@@ -124,7 +124,7 @@ MonoBehaviour:
   EH_Script: {fileID: 0}
   despawnTimer: 10
   force: 15
-  bulletDamage: 40
+  bulletDamage: 20
   playerHealth: {fileID: 0}
   MainCamera: {fileID: 0}
   enemyBullet: {fileID: 0}
