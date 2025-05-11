@@ -16,7 +16,7 @@ namespace Platformer
         private SphereCollider SphereCollider;
         public float ManaAmount;
         //public TMP_Text Counter_Text;
-        //public AudioSource SFX;
+        public AudioSource SFX;
         void Start()
         {
             // Get Animator UI Object Because Unity is AWFUL
@@ -40,6 +40,7 @@ namespace Platformer
                 ManaAnimator.SetTrigger("PickedUp");
                 PAttack_Script.IncreaseMana(PAttack_Script.MaxMana);
                 SetDead();
+                SFX.Play();
                 Destroy(gameObject, 5);
             }
         }
