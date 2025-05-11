@@ -160,37 +160,8 @@ MonoBehaviour:
   BF: {fileID: 0}
   animator: {fileID: 0}
   player: {fileID: 0}
---- !u!1 &6524440713761600264
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1677030043954195057}
-  m_Layer: 0
-  m_Name: SpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1677030043954195057
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6524440713761600264}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.328, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3521380543907849567}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  AR: {fileID: 0}
+  SR: {fileID: 0}
 --- !u!1 &7332006057030189982
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +175,7 @@ GameObject:
   - component: {fileID: 4064986867148007336}
   m_Layer: 2
   m_Name: SightRange
-  m_TagString: Untagged
+  m_TagString: SightRange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,7 +265,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7062420884508256827}
-  - {fileID: 1677030043954195057}
   - {fileID: 1466045684722223400}
   - {fileID: 6956248418617472458}
   m_Father: {fileID: 0}
@@ -377,7 +347,7 @@ MonoBehaviour:
   playerInSightRange: 0
   playerInAttackRange: 0
   enemyMelee: {fileID: 1211534957273779233, guid: 056d7a66a5092e542a7386226f758eb3, type: 3}
-  spawnPoint: {fileID: 1677030043954195057}
+  spawnPoint: {fileID: 0}
   timer: 5
   bulletVelocity: 10
 --- !u!114 &2584777632536841594
@@ -394,6 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 50
+  isHurt: 0
   sprite: {fileID: 6300328441142349907}
   deathTimer: 2
   animator: {fileID: 0}
@@ -457,7 +428,7 @@ GameObject:
   - component: {fileID: 6213956611106650357}
   m_Layer: 2
   m_Name: AttackRange
-  m_TagString: Untagged
+  m_TagString: CerberusAttackRange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
