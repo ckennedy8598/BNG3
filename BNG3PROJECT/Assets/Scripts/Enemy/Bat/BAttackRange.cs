@@ -34,7 +34,7 @@ namespace Platformer
             {
                 if (other.gameObject.CompareTag("Player"))
                 {
-                    BF.ResetState();
+                    BF.state = BatFinal.BatState.Walk;
                 }
             }
         }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -14,10 +15,41 @@ namespace Platformer
         public Animator animator;
 
         public GameObject player;
+
+        public GameObject AR;
+
+        public GameObject SR;
         void Start()
         {
             BF = GetComponentInParent<BatFinal>();
             animator = GetComponent<Animator>();
+            AR = GameObject.FindWithTag("CerberusAttackRange");
+            SR = GameObject.FindWithTag("SightRange");
+        }
+
+        public void AttackActivate()
+        {
+            AR.SetActive(true);
+        }
+
+        public void BatResetMelee()
+        {
+            animator.SetTrigger("endAttack");
+        }
+
+        public void AttackDeactivate()
+        {
+            AR.SetActive(false);
+        }
+
+        public void SightActivate()
+        {
+            SR.SetActive(true);
+        }
+
+        public void SightDeactivate()
+        {
+            SR.SetActive(false);
         }
         public void StartDeath()
         {
@@ -30,6 +62,8 @@ namespace Platformer
         {
             Destroy(transform.parent.gameObject);
         }
+
+        
         public void ResetMelee()
         {
             animator.SetTrigger("endAttack");
