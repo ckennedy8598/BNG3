@@ -17,6 +17,7 @@ TagManager:
   - Ground
   - GroundFire
   - Checkpoint
+  - SightRange
   layers:
   - Default
   - TransparentFX

@@ -56,7 +56,7 @@ namespace Platformer
                 animator.SetBool("isIdle", false);
                 animator.SetBool("isWalking", true);
                 animator.SetBool("isAttacking", false);
-                animator.SetTrigger("endAttack");
+                //animator.SetTrigger("endAttack");
 
             }
             //else
