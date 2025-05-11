@@ -41,7 +41,7 @@ namespace Platformer
             {
                 //SFX.Play();
                 HealthAnimator.SetTrigger("PickedUp");
-                PHScript.IncreaseHealth(HealingAmount);
+                PHScript.IncreaseHealth(PHScript.MaxHealth);
                 SetDead();
                 Destroy(gameObject, 5);
 

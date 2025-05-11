@@ -28,7 +28,7 @@ namespace Platformer
         [SerializeField] private float _parryTimeMax = .75f;
         private float _parryTime;
         private float _ashesCooldown = 0f;
-        private float _ashesCooldownMax = 30f;
+        private float _ashesCooldownMax = 20f;
         public Animator AshesAnim;
         public BoxCollider MeleeHitbox;
         public TMP_Text BlockIndicator;
@@ -46,7 +46,8 @@ namespace Platformer
         [Header("Ranged Variables")]
         private string _mana;
         private bool _allowInvoke;
-        private float PlayerMana;
+        public float MaxMana = 20f;
+        public float PlayerMana;
         public TMP_Text ManaCounter;
         public GameObject Fireball;
         public bool AllowedToShoot;
@@ -440,7 +441,7 @@ namespace Platformer
             // Deal Heavy Attack Damage on Collision
             _ashesCooldown = _ashesCooldownMax;
             AshesAnim.SetTrigger("AshesTrigger");
-            Weapon_Collision_Script.DealDamage(500);
+            Weapon_Collision_Script.DealDamage(300);
             Anim.SetTrigger("Heavy_Attack_Trigger");
 
             if (_allowInvoke)
