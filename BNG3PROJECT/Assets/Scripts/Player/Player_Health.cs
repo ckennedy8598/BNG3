@@ -23,14 +23,14 @@ namespace Platformer
         [Header("Health Bar")]
         public Slider HealthSlider;
 
-        private float _maxHealth = 100f;
+        public float MaxHealth = 100f;
         private float _dmgTimerCheck;
         private float _dmgTimer = 1f;
         public float HalfDamageValue = 1f;
         private bool _damageCooldown;
         public bool CanBeDamaged;
         public bool HalfDamage;
-        public float PlayerHealth = 20f;
+        public float PlayerHealth = 100f;
         public TMP_Text HealthReadout;
         public AudioSource HealthPickupSFX;
         public AudioSource OnHitSFX;
@@ -109,9 +109,9 @@ namespace Platformer
             {
                 PlayerHealth += amount;
                 HealthPickupSFX.Play();
-                if (PlayerHealth >= _maxHealth)
+                if (PlayerHealth >= MaxHealth)
                 {
-                    PlayerHealth = _maxHealth;
+                    PlayerHealth = MaxHealth;
                 }
             }
         }

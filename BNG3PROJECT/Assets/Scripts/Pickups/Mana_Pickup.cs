@@ -38,7 +38,7 @@ namespace Platformer
             if (other.gameObject.tag == "Player")
             {
                 ManaAnimator.SetTrigger("PickedUp");
-                PAttack_Script.IncreaseMana(ManaAmount);
+                PAttack_Script.IncreaseMana(PAttack_Script.MaxMana);
                 SetDead();
                 Destroy(gameObject, 5);
             }
