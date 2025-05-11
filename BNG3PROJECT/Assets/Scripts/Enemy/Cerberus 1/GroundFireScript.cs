@@ -7,7 +7,7 @@ namespace Platformer
     public class GroundFireScript : MonoBehaviour
     {
         // Start is called before the first frame update
-        public PlayerTickDamage ptd;
+        //public PlayerTickDamage ptd;
         public Player_Health playerHealth;
         public GameObject player;
 
@@ -18,7 +18,7 @@ namespace Platformer
 
             playerHealth = FindAnyObjectByType<Player_Health>();
 
-            ptd = FindAnyObjectByType<PlayerTickDamage>();
+            //ptd = FindAnyObjectByType<PlayerTickDamage>();
 
             despawnTimer = 3f;
         }
@@ -28,7 +28,7 @@ namespace Platformer
             if (other.gameObject.CompareTag("Player"))
             {
                 Debug.Log("Player was burned by fire");
-                ptd.isBurned = true;
+                playerHealth.TakeDamage(20);
             }
         }
 

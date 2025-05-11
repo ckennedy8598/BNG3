@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6331454269268465640}
   - component: {fileID: 1672974133441477208}
   - component: {fileID: 1841019448507120926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CerbCloud
   m_TagString: CerbCloud
   m_Icon: {fileID: 0}
@@ -298,4 +298,5 @@ MonoBehaviour:
   Lightning: {fileID: 977783416074219707, guid: 2406d4bb4a1f3f84993e4ede7fbf7be5, type: 3}
   agent: {fileID: 0}
   BC: {fileID: 0}
+  playerHealth: {fileID: 0}
   strikeTimer: 10
