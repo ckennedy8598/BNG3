@@ -197,7 +197,7 @@ namespace Platformer
             LastCheckpointPOS = new Vector3(4f, 1.5f, 5.5f);
             _oldScore = 0;
             NewScore = 0;
-            MainMenu = false;
+            //MainMenu = false; // Testing Main Menu Anim
             Debug.Log("SET NEW GAME SETTINGS!");
         }
 
