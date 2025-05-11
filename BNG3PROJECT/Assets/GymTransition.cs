@@ -55,9 +55,9 @@ namespace Platformer
                 case 3:
                     gm_script.LastCheckpointPOS = new Vector3(9.74f, 1.69f, 2.33f);
                     break;
-                // Tundrus - Change later?
+                // Tundrus - Change later? ck fix :)
                 case 4:
-                    gm_script.LastCheckpointPOS = new Vector3(154f, 11.3f, 126f);
+                    gm_script.LastCheckpointPOS = new Vector3(-25.66f, -30.85f, 101.97f);
                     break;
                 // Tundrus Cerb Arena
                 case 5:
