@@ -20,6 +20,7 @@ public class EnemyBulletTest : MonoBehaviour
     public Camera MainCamera;
     public GameObject enemyBullet;
     public GameObject player;
+    public Transform playerT;
     void Start()
     {
        
@@ -31,6 +32,7 @@ public class EnemyBulletTest : MonoBehaviour
         MainCamera = FindAnyObjectByType<Camera>();
         PA_Script = FindAnyObjectByType<Player_Attacking>();
         EH_Script = FindAnyObjectByType<EnemyHealth>();
+        playerT = GameObject.Find("Player").transform;
 
         Vector3 direction = player.transform.position - transform.position;
         rb.velocity = new Vector3(direction.x, direction.y, direction.z).normalized * force;
@@ -38,7 +40,9 @@ public class EnemyBulletTest : MonoBehaviour
     }
     void Update()
     {
-        
+        Vector3 targetPostition = new Vector3(playerT.position.x, this.transform.position.y, playerT.position.z);
+        this.transform.LookAt(targetPostition);
+
         timer += Time.deltaTime;
         if(timer > despawnTimer)
         {
