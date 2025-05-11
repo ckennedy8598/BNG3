@@ -16,6 +16,7 @@ TagManager:
   - Wall
   - Ground
   - GroundFire
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

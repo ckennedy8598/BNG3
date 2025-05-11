@@ -63,6 +63,7 @@ namespace Platformer
                 case 5:
                     gm_script.LastCheckpointPOS = new Vector3(9.74f, 1.69f, 2.33f);
                     break;
+                // Azrael Arena
                 case 6:
                     gm_script.LastCheckpointPOS = new Vector3(9.74f, 1.69f, 2.33f);
                     break;
