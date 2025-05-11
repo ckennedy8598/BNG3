@@ -19,6 +19,7 @@ public class Menu_Main : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1.0f;
         GameMaster = GameObject.Find("Game Master");
         gm_script = GameMaster.GetComponent<GameMaster>();
         gm_script.MainMenu = true;
