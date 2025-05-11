@@ -7,6 +7,7 @@ using System;
 using System.Runtime.CompilerServices;
 //using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
+//using UnityEngine.UIElements;
 
 namespace Platformer
 {
@@ -41,6 +42,10 @@ namespace Platformer
         private bool _UIBool = true;
 
         public GymTransition GymTransition_Script;
+        public PlayerTickDamage PlayerTickDamage;
+        private Color purple = new Color(154f/255f, 0f/ 255f, 255f/ 255f);
+        private Color red = new Color(255f / 255f, 0f / 255f, 0f / 255f);
+        private bool isRed;
 
 
         // I moved the poison method to it's own script, as well as adding burn damage and frost damage. Nothing in the game
@@ -59,7 +64,9 @@ namespace Platformer
             _player_M_Script = GetComponent<Player_Movement>();*/
             PM_Script = FindAnyObjectByType<Pause_Menu>();
             GymTransition_Script = FindAnyObjectByType<GymTransition>();
+            PlayerTickDamage = FindAnyObjectByType<PlayerTickDamage>();
             CanBeDamaged = true;
+            isRed = true;
         }
 
         // Update is called once per frame
@@ -69,6 +76,18 @@ namespace Platformer
             HealthReadout.text = "Health: " + PlayerHealth.ToString();
             HealthSlider.value = PlayerHealth;
             _checkDead();
+            if (PlayerTickDamage.isPoisoned && isRed)
+            {
+                HealthSlider.gameObject.transform.Find("Fill Area").Find("Fill").GetComponent<Image>().color = purple;
+                Debug.Log("Set to Purple" + " || Player Poison State: " + PlayerTickDamage.isPoisoned);
+                isRed = false;
+            }
+            else if (PlayerTickDamage.isPoisoned == false && isRed == false)
+            {
+                HealthSlider.gameObject.transform.Find("Fill Area").Find("Fill").GetComponent<Image>().color = red;
+                Debug.Log("Set to Red" + " || Player Poison State: " + PlayerTickDamage.isPoisoned);
+                isRed = true;
+            }
 
 
             // Turn off HUD

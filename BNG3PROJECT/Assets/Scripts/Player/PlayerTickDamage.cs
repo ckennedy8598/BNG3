@@ -65,6 +65,7 @@ namespace Platformer
             if (poisonTimer <= 0)
             {
                 isPoisoned = false;
+                poisonTimer = 4f;
             }
         }
 
