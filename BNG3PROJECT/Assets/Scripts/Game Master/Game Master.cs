@@ -32,6 +32,10 @@ namespace Platformer
         public bool Dash;
         public bool SoulOverflow;
         public bool Ashes;
+
+        public bool orbDash;
+        public bool orbSoul;
+        public bool orbAshes;
         private void Awake()
         {
             if (instance == null)
@@ -123,6 +127,10 @@ namespace Platformer
             if (_sceneNumber == 1)
             {
                 Dash = false;
+                if (orbDash)
+                {
+                    Dash = true;
+                }
                 SoulOverflow = false;
                 Ashes = false;
             }
@@ -131,6 +139,10 @@ namespace Platformer
             {
                 Dash = true;
                 SoulOverflow = false;
+                if (orbSoul)
+                {
+                    SoulOverflow |= true;
+                }
                 Ashes = false;
             }
             // Ergus Cerb Arena or Tundrus
@@ -139,6 +151,10 @@ namespace Platformer
                 Dash = true;
                 SoulOverflow = true;
                 Ashes = false;
+                if (orbAshes)
+                {
+                    Ashes = true;
+                }
             }
             // Tundrus Cerb Arena or Azrael Arena
             else if (_sceneNumber == 6 || _sceneNumber == 7)
@@ -197,6 +213,10 @@ namespace Platformer
             LastCheckpointPOS = new Vector3(4f, 1.5f, 5.5f);
             _oldScore = 0;
             NewScore = 0;
+
+            orbDash = false;
+            orbSoul = false;
+            orbAshes = false;
             //MainMenu = false; // Testing Main Menu Anim
             Debug.Log("SET NEW GAME SETTINGS!");
         }
