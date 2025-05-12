@@ -27,13 +27,16 @@ namespace Platformer
                 {
                     case 1:
                         GameMasterScript.Dash = true;
+                        GameMasterScript.orbDash = true;
                         Debug.Log("GameMaster Dash Variable from Orb: " + GameMasterScript.Dash);
                         break;
                     case 3:
                         GameMasterScript.SoulOverflow = true;
+                        GameMasterScript.orbSoul = true;
                         break;
                     case 5:
                         GameMasterScript.Ashes = true;
+                        GameMasterScript.orbAshes = true;
                         break;
                     default:
                         Debug.Log("Sphere Default Case");
