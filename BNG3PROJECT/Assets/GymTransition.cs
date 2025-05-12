@@ -47,9 +47,9 @@ namespace Platformer
                 case 1:
                     gm_script.LastCheckpointPOS = new Vector3(9.74f, 1.11f, 2.33f);
                     break;
-                // Ergus
+                // Ergus ck adjust
                 case 2:
-                    gm_script.LastCheckpointPOS = new Vector3(23f, 1.3f, 0f);
+                    gm_script.LastCheckpointPOS = new Vector3(14.91f, 1.224f, 0f);
                     break;
                 // Ergus Cerb Arena
                 case 3:
