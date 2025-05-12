@@ -18,7 +18,7 @@ namespace Platformer
         {
             if (!PlayerPrefs.HasKey("musicVolume"))
             {
-                PlayerPrefs.SetFloat("musicVolume", 0);
+                PlayerPrefs.SetFloat("musicVolume", 50);
                 Load();
             }
             else
