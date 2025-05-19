@@ -10,6 +10,7 @@ namespace Platformer
         [Header("Player Script Reference")]
         public Player_Health PHScript;
 
+        private GameObject HealthAnimUIObj;
         public Animator HealthAnimator;
 
         private SpriteRenderer SpriteRender;
@@ -19,6 +20,9 @@ namespace Platformer
         //public AudioSource SFX;
         void Start()
         {
+            HealthAnimUIObj = GameObject.Find("Health_Pickup_Anim");
+            HealthAnimator = HealthAnimUIObj.GetComponent<Animator>();
+
             PHScript = FindAnyObjectByType<Player_Health>();
             //SFX = GetComponent<AudioSource>();
             SpriteRender = GetComponent<SpriteRenderer>();
@@ -27,6 +31,7 @@ namespace Platformer
 
         private void LateUpdate()
         {
+
             transform.forward = Camera.main.transform.forward;
         }
 
@@ -36,7 +41,7 @@ namespace Platformer
             {
                 //SFX.Play();
                 HealthAnimator.SetTrigger("PickedUp");
-                PHScript.IncreaseHealth(HealingAmount);
+                PHScript.IncreaseHealth(PHScript.MaxHealth);
                 SetDead();
                 Destroy(gameObject, 5);
 

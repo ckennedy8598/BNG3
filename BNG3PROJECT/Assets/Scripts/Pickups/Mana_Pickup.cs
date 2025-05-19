@@ -9,16 +9,20 @@ namespace Platformer
         [Header("Player Script Reference")]
         public Player_Attacking PAttack_Script;
 
+        public GameObject ManaAnimUIObj;
         public Animator ManaAnimator;
 
         private SpriteRenderer SpriteRender;
         private SphereCollider SphereCollider;
         public float ManaAmount;
         //public TMP_Text Counter_Text;
-        //public AudioSource SFX;
+        public AudioSource SFX;
         void Start()
         {
-            //ManaAnimator = FindObject
+            // Get Animator UI Object Because Unity is AWFUL
+            ManaAnimUIObj = GameObject.Find("Mana_Pickup_Anim");
+            ManaAnimator = ManaAnimUIObj.GetComponent<Animator>();
+
             PAttack_Script = FindAnyObjectByType<Player_Attacking>();
             SpriteRender = GetComponent<SpriteRenderer>();
             SphereCollider = GetComponent<SphereCollider>();
@@ -34,8 +38,9 @@ namespace Platformer
             if (other.gameObject.tag == "Player")
             {
                 ManaAnimator.SetTrigger("PickedUp");
-                PAttack_Script.IncreaseMana(ManaAmount);
+                PAttack_Script.IncreaseMana(PAttack_Script.MaxMana);
                 SetDead();
+                SFX.Play();
                 Destroy(gameObject, 5);
             }
         }

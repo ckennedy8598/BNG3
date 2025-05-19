@@ -10,8 +10,9 @@ namespace Platformer
         public float despawnTimer = 1f;
         public float force = 2f;
         private float timer;
-        public float meleeDamage = 1f;
+        public float meleeDamage = 10f;
 
+        public PlayerTickDamage ptd;
         public Player_Health playerHealth;
         Rigidbody rb;
 
@@ -25,6 +26,7 @@ namespace Platformer
             Vector3 direction = player.transform.position - transform.position;
             rb.velocity = new Vector3(direction.x, direction.y, direction.z).normalized * force;
             playerHealth = FindAnyObjectByType<Player_Health>();
+            ptd = FindAnyObjectByType<PlayerTickDamage>();
         }
         void Update()
         {
@@ -41,7 +43,7 @@ namespace Platformer
             if (other.gameObject.CompareTag("Player"))
             {
                 playerHealth.TakeDamage(meleeDamage);
-                playerHealth.isPoisoned = true;
+                ptd.isPoisoned = true;
                 Debug.Log("Player has been hit D:");
                 Destroy(gameObject);
             }

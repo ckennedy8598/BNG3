@@ -7,6 +7,17 @@ TagManager:
   - Enemy
   - GM
   - Reflected
+  - CerbSpawnPoint
+  - CerberusAttackRange
+  - Fireball
+  - CloudSpawnPoint
+  - Lightning
+  - CerbCloud
+  - Wall
+  - Ground
+  - GroundFire
+  - Checkpoint
+  - SightRange
   layers:
   - Default
   - TransparentFX
@@ -16,8 +27,8 @@ TagManager:
   - UI
   - Ground
   - UI_2
-  - 
-  - 
+  - Diag and Pickup
+  - EnemyNoTouch
   - 
   - 
   - 

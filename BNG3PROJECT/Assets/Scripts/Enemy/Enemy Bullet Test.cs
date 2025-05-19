@@ -12,7 +12,7 @@ public class EnemyBulletTest : MonoBehaviour
     public float despawnTimer = 5f;
     public float force = 10f;
     private float timer;
-    public float bulletDamage = 5f;
+    public float bulletDamage = 30f;
 
     public Player_Health playerHealth;
     Rigidbody rb;
@@ -20,13 +20,19 @@ public class EnemyBulletTest : MonoBehaviour
     public Camera MainCamera;
     public GameObject enemyBullet;
     public GameObject player;
+    public Transform playerT;
     void Start()
     {
+       
+    }
+    void Awake()
+    {
         rb = GetComponent<Rigidbody>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = player = GameObject.Find("Player");
         MainCamera = FindAnyObjectByType<Camera>();
         PA_Script = FindAnyObjectByType<Player_Attacking>();
         EH_Script = FindAnyObjectByType<EnemyHealth>();
+        playerT = GameObject.Find("Player").transform;
 
         Vector3 direction = player.transform.position - transform.position;
         rb.velocity = new Vector3(direction.x, direction.y, direction.z).normalized * force;
@@ -34,7 +40,9 @@ public class EnemyBulletTest : MonoBehaviour
     }
     void Update()
     {
-        
+        Vector3 targetPostition = new Vector3(playerT.position.x, this.transform.position.y, playerT.position.z);
+        this.transform.LookAt(targetPostition);
+
         timer += Time.deltaTime;
         if(timer > despawnTimer)
         {
@@ -43,15 +51,19 @@ public class EnemyBulletTest : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-
+        if(other.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
     
         if (other.gameObject.CompareTag("Player"))
         {
-            if (PA_Script.CanParry || PA_Script.IsBlocking) // - B
+            if (PA_Script.CanParry) // - B
             {
                 rb.position = new Vector3(MainCamera.transform.position.x, MainCamera.transform.position.y - .25f, MainCamera.transform.position.z);
                 rb.velocity = MainCamera.transform.forward * force;
                 gameObject.tag = "Reflected";
+                PA_Script.ParrySound.Play();
             }
             else
             {

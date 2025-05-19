@@ -19,7 +19,7 @@ public class ChrisEnemyAITest : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
-
+    
     // Patroling variables
     public Vector3 walkPoint;
     bool walkPointSet;

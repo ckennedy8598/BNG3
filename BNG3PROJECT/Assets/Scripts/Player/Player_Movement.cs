@@ -14,12 +14,17 @@ public class Player_Movement : MonoBehaviour
     public AudioSource JumpSource;
 
     [Header("Movement")]
+    private Transform _playerBody;
+    private Transform _playerOrientation;
     private float _lastDesiredMS;
     private float _desiredMS;
     public float MoveSpeed;
     public float DashSpeed;
     public float GroundDrag;
     public bool Dashing;
+    public bool CanMove;
+    // To be used by other scripts
+    public bool StopMovement;
 
     [Header("Jumping")]
     public float CoyoteTime;
@@ -57,6 +62,7 @@ public class Player_Movement : MonoBehaviour
     public TMP_Text ScoreUpdate; // Score Counter
 
     public bool PauseScript;
+    public bool CheckScore;
 
     public MovementState state;
     public enum MovementState
@@ -72,21 +78,28 @@ public class Player_Movement : MonoBehaviour
         // Get ParentPlatform script reference
         PP_Script = FindAnyObjectByType<ParentPlatform>();
 
+        //ScoreUpdate = GameObject.Find("Score_Counter").GetComponent<TextMeshPro>();
+        Debug.Log("Score Counter Found!");
+
+        _playerBody = GameObject.Find("PlayerBody").GetComponent<Transform>();
+        _playerOrientation = GameObject.Find("PlayerOrientation").GetComponent<Transform>();
+
         //GroundCheckText.text = "Start! <3";
-        PlayerScore = 0;
+        //PlayerScore = 0;
         _rb = GetComponent<Rigidbody>();
         _rb.freezeRotation = true; // Otherwise player falls over
         _readyToJump = true;
         Time.timeScale = 1f;
+        StopMovement = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         // Score Update
-        ScoreUpdate.text = "Score: " + PlayerScore.ToString();
+        ScoreUpdate.text = PlayerScore.ToString();
         // Ground Check
-        _grounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.2f, IsGround);
+        _grounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.175f, IsGround);
 
         _speedControl();
         StateHandler();
@@ -136,6 +149,10 @@ public class Player_Movement : MonoBehaviour
 
     private void _movePlayer()
     {
+        if (!CanMove)
+        {
+            return;
+        }
         // calculate movement direction
         _moveDirection = Orientation.forward * _vertiInput + Orientation.right * _horiInput;
 
@@ -240,13 +257,20 @@ public class Player_Movement : MonoBehaviour
             GroundCheckText.text = "Paused!";
             return;
         }
+        
+        if (StopMovement)
+        {
+            _rb.velocity = Vector3.zero;
+            return;
+        }
 
         // Dashing
         if (Dashing)
         {
             state = MovementState.dashing;
-            _rb.useGravity = false;
-            _rb.velocity = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
+            CanMove = false;
+            //_rb.useGravity = false;
+            //_rb.velocity = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
             _desiredMS = DashSpeed;
             _rb.drag = 0f;
             GroundCheckText.text = "Dashing"; // Remove before release
@@ -266,6 +290,7 @@ public class Player_Movement : MonoBehaviour
         // Ground or Air State
         if (_grounded)
         {
+            CanMove = true;
             state = MovementState.walking;
             if(!Dashing)
             {
@@ -277,10 +302,12 @@ public class Player_Movement : MonoBehaviour
             // turn off gravity on slope (so we don't slide)
             if (_onSlope())
             {
+                _rb.drag = GroundDrag * 2;
                 _rb.useGravity = false;
             }
             else
             {
+                _rb.drag = GroundDrag;
                 _rb.useGravity = true;
             }
             CoyoteTimeCounter = CoyoteTime;
@@ -289,6 +316,7 @@ public class Player_Movement : MonoBehaviour
         }
         else if (!_grounded && !Dashing)
         {
+            CanMove = true;
             state = MovementState.air;
             _rb.useGravity = true;
             _myInput();

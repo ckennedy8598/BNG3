@@ -84,12 +84,16 @@ namespace Platformer
                 _setDead();
 
             }
-            else if(other.gameObject.name != "PlayerBody")
+            else if(other.gameObject.name != "PlayerBody" && other.gameObject.name != "SightRange" && other.gameObject.name != "AttackRange" 
+                && other.gameObject.name != "CerberusAttackRange" && other.gameObject.tag != "Checkpoint" && other.gameObject.tag != "CerbCloud")
             {
                 AudioSource.PlayClipAtPoint(_audioClip, gameObject.transform.position);
                 _setDead();
                 Destroy(gameObject, 2);
             }
+
+
+
         }
 
         public void _setDead()

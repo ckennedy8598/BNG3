@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: b40f136b05706d148acfc980f429ff31
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 800
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pefect_parry_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4800
+        width: 1400
+        height: 800
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30b1c02615086e489c18a3c57bf540a
+      internalID: 1613090844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_1
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 4800
+        width: 1400
+        height: 800
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818f0de933be5aa4d88525174a196dd8
+      internalID: 1857848638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_2
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 4800
+        width: 1400
+        height: 800
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d9c8065cb5d15488520e8c3a4ad4df
+      internalID: -1485753071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d138e2928c68674d9b24b0c50e79d06
+      internalID: 1031037972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_4
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 4000
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f10ba8f1cf292409d71cc7abb0b855
+      internalID: 1577811461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_5
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 4000
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2171c06f96322224387c7b82d2b5ead2
+      internalID: -912460167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3200
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbfbbbe771ecc14c973d1854cfc390b
+      internalID: 1386915852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 3200
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce612b4e0b29d114bbcc82f266b9619b
+      internalID: -1599633699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_8
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 3200
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7013b41cdbd2e114381aec96c101cb95
+      internalID: -1462802091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7e33c988686054dbfe4e72743b46b3
+      internalID: 1345557199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_10
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2400
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5bdb7fc70c4b549b1ec391e7f44a69
+      internalID: 333645970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_11
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 2400
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e04ed9d8c21a942be3a217d3c8784a
+      internalID: -1268669076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7f05983d0a5624cabff6326cf6c29e
+      internalID: -1051117775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_13
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1600
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8040115ada1584f94ad8a8fb90aaf6
+      internalID: 1181506198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_14
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1600
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5227aedf1e516384bbac03ef6261a302
+      internalID: -379279527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad72c0057938960478debf0f488579ab
+      internalID: -1690464118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_16
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 800
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fb86a5fd1ae35449089d61ca90462d
+      internalID: -1477130463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_17
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 800
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42db26552edd3934d84b0668ded08bb3
+      internalID: -1967785222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1400
+        height: 799
+      alignment: 9
+      pivot: {x: 0.575, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac20fc97b045f1448a894015e475bd8c
+      internalID: -306192329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_19
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 1400
+        height: 799
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c732a30682d00a0419e3155b1658309c
+      internalID: 385388576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pefect_parry_20
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 0
+        width: 1400
+        height: 799
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc49b452343c9874f93ac345f06bb40d
+      internalID: -1623520493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 399fcf50e01e24b45a29b4994a01a797
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pefect_parry_0: 1613090844
+      pefect_parry_1: 1857848638
+      pefect_parry_10: 333645970
+      pefect_parry_11: -1268669076
+      pefect_parry_12: -1051117775
+      pefect_parry_13: 1181506198
+      pefect_parry_14: -379279527
+      pefect_parry_15: -1690464118
+      pefect_parry_16: -1477130463
+      pefect_parry_17: -1967785222
+      pefect_parry_18: -306192329
+      pefect_parry_19: 385388576
+      pefect_parry_2: -1485753071
+      pefect_parry_20: -1623520493
+      pefect_parry_3: 1031037972
+      pefect_parry_4: 1577811461
+      pefect_parry_5: -912460167
+      pefect_parry_6: 1386915852
+      pefect_parry_7: -1599633699
+      pefect_parry_8: -1462802091
+      pefect_parry_9: 1345557199
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

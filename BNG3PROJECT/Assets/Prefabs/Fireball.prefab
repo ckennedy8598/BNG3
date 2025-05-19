@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6374752425479592788}
   m_Layer: 2
   m_Name: Fireball
-  m_TagString: Untagged
+  m_TagString: Fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2e038bbbaca3a8442b10800a93b9decd, type: 3}
+  m_Sprite: {fileID: 1348937921, guid: 7fa9ae7e2c849cb4da10e68970d34063, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,6 +130,8 @@ MonoBehaviour:
   fireballType: 1
   _spriteMesh: {fileID: 7197828999439900783}
   _sphereCollider: {fileID: 3517604719450188102}
+  fireballDamage: 5
+  enemyHealth: {fileID: 0}
   _audioClip: {fileID: 8300000, guid: 373403fa66da7314fb4344b98a21e92f, type: 3}
 --- !u!135 &3517604719450188102
 SphereCollider:

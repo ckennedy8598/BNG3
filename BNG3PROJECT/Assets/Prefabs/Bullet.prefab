@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6613384418796427146}
   - component: {fileID: 7532884315802662487}
   - component: {fileID: 1877187851938920699}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,10 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698af95eefdc9a24ea900da957827ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PA_Script: {fileID: 0}
+  EH_Script: {fileID: 0}
   despawnTimer: 10
   force: 30
   bulletDamage: 5
   playerHealth: {fileID: 0}
+  MainCamera: {fileID: 0}
   enemyBullet: {fileID: 0}
   player: {fileID: 0}
 --- !u!212 &1877187851938920699

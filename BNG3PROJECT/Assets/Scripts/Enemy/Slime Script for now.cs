@@ -18,6 +18,8 @@ namespace Platformer
 
         public GameObject lineOfSight;
 
+        public float speed = 10f;
+
         public bool playerSeen = false;
 
         // Patroling variables
@@ -54,7 +56,7 @@ namespace Platformer
             agent = GetComponent<NavMeshAgent>();
             endZone = GameObject.Find("EndZone").transform;
             lineOfSight = GameObject.Find("LineOfSight");
-
+            
 
         }
         private void Update()
@@ -81,26 +83,28 @@ namespace Platformer
            // {
             //    AttackPlayer();
             //}
+
+            var step = speed * Time.deltaTime;
             if (playerSeen == true)
             {
-                agent.SetDestination(endZone.position);
+                transform.position = Vector3.MoveTowards(transform.position, endZone.position, step);
             }
 
         }
 
-        private void SearchWalkPoint()
-        {
-            float randomZ = Random.Range(-walkPointRange, walkPointRange);
-            float randomX = Random.Range(-walkPointRange, walkPointRange);
+        //private void SearchWalkPoint()
+        //{
+        //    float randomZ = Random.Range(-walkPointRange, walkPointRange);
+        //    float randomX = Random.Range(-walkPointRange, walkPointRange);
 
-            walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+        //    walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
-            if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
-            {
-                walkPointSet = true;
-                //Debug.Log("Walkpoint Found");
-            }
-        }
+        //    if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
+        //    {
+        //        walkPointSet = true;
+        //        //Debug.Log("Walkpoint Found");
+        //    }
+        //}
 
         //private void Patroling()
         //{
@@ -122,36 +126,36 @@ namespace Platformer
         //    }
         //}
 
-        private void ChasePlayer()
-        {
-            //animator.SetBool("isIdle", false);
-            //animator.SetBool("isCharging", true);
-            //agent.SetDestination(player.position);
-        }
+        //private void ChasePlayer()
+        //{
+        //    //animator.SetBool("isIdle", false);
+        //    //animator.SetBool("isCharging", true);
+        //    //agent.SetDestination(player.position);
+        //}
 
-        private void AttackPlayer()
-        {
+        //private void AttackPlayer()
+        //{
             
-            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+        //    gameObject.GetComponent<NavMeshAgent>().isStopped = true;
 
             
-        }
+        //}
 
-        private void ResetAttack()
-        {
-            Debug.Log("Resetting Attack");
-            alreadyAttacked = false;
-        }
+        //private void ResetAttack()
+        //{
+        //    Debug.Log("Resetting Attack");
+        //    alreadyAttacked = false;
+        //}
 
-        public void TakeDamage(int damage)
-        {
-            //health -= damage;
+        //public void TakeDamage(int damage)
+        //{
+        //    //health -= damage;
 
-            //if (health <= 0)
-            //{
-            //    Invoke(nameof(DestroyEnemy), 0.5f);
-            //}
-        }
+        //    //if (health <= 0)
+        //    //{
+        //    //    Invoke(nameof(DestroyEnemy), 0.5f);
+        //    //}
+        //}
 
         private void DestroyEnemy()
         {
@@ -182,13 +186,13 @@ namespace Platformer
 
 
 
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, attackingRange);
+        //private void OnDrawGizmosSelected()
+        //{
+        //    Gizmos.color = Color.red;
+        //    Gizmos.DrawWireSphere(transform.position, attackingRange);
 
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, sightRange);
-        }
+        //    Gizmos.color = Color.yellow;
+        //    Gizmos.DrawWireSphere(transform.position, sightRange);
+        //}
     }
 }

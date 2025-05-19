@@ -7,9 +7,16 @@ namespace Platformer
 {
     public class Checkpoint : MonoBehaviour
     {
-        // Start is called before the first frame update\
+        // Start is called before the first frame update
 
+        private int _sceneNumber;
         private GameMaster gm;
+        public AudioClip CheckpointSFX;
+
+        private void Awake()
+        {
+
+        }
         void Start()
         {
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
@@ -18,9 +25,12 @@ namespace Platformer
         // Update is called once per frame
         void Update()
         {
+
             if (Input.GetKeyUp(KeyCode.I)) 
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                gm.isrespawning = true;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                
             }
         }
 
@@ -28,7 +38,9 @@ namespace Platformer
         {
             if (other.CompareTag("Player"))
             {
+                Debug.Log("Checkpoint activated");
                 gm.LastCheckpointPOS = transform.position;
+                AudioSource.PlayClipAtPoint(CheckpointSFX, gameObject.transform.position);
             }
         }
     }

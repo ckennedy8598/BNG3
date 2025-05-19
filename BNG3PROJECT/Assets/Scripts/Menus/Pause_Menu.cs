@@ -1,3 +1,4 @@
+using Platformer;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,16 +40,34 @@ public class Pause_Menu : MonoBehaviour
 
     [Header("Pause Check")]
     public bool Paused;
+
+    [Header("UI Ability Elements")]
+    public GameObject DashUI;
+    public GameObject SoulOverflowUI;
+    public GameObject AshesUI;
+
+    public GameObject GameMaster;
+    public GameMaster GameMasterScript;
     public void Start()
     {
         PlayerDead = false;
         Paused = false;
         PCam_Script = FindAnyObjectByType<Player_Cam>();
+
+        GameMaster = GameObject.Find("Game Master");
+        GameMasterScript = GameMaster.GetComponent<GameMaster>();
     }
 
     private void Update()
     {
         _onKeyPress();
+        _checkCollected();
+
+        /*
+        if (GameMasterScript = null)
+        {
+            GameMasterScript = GameMaster.GetComponent<GameMaster>();
+        }*/
     }
 
     private void _onKeyPress()
@@ -143,6 +162,7 @@ public class Pause_Menu : MonoBehaviour
     }
     public void OnMainMenuButton()
     {
+        GameMasterScript.SetMainMenuTrue();
         SceneManager.LoadScene(0);
     }
     public void OnQuitButton()
@@ -153,5 +173,36 @@ public class Pause_Menu : MonoBehaviour
     public bool GetIsPaused()
     {
         return Paused;
+    }
+
+    // References GameMaster variables
+    private void _checkCollected()
+    {
+        if (GameMasterScript.Dash)
+        {
+            DashUI.SetActive(true);
+        }
+        else
+        {
+            DashUI.SetActive(false);
+        }
+
+        if (GameMasterScript.SoulOverflow)
+        {
+            SoulOverflowUI.SetActive(true);
+        }
+        else
+        {
+            SoulOverflowUI.SetActive(false);
+        }
+
+        if (GameMasterScript.Ashes)
+        {
+            AshesUI.SetActive(true);
+        }
+        else
+        {
+            AshesUI.SetActive(false);
+        }
     }
 }

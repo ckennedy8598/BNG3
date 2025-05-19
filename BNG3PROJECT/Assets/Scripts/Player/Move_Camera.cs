@@ -11,6 +11,7 @@ public class Move_Camera : MonoBehaviour
     private void Start()
     {
         PCam_Script = FindAnyObjectByType<Player_Cam>();
+        Target = GameObject.Find("PlayerCamPosition").transform;
     }
     void Update()
     {
